@@ -87,7 +87,6 @@ class LinkStreamBlock(blocks.StreamBlock):
 class QuoteBlock(blocks.StructBlock):
     quote = blocks.CharBlock(form_classname="title")
     attribution = blocks.CharBlock(required=False)
-    link = LinkStreamBlock(required=False, min_num=0)
 
     class Meta:
         icon = "openquote"
