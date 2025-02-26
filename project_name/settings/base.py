@@ -252,6 +252,10 @@ if AWS_STORAGE_BUCKET_NAME:
     # Limit how large a file can be spooled into memory before it's written to disk.
     AWS_S3_MAX_MEMORY_SIZE = 2 * 1024 * 1024  # 2MB
 
+# Django sets a maximum of 1000 fields per form by default, but particularly complex page models
+# can exceed this limit within Wagtail's page editor.
+DATA_UPLOAD_MAX_NUMBER_FIELDS = 10_000
+
 
 # Wagtail settings
 
