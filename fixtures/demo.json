@@ -1080,6 +1080,7 @@
       "collection": 1,
       "title": "Placeholder Image",
       "file": "original_images/wagtail.webp",
+      "description": "A Pied Wagtail walking with its left foot in the air. Copyright The Hall of EINAR.",
       "width": 2048,
       "height": 1365,
       "created_at": "2024-02-26T15:28:56.871Z",
@@ -1089,8 +1090,7 @@
       "focal_point_width": null,
       "focal_point_height": null,
       "file_size": null,
-      "file_hash": "",
-      "alternative_text": ""
+      "file_hash": ""
     }
   },
   {
@@ -1100,6 +1100,7 @@
       "collection": 1,
       "title": "frank",
       "file": "original_images/frank.png",
+      "description": "Portrait image of Frank Nigelson",
       "width": 430,
       "height": 436,
       "created_at": "2024-02-26T15:30:40.198Z",
@@ -1111,8 +1112,7 @@
       "focal_point_width": null,
       "focal_point_height": null,
       "file_size": 325553,
-      "file_hash": "54714057fdff3731850126bbcbd93d66d5b3a59a",
-      "alternative_text": "Portrait image of Frank Nigelson"
+      "file_hash": "54714057fdff3731850126bbcbd93d66d5b3a59a"
     }
   },
   {
@@ -1122,6 +1122,7 @@
       "collection": 1,
       "title": "mackerel",
       "file": "original_images/mackerel.webp",
+      "description": "A school of Pacific Mackerel swimming in dark waters.",
       "width": 640,
       "height": 457,
       "created_at": "2024-02-26T15:54:21.403Z",
@@ -1133,8 +1134,7 @@
       "focal_point_width": 182,
       "focal_point_height": 119,
       "file_size": 22162,
-      "file_hash": "c9e7cea533cf90f49c3ef8f71c38dec4f43aa168",
-      "alternative_text": ""
+      "file_hash": "c9e7cea533cf90f49c3ef8f71c38dec4f43aa168"
     }
   },
   {
@@ -14058,4 +14058,3 @@
     }
   }
   ]
-  

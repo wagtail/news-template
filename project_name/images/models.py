@@ -1,6 +1,5 @@
 from PIL import ImageOps
 from django.db import models
-from django.utils.safestring import mark_safe
 from wagtail import hooks
 from wagtail.search import index
 from wagtail.images.models import AbstractImage, AbstractRendition, Image
@@ -8,24 +7,9 @@ from wagtail.images.image_operations import FilterOperation
 
 
 class CustomImage(AbstractImage):
-    alternative_text = models.CharField(
-        blank=True,
-        max_length=200,
-        help_text=mark_safe(
-            "Provide a text alternative for this image for visually "
-            "impaired users."
-            "<br />For advice and best practice, visit "
-            "<a href='https://moz.com/learn/seo/alt-text' target='_blank' "
-            "rel='noreferrer noopener'>"
-            "https://moz.com/learn/seo/alt-text</a>"
-        ),
-    )
+    admin_form_fields = Image.admin_form_fields
 
-    admin_form_fields = Image.admin_form_fields + (
-        "alternative_text",
-    )
-
-    search_fields = AbstractImage.search_fields + [index.SearchField("alternative_text")]
+    search_fields = AbstractImage.search_fields + [index.SearchField("description")]
 
 
 class Rendition(AbstractRendition):
