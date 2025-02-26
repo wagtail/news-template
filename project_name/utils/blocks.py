@@ -85,7 +85,7 @@ class LinkStreamBlock(blocks.StreamBlock):
 
 
 class QuoteBlock(blocks.StructBlock):
-    quote = blocks.CharBlock(form_classname="title")
+    quote = blocks.TextBlock(form_classname="title")
     attribution = blocks.CharBlock(required=False)
 
     class Meta:
