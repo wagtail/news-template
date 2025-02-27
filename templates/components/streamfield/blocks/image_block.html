@@ -1,5 +1,12 @@
 {% verbatim %}
-<div class="">
-    {{ self }}
+{% load wagtailimages_tags %}
+
+<div class="pb-10 md:pb-20 flex justify-center">
+    <div class="mx-auto">
+        {% image value.image width-640 class="mx-auto" %}
+        {% if value.caption %}
+            <p class="text-xs text-strong mt-4">{{ value.caption }}</p>
+        {% endif %}
+    </div>
 </div>
 {% endverbatim %}
