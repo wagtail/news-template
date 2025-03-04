@@ -42,7 +42,7 @@ class ImageBlock(blocks.StructBlock):
         template = "components/streamfield/blocks/image_block.html"
 
 
-class BaseInternalLinkBlock(blocks.StructBlock):
+class InternalLinkBlock(blocks.StructBlock):
     page = blocks.PageChooserBlock()
     title = blocks.CharBlock(
         required=False,
@@ -55,10 +55,10 @@ class BaseInternalLinkBlock(blocks.StructBlock):
         value_class = LinkStructValue
 
 
-class InternalLinkBlock(BaseInternalLinkBlock):
+class InternalLinkBlock(InternalLinkBlock):
     pass
 
-class ArticlePageLinkBlock(BaseInternalLinkBlock):
+class ArticlePageLinkBlock(InternalLinkBlock):
     page = blocks.PageChooserBlock(
         page_type="news.ArticlePage",
     )
