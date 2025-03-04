@@ -88,14 +88,6 @@ class LinkStreamBlock(blocks.StreamBlock):
         max_num = 1
 
 
-class OptionalLinkStreamBlock(LinkStreamBlock):
-    class Meta:
-        icon = "link"
-        label = "Link"
-        min_num = 0
-        max_num = 1
-
-
 class QuoteBlock(blocks.StructBlock):
     quote = blocks.CharBlock(form_classname="title")
     attribution = blocks.CharBlock(required=False)
