@@ -1,0 +1,15 @@
+{% verbatim %}
+{% if value.sr_only_label %}
+    <h2 class="sr-only">{{value.heading}}</h2>
+{% else %}
+    {% include "components/streamfield/blocks/heading2_block.html" with large_spacing=True value=value.heading %}
+{% endif %}
+
+<div class="flex flex-col md:flex-row gap-20">
+    {% for card in value.cards %}
+        <div class="flex flex-col gap-2 items-center">
+            {% include "components/streamfield/blocks/card_block.html" with value=card classes="pb-[50px] md:pb-[100px] md:odd:pr-[var(--gutter-xl)] md:even:pl-[var(--gutter-xl)] lg:odd:col-span-2 lg:even:col-span-2 lg:odd:col-start-2 lg:even:col-start-4" %}
+        </div>
+    {% endfor %}
+</div>
+{% endverbatim %}

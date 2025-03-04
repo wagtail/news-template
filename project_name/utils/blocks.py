@@ -202,7 +202,7 @@ class BaseCardSectionBlock(BaseSectionBlock):
 
 class CardSectionBlock(BaseCardSectionBlock):
     class Meta:
-        template = "components/streamfield/blocks/cards_block.html"
+        template = "components/streamfield/blocks/card_section_block.html"
 
 
 class PlainCardSectionBlock(BaseCardSectionBlock):
