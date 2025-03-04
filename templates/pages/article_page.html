@@ -31,7 +31,7 @@
         height="{{ author_avatar.height }}"
         alt="{{ author_avatar.alt }}"
         class="w-10 h-10 rounded-full"
-        />  
+        />
         {{ page.author.title }}
     </div>
 </div>
@@ -58,10 +58,10 @@
             />
         </picture>
 
-        
+
 
     </div>
-    {% if value.caption %}
+    {% if page.image.0.value.caption %}
         <p class="text-sm leading-6 py-5">{{ page.image.0.value.caption }}</p>
     {% endif %}
 </div>
