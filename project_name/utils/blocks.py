@@ -100,6 +100,7 @@ class CardBlock(blocks.StructBlock):
 
     class Meta:
         icon = "form"
+        template = "components/streamfield/blocks/card_block.html"
         label = "Card"
         value_class = CardStructValue
 
