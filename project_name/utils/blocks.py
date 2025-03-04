@@ -54,10 +54,6 @@ class InternalLinkBlock(blocks.StructBlock):
         icon = "link"
         value_class = LinkStructValue
 
-
-class InternalLinkBlock(InternalLinkBlock):
-    pass
-
 class ArticlePageLinkBlock(InternalLinkBlock):
     page = blocks.PageChooserBlock(
         page_type="news.ArticlePage",
