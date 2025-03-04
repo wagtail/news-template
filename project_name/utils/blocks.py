@@ -94,19 +94,13 @@ class QuoteBlock(blocks.StructBlock):
 
 
 class CardBlock(blocks.StructBlock):
-    link = InternalLinkBlock()
-    description = blocks.TextBlock(
-        max_length=255,
-        required=False,
-        help_text="""
-            Choose to override
-            a page's listing summary or introduction when choosing an
-            internal link.
-        """,
-    )
+    heading = blocks.CharBlock(max_length=255)
+    description = blocks.RichTextBlock(required=False, features=["bold", "italic"])
+    link = LinkStreamBlock(required=False, min_num=0)
 
     class Meta:
-        icon = "link"
+        icon = "form"
+        label = "Card"
         value_class = CardStructValue
 
 
@@ -138,7 +132,7 @@ class FeaturedArticleBlock(blocks.StructBlock):
 
 class BaseSectionBlock(blocks.StructBlock):
     heading = blocks.CharBlock(
-        form_classname="title", 
+        form_classname="title",
         icon="title",
         required=True
     )  # Should use H2s only
@@ -169,7 +163,7 @@ class StatisticSectionBlock(BaseSectionBlock):
 
 class CTASectionBlock(blocks.StructBlock):
     heading = blocks.CharBlock(
-        form_classname="title", 
+        form_classname="title",
         icon="title",
         required=True
     )
