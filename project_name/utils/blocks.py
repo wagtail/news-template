@@ -29,7 +29,7 @@ class AccordionBlock(blocks.StructBlock):
         template = "components/accordion/accordion.html"
 
 
-class ImageBlock(blocks.StructBlock):
+class CaptionedImageBlock(blocks.StructBlock):
     image = ImageChooserBlock()
     image_alt_text = blocks.CharBlock(
         required=False,
