@@ -186,12 +186,12 @@ class BaseCardSectionBlock(BaseSectionBlock):
     )
     class Meta:
         abstract = True
-        icon = "doc-full"
+        icon = "form"
 
 
 class CardSectionBlock(BaseCardSectionBlock):
     class Meta:
-        template = "components/streamfield/blocks/cards_block.html"
+        template = "components/streamfield/blocks/card_section_block.html"
 
 
 class PlainCardSectionBlock(BaseCardSectionBlock):
