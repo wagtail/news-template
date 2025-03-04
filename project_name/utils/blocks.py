@@ -107,20 +107,13 @@ class QuoteBlock(blocks.StructBlock):
 
 
 class CardBlock(blocks.StructBlock):
-    link = InternalLinkBlock()
-    description = blocks.TextBlock(
-        max_length=255,
-        required=False,
-        help_text="""
-            Choose to override
-            a page's listing summary or introduction when choosing an
-            internal link.
-        """,
-    )
-
+    heading = blocks.CharBlock(max_length=255)
+    description = blocks.RichTextBlock(required=False, features=["bold", "italic"])
+    link = LinkStreamBlock(required=False, min_num=0)
     class Meta:
-        icon = "link"
-        value_class = CardStructValue
+        icon = "address-card"
+        template = "components/streamfield/blocks/card_block.html"
+        label = "Card"
 
 
 class FeaturedArticleBlock(blocks.StructBlock):
