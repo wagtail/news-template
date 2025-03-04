@@ -29,7 +29,7 @@ class AccordionBlock(blocks.StructBlock):
         template = "components/accordion/accordion.html"
 
 
-class ImageBlock(blocks.StructBlock):
+class CaptionedImageBlock(blocks.StructBlock):
     image = ImageChooserBlock()
     image_alt_text = blocks.CharBlock(
         required=False,
@@ -151,7 +151,7 @@ class FeaturedArticleBlock(blocks.StructBlock):
 
 class BaseSectionBlock(blocks.StructBlock):
     heading = blocks.CharBlock(
-        form_classname="title", 
+        form_classname="title",
         icon="title",
         required=True
     )  # Should use H2s only
@@ -182,7 +182,7 @@ class StatisticSectionBlock(BaseSectionBlock):
 
 class CTASectionBlock(blocks.StructBlock):
     heading = blocks.CharBlock(
-        form_classname="title", 
+        form_classname="title",
         icon="title",
         required=True
     )
