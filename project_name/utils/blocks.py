@@ -5,7 +5,7 @@ from django.forms.utils import ErrorList
 from wagtail import blocks
 from wagtail.blocks.struct_block import StructBlockValidationError
 from wagtail.documents.blocks import DocumentChooserBlock
-from wagtail.images.blocks import ImageChooserBlock
+from wagtail.images.blocks import ImageBlock, ImageChooserBlock
 from wagtail.snippets.blocks import SnippetChooserBlock
 
 from {{ project_name }}.utils.struct_values import CardStructValue, LinkStructValue
@@ -107,7 +107,7 @@ class CardBlock(blocks.StructBlock):
 
 class FeaturedArticleBlock(blocks.StructBlock):
     link = ArticlePageLinkBlock()
-    image = ImageChooserBlock(
+    image = ImageBlock(
         required=False,
         help_text="Set to override the image of the chosen article page.",
     )
