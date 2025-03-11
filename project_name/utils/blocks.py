@@ -50,9 +50,9 @@ class InternalLinkBlock(blocks.StructBlock):
     )
 
     class Meta:
-        abstract = True
         icon = "link"
         value_class = LinkStructValue
+
 
 class ArticlePageLinkBlock(InternalLinkBlock):
     page = blocks.PageChooserBlock(
