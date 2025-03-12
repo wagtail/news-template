@@ -1,21 +1,21 @@
 {% verbatim %}
 <div class="mb-10 md:mb-20 last:mb-0">
-    <h2 class="font-serif4 text-3xl md:text-5xl font-semibold text-center
+    <p class="font-serif4 text-3xl md:text-5xl font-semibold text-center
     {% if large_spacing %}
         mb-10 md:mb-20
     {% else %}
         mb-8 md:mb-10
     {% endif %}
     ">
-        "{{ value.quote }}"</h2>
+        "{{ value.quote }}"</p>
     {% if value.attribution %}
-        <h2 class="font-serif4 text-base md:text-xl font-medium text-center
+        <p class="font-serif4 text-base md:text-xl font-medium text-center
         {% if large_spacing %}
             mb-10 md:mb-20
         {% else %}
             mb-8 md:mb-10
         {% endif %}
-        ">- {{ value.attribution }}</h2>
+        ">- {{ value.attribution }}</p>
     {% endif %}
 </div>
 {% endverbatim %}
