@@ -11,7 +11,7 @@ from wagtail.snippets.blocks import SnippetChooserBlock
 from {{ project_name }}.utils.struct_values import CardStructValue, LinkStructValue
 
 
-class AccordionBlock(blocks.StructBlock):
+class AccordionSectionBlock(blocks.StructBlock):
     title = blocks.CharBlock(max_length=255)
     content = blocks.RichTextBlock()
 
@@ -21,12 +21,18 @@ class AccordionBlock(blocks.StructBlock):
 
 
 class AccordionBlock(blocks.StructBlock):
-    heading = blocks.ListBlock(AccordionBlock())
-    list = blocks.ListBlock(AccordionBlock())
+    sections = blocks.ListBlock(
+        AccordionSectionBlock(),
+    )
 
     class Meta:
         icon = "list-ol"
-        template = "components/accordion/accordion.html"
+        template = "components/streamfield/blocks/accordion.html"
+
+    def get_context(self, value, parent_context=None):
+        ctx = super().get_context(value, parent_context=parent_context)
+        ctx["accordions"] = value["sections"]
+        return ctx
 
 
 class ImageBlock(blocks.StructBlock):
