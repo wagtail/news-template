@@ -8,7 +8,7 @@ from wagtail.search import index
 
 from wagtail.fields import StreamField
 from {{ project_name }}.utils.models import BasePage, ArticleTopic
-from {{ project_name }}.utils.blocks import ImageBlock, StoryBlock, FeaturedArticleBlock
+from {{ project_name }}.utils.blocks import CaptionedImageBlock, StoryBlock, FeaturedArticleBlock
 
 
 class ArticlePage(BasePage):
@@ -37,7 +37,7 @@ class ArticlePage(BasePage):
     )
     introduction = models.TextField(blank=True)
     image = StreamField(
-        [("image", ImageBlock())],
+        [("image", CaptionedImageBlock())],
         blank=True,
         max_num=1,
     )
