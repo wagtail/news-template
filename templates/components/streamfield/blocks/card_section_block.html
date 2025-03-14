@@ -1,9 +1,6 @@
 {% verbatim %}
-{% if value.sr_only_label %}
-    <h2 class="sr-only">{{value.heading}}</h2>
-{% else %}
-    {% include "components/streamfield/blocks/heading2_block.html" with large_spacing=True value=value.heading %}
-{% endif %}
+{% include "components/streamfield/blocks/heading2_block.html" with large_spacing=True value=value.heading sr_only=value.sr_only_label %}
+
 
 <div class="flex flex-col md:flex-row gap-20">
     {% for card in value.cards %}
