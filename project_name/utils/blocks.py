@@ -114,6 +114,7 @@ class CardBlock(blocks.StructBlock):
         icon = "form"
         template = "components/streamfield/blocks/card_block.html"
         label = "Card"
+        value_class = CardStructValue
 
 
 class FeaturedArticleBlock(blocks.StructBlock):
