@@ -95,19 +95,13 @@ class QuoteBlock(blocks.StructBlock):
 
 
 class CardBlock(blocks.StructBlock):
-    link = InternalLinkBlock()
-    description = blocks.TextBlock(
-        max_length=255,
-        required=False,
-        help_text="""
-            Choose to override
-            a page's listing summary or introduction when choosing an
-            internal link.
-        """,
-    )
-
+    heading = blocks.CharBlock(max_length=255)
+    description = blocks.RichTextBlock(required=False, features=["bold", "italic"])
+    link = LinkStreamBlock(required=False, min_num=0)
     class Meta:
-        icon = "link"
+        icon = "form"
+        template = "components/streamfield/blocks/card_block.html"
+        label = "Card"
         value_class = CardStructValue
 
 
@@ -192,12 +186,12 @@ class BaseCardSectionBlock(BaseSectionBlock):
     )
     class Meta:
         abstract = True
-        icon = "doc-full"
+        icon = "form"
 
 
 class CardSectionBlock(BaseCardSectionBlock):
     class Meta:
-        template = "components/streamfield/blocks/cards_block.html"
+        template = "components/streamfield/blocks/card_section_block.html"
 
 
 class PlainCardSectionBlock(BaseCardSectionBlock):
