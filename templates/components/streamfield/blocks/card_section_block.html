@@ -4,9 +4,7 @@
 
 <div class="flex flex-col md:flex-row gap-20">
     {% for card in value.cards %}
-        <div class="flex flex-col gap-2 items-center">
-            {% include "components/streamfield/blocks/card_block.html" with value=card %}
-        </div>
+        {% include "components/streamfield/blocks/card_block.html" with value=card %}
     {% endfor %}
 </div>
 {% endverbatim %}
