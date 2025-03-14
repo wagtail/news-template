@@ -111,7 +111,7 @@ class CardBlock(blocks.StructBlock):
     description = blocks.RichTextBlock(required=False, features=["bold", "italic"])
     link = LinkStreamBlock(required=False, min_num=0)
     class Meta:
-        icon = "address-card"
+        icon = "form"
         template = "components/streamfield/blocks/card_block.html"
         label = "Card"
 
@@ -197,7 +197,7 @@ class BaseCardSectionBlock(BaseSectionBlock):
     )
     class Meta:
         abstract = True
-        icon = "doc-full"
+        icon = "form"
 
 
 class CardSectionBlock(BaseCardSectionBlock):
