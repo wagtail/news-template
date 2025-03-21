@@ -2,7 +2,7 @@
 {% load wagtailcore_tags %}
 
 <div class="container mx-auto my-16 text-black">
-    {% for accordion in accordions %}
+    {% for accordion in value.sections %}
     <details class="max-w-3xl my-12 border-b border-grey-300">
         {# webkit-details-marker hides the default arrow on safari #}
         <summary

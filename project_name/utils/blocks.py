@@ -29,11 +29,6 @@ class AccordionBlock(blocks.StructBlock):
         icon = "list-ol"
         template = "components/streamfield/blocks/accordion.html"
 
-    def get_context(self, value, parent_context=None):
-        ctx = super().get_context(value, parent_context=parent_context)
-        ctx["accordions"] = value["sections"]
-        return ctx
-
 
 class ImageBlock(blocks.StructBlock):
     image = ImageChooserBlock()
