@@ -1,5 +1,5 @@
 django>=4.2,<5.2
-wagtail>=6.2,<6.3
+wagtail>=6.4,<6.5
 dj-database-url
 psycopg[binary]
 whitenoise
