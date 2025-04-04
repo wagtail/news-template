@@ -1,0 +1,21 @@
+
+{% load wagtailcore_tags %}
+
+<div class="bg-mackerel-200 text-mackerel-400 dark:text-mackerel-400 p-10 md:px-20 flex gap-5 flex-col md:flex-row justify-between md:items-center rounded-[30px]">
+    <div class="">
+        <h2 class="
+            font-serif4 text-3xl md:text-5xl font-semibold mb-2
+        ">
+            {{ value.heading }}
+        </h2>
+        {% if value.description %}
+        <p class="text-lg md:text-xl">
+            {{ value.description }}
+        </p>
+        {% endif %}
+    </div>
+    {% with cta_link=value.link.0 %}
+        {% include "components/button.html" with title=cta_link.value.get_title url=cta_link.value.get_url classes='w-full md:w-auto' %}
+    {% endwith %}
+</div>
+
