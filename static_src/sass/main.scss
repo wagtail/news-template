@@ -142,26 +142,4 @@
             @apply text-white;
         }
     }
-
-    // Controls the open/closed states for AccordionBlock
-    details {
-        &[open] {
-            .show-button {
-                display: none;
-            }
-
-            .hide-button {
-                display: flex;
-            }
-        }
-    }
-
-    /* Rotation for chevrons */
-    .chevron-icon {
-        transform: rotate(0deg);
-    }
-
-    .chevron-icon-open {
-        transform: rotate(90deg);
-    }
 }
