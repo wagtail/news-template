@@ -1,0 +1,120 @@
+
+{% load wagtailcore_tags wagtailsettings_tags static %}
+{% wagtail_site as current_site %}
+
+
+<div class="px-4">
+    <div class="bg-slash opacity-50 h-4 w-full"></div>
+</div>
+
+<footer class="site-padding site-container w-full py-20">
+    <div class="flex flex-col lg:flex-row gap-20 justify-between">
+        {% if settings.navigation.NavigationSettings.footer_navigation %}
+        <div class="grid grid-cols-2 gap-20 justify-between">
+            {% for link_section in settings.navigation.NavigationSettings.footer_navigation %}
+                <div class="mb-10 lg:mb-0 lg:mr-20 flex flex-col gap-10">
+                    <h2 class="text-xl md:text-2xl font-semibold">
+                        {{ link_section.value.section_heading }}
+                    </h2>
+                    <ul class="flex flex-col gap-y-4 md:gap-y-6">
+                        {% for link in link_section.value.links %}
+                        <li>
+                            <a href="{{ link.value.get_url }}"
+                                class="
+                                text-grey-700
+                                dark:text-grey-200
+                                underline
+                                underline-offset-8
+                                decoration-[1.5px]
+                                decoration-mackerel-200
+                                hover:decoration-mackerel-300
+                                ">
+                                {{ link.value.get_title }}
+                            </a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        <div>
+            {% if settings.utils.SystemMessagesSettings.footer_newsletter_signup_link %}
+                <div class="flex flex-col max-w-96">
+                    <h2 
+                        class="text-xl md:text-2xl font-semibold"
+                        id="footer-newsletter-signup-title"
+                    >
+                        {{ settings.utils.SystemMessagesSettings.footer_newsletter_signup_title }}
+                    </h2>
+                    {% if settings.utils.SystemMessagesSettings.footer_newsletter_signup_description %}
+                    <p class="pt-3 text-base md:text-lg text-grey-700 dark:text-grey-200 md:leading-[170%]">
+                        {{ settings.utils.SystemMessagesSettings.footer_newsletter_signup_description }}
+                    </p>
+                    {% endif %}
+                    <div class="pt-5 flex gap-1 md:gap-2.5">
+                        <input 
+                            type="email" 
+                            placeholder="Enter your email" 
+                            aria-labelledby="footer-newsletter-signup-title"
+                            class="border-[1px] border-mackerel-200 rounded-[3px] px-5 md:py-2.5 md:px-5 text-base md:text-lg bg-white dark:bg-mackerel-100 dark:text-white">
+                        {% include "components/button.html" with variant="footer" title="Sign up" url=settings.utils.SystemMessagesSettings.footer_newsletter_signup_link %}
+                    </div>
+                </div>
+            {% endif %}
+            {% get_settings %}
+            {% if settings.utils.SocialMediaSettings.linkedin_handle or settings.utils.SocialMediaSettings.facebook_app_id or settings.utils.SocialMediaSettings.instagram_handle or settings.utils.SocialMediaSettings.tiktok_handle %}
+                <p class="sr-only">Follow us</p>
+                <div class="flex flex-row gap-10 pt-14">
+                    {% if settings.myapp.SocialMediaSettings.linkedin_profile_type == 'personal' %}
+                    <a href="https://www.linkedin.com/in/{{ settings.myapp.SocialMediaSettings.linkedin_handle }}">LinkedIn Profile</a>
+                {% else %}
+                    <a href="https://www.linkedin.com/company/{{ settings.myapp.SocialMediaSettings.linkedin_handle }}">LinkedIn Company Page</a>
+                {% endif %}
+                    {% endif %}
+                    {% if settings.utils.SocialMediaSettings.instagram_handle %}
+                    <a href="https://www.instagram.com/{{ settings.utils.SocialMediaSettings.instagram_handle }}"
+                        aria-label="{{ current_site.site_name|default:'We&apos;re' }} on Instagram"
+                        class="hover:text-mackerel-300">
+                        <svg aria-hidden="true" class="fill-current w-7 h-7" width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.0033 7.68533C10.7468 7.68533 7.31344 11.1194 7.31344 15.377C7.31344 19.6345 10.7468 23.0686 15.0033 23.0686C19.2599 23.0686 22.6933 19.6345 22.6933 15.377C22.6933 11.1194 19.2599 7.68533 15.0033 7.68533ZM15.0033 20.3775C12.2527 20.3775 10.0039 18.135 10.0039 15.377C10.0039 12.6189 12.246 10.3764 15.0033 10.3764C17.7607 10.3764 20.0028 12.6189 20.0028 15.377C20.0028 18.135 17.754 20.3775 15.0033 20.3775ZM24.8015 7.37071C24.8015 8.36814 23.9983 9.16475 23.0078 9.16475C22.0106 9.16475 21.2142 8.36144 21.2142 7.37071C21.2142 6.37997 22.0173 5.57666 23.0078 5.57666C23.9983 5.57666 24.8015 6.37997 24.8015 7.37071ZM29.8946 9.19152C29.7808 6.78831 29.232 4.65956 27.4718 2.90568C25.7184 1.15181 23.5901 0.602882 21.1874 0.482387C18.7111 0.341809 11.2889 0.341809 8.8126 0.482387C6.41662 0.596188 4.28834 1.14511 2.52817 2.89899C0.767987 4.65287 0.225878 6.78162 0.10541 9.18483C-0.0351366 11.6617 -0.0351366 19.0855 0.10541 21.5624C0.219186 23.9656 0.767987 26.0943 2.52817 27.8482C4.28834 29.6021 6.40993 30.151 8.8126 30.2715C11.2889 30.4121 18.7111 30.4121 21.1874 30.2715C23.5901 30.1577 25.7184 29.6088 27.4718 27.8482C29.2253 26.0943 29.7741 23.9656 29.8946 21.5624C30.0351 19.0855 30.0351 11.6684 29.8946 9.19152ZM26.6955 24.22C26.1735 25.532 25.1629 26.5429 23.8444 27.0717C21.8701 27.8549 17.1852 27.6742 15.0033 27.6742C12.8215 27.6742 8.12995 27.8482 6.1623 27.0717C4.85053 26.5496 3.83993 25.5387 3.31121 24.22C2.52817 22.2452 2.70887 17.5593 2.70887 15.377C2.70887 13.1946 2.53486 8.50202 3.31121 6.53393C3.83324 5.22187 4.84384 4.21105 6.1623 3.68221C8.13664 2.89899 12.8215 3.07973 15.0033 3.07973C17.1852 3.07973 21.8767 2.90568 23.8444 3.68221C25.1562 4.20435 26.1668 5.21518 26.6955 6.53393C27.4785 8.50872 27.2978 13.1946 27.2978 15.377C27.2978 17.5593 27.4785 22.2519 26.6955 24.22Z"/>
+                        </svg>
+                    </a>
+                    {% endif %}
+                    {% if settings.utils.SocialMediaSettings.twitter_handle %}
+                    <a href="https://twitter.com/{{ settings.utils.SocialMediaSettings.twitter_handle }}"
+                        aria-label="{{ current_site.site_name|default:'We&apos;re' }} on Twitter"
+                        class="hover:text-mackerel-300">
+                        <svg aria-hidden="true" class="fill-current w-7 h-7" viewBox="0 0 34 31">
+                            <path d="M26.1346 0.376953H31.226L20.1058 13.0837L33.1875 30.377H22.9471L14.9207 19.8914L5.7476 30.377H0.649038L12.5409 16.7832L0 0.376953H10.5L17.7476 9.96109L26.1346 0.376953ZM24.3462 27.3337H27.1659L8.96394 3.26157H5.9351L24.3462 27.3337Z"/>
+                        </svg>
+                    </a>
+                    {% endif %}
+                    {% if settings.utils.SocialMediaSettings.tiktok_handle %}
+                    <a href="https://www.tiktok.com/@{{ settings.utils.SocialMediaSettings.tiktok_handle }}"
+                        aria-label="{{ current_site.site_name|default:'We&apos;re' }} on TikTok"
+                        class="hover:text-mackerel-300">
+                        <svg aria-hidden="true" class="fill-current w-7 h-7" viewBox="0 0 27 31">
+                            <path d="m26.5319 12.677c-2.5808.0055-5.098-.8001-7.196-2.303v10.4776c-.0006 1.9405-.5937 3.8346-1.6999 5.4289-1.1063 1.5943-2.6729 2.8128-4.4904 3.4926-1.8176.6798-3.79933.7885-5.68028.3115-1.88096-.477-3.57143-1.517-4.84533-2.9808s-2.070494-3.2817-2.283245-5.2105.168484-3.8766 1.092715-5.5828c.92424-1.7063 2.34741-3.0897 4.07918-3.9652s3.68957-1.2014 5.61156-.9341v5.2681c-.8788-.2766-1.8226-.2685-2.69657.0232-.87396.2916-1.63342.852-2.16994 1.601-.53651.7491-.82265 1.6485-.81756 2.5698s.30116 1.8175.84592 2.5606c.54477.743 1.31038 1.2949 2.18751 1.577.87713.282 1.82094.2796 2.69664-.0067.8758-.2864 1.6386-.8421 2.1797-1.5879.5411-.7457.8327-1.6433.8332-2.5647v-20.474647h5.1568c-.0029.436135.0343.871607.1113 1.300907.1793.95693.5519 1.86724 1.095 2.6753s1.2452 1.49688 2.0635 2.02438c1.1648.76932 2.5302 1.17895 3.9262 1.17785z" />
+                        </svg>
+                    </a>
+                    {% endif %}
+                    {% if settings.utils.SocialMediaSettings.facebook_app_id %}
+                    <a href="https://www.facebook.com/{{ settings.utils.SocialMediaSettings.facebook_app_id }}"
+                        aria-label="{{ current_site.site_name|default:'We&apos;re' }} on Facebook"
+                        class="hover:text-mackerel-300">
+                        <svg aria-hidden="true" class="fill-current w-7 h-7" viewBox="0 0 18 31">
+                            <path d="m4.05469 17.9141v12.4629h6.79691v-12.4629h5.0683l1.0547-5.7305h-6.123v-2.0274c0-3.02925 1.1894-4.1894 4.2597-4.1894.9551 0 1.7227.02343 2.168.07031v-5.197266c-.8379-.228516-2.8887-.462891-4.0723-.462891-6.26364 0-9.15231 2.958987-9.15231 9.339847v2.4668h-3.86719v5.7305z" />
+                        </svg>
+                    </a>
+                    {% endif %}
+                </div>
+            {% endif %}
+        </div>
+    </div>
+    <p class="font-codepro text-base text-black dark:text-white opacity-60 pt-10 md:pt-20 mb-10 leading-6">
+        © {% now "Y" %} Wagtail Starter Kit
+    </p>
+</footer>
+

@@ -1,0 +1,58 @@
+
+{% load wagtailcore_tags wagtailsettings_tags wagtailimages_tags %}
+
+
+<div class="flex flex-col 
+    md:flex-row
+    md:gap-10
+    md:items-start
+    md:justify-start
+    md:max-w-[1192px]
+    w-full h-full group
+">
+    <div class="
+        md:h-full
+        md:justify-center
+        md:flex
+        md:flex-col
+        md:max-w-[767px]
+    ">
+        <p class="text-sm md:text-base text-grey-700 dark:text-grey-200 font-codepro pt-7 md:pt-0 pb-2.5">
+
+            <span class="text-sm md:text-base text-mackerel-300 font-medium uppercase">
+                {% if page.topic %}
+                    {{ page.topic }}
+                {% else %}
+                    Page
+                {% endif %}
+            </span>
+            {% if page.display_date %}
+                <span aria-hidden="true"
+                    class="line-through decoration-white dark:decoration-mackerel-400 decoration-4 text-grey-700 dark:text-grey-200">
+                    //
+                </span>
+                <span class="text-sm md:text-base text-grey-700 dark:text-grey-200">
+                    {{ page.display_date }}
+                </span>
+            {% endif %}
+        </p>
+
+        <a
+            href="{% pageurl page %}"
+            class="
+            text-xl md:text-2xl font-bold leading-8 md:leading-10
+            underline
+            underline-offset-8
+            decoration-[1.5px]
+            decoration-mackerel-200
+            hover:decoration-mackerel-300
+            "
+        >
+            {% firstof page.listing_title page.title %}
+        </a>
+        <p class="text-grey-700 dark:text-grey-200 pt-2.5 leading-6">
+            {% firstof page.listing_summary page.plain_introduction %}
+        </p>
+    </div>
+</div>
+

@@ -1,0 +1,50 @@
+
+{% extends "base_page.html" %}
+{% load wagtailcore_tags wagtailimages_tags static %}
+
+{% block content %}
+    {% block breadcrumbs %}
+        {% include "navigation/breadcrumbs.html" %}
+    {% endblock %}
+    <div class="site-padding site-container">
+
+        
+        <div class="flex flex-col md:flex-row md:items-center py-20">
+            <h1 class="font-serif4 [word-spacing:-6px] font-bold text-8xl lg:text-10xl
+            md:pr-16
+            lg:pr-20
+            {% if page.introduction %}
+                md:border-r-[1px]
+                md:basis-2/6
+                border-grey-200
+            {% endif %}
+            ">
+                {{ page.title }}
+            </h1>
+            {% if page.introduction %}
+                <div class="
+                    max-w-[636px]
+                    rich-text
+                    pt-5
+                    md:w-2/3
+                    md:pl-16
+                    lg:pl-20
+                ">
+                    {{ page.introduction|richtext }}
+                </div>
+            {% endif %}
+        </div>
+
+        {% if page.related_pages %}
+            <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 pb-20 md:pb-40">
+                {% for related_page in page.related_pages.specific %}
+                    {% include "components/card.html" with page=related_page %}
+                {% endfor %}
+            </section>
+        {% endif %}        
+    </div>
+
+    {% include_block page.body %}
+
+{% endblock %}
+

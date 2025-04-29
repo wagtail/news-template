@@ -1,0 +1,133 @@
+
+{% extends "base_page.html" %}
+{% load wagtailcore_tags wagtailimages_tags static %}
+
+{% block content %}
+    {% block breadcrumbs %}
+        {% include "navigation/breadcrumbs.html" %}
+    {% endblock %}
+    <div class="site-padding site-container">
+
+        
+        <div class="flex flex-col md:flex-row md:items-center py-20">
+            <h1 class="font-serif4 [word-spacing:-6px] font-bold text-8xl lg:text-10xl
+            md:pr-16
+            lg:pr-20
+            {% if page.introduction %}
+                md:border-r-[1px]
+                md:basis-2/6
+                border-grey-200
+            {% endif %}
+            ">
+                {{ page.title }}
+            </h1>
+        
+            <div class="
+                max-w-[636px] 
+                pt-5 
+                md:w-2/3
+                md:pl-16
+                lg:pl-20
+                flex
+                flex-col
+                gap-2.5
+            ">
+                {% if page.introduction %}
+                    <div class="rich-text">
+                        {{ page.introduction|richtext }}
+                    </div>
+                {% endif %}
+    
+                {% if topics %}
+                    <div class="
+                    flex
+                    flex-row
+                    pt-7
+                    gap-2.5
+                    ">
+                    <a href="{% pageurl page %}" 
+                        class="
+                        py-2.5 px-5
+                        text-sm
+                        uppercase
+                        font-codepro
+                        font-medium
+                        border-[1px] 
+                        rounded-[85px]
+
+                        {% if matching_topic %}
+                        bg-white dark:bg-mackerel-400
+                        text-mackerel-300 dark:text-white
+                        border-mackerel-300 dark:border-white
+                        hover:bg-mackerel-300 hover:dark:bg-white
+                        hover:text-white hover:dark:text-mackerel-400
+                        hover:border-mackerel-300 hover:dark:border-white
+                        {% else %}
+                        bg-mackerel-300 dark:bg-white
+                        text-white dark:text-mackerel-400
+                        border-mackerel-300 dark:border-white
+                        hover:bg-white hover:dark:bg-mackerel-400
+                        hover:text-mackerel-300 hover:dark:text-white
+                        hover:border-mackerel-300 hover:dark:border-white
+                        {% endif %}
+
+                        "
+                    >
+                        All
+                    </a>
+                    {% for topic in topics %}
+                        <a 
+                            href="{% pageurl page %}?topic={{ topic.slug }}" 
+                            class="
+                            py-2.5 px-5
+                            text-sm
+                            uppercase
+                            font-codepro
+                            font-medium
+                            {% if matching_topic == topic.slug %}
+                            bg-mackerel-300 dark:bg-white
+                            text-white dark:text-mackerel-400
+                            border-mackerel-300 dark:border-white
+                            hover:bg-white hover:dark:bg-mackerel-400
+                            hover:text-mackerel-300 hover:dark:text-white
+                            hover:border-mackerel-300 hover:dark:border-white
+                            active:
+                            {% else %}
+                            bg-white dark:bg-mackerel-400
+                            text-mackerel-300 dark:text-white
+                            border-mackerel-300 dark:border-white
+                            hover:bg-mackerel-300 hover:dark:bg-white
+                            hover:text-white hover:dark:text-mackerel-400
+                            hover:border-mackerel-300 hover:dark:border-white
+                            {% endif %}
+
+                            border-[1px]
+                            rounded-[85px]
+                            ">
+                            {{ topic.title }}
+                        </a>
+                    {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+
+        
+        {% if paginator_page %}
+            <section class="grid grid-cols-1 gap-8 lg:gap-10 pb-20 md:pb-40">
+                {% for subpage in paginator_page %}
+                    {% include "components/card--article.html" with page=subpage.specific %}
+                {% endfor %}
+
+                
+                {% if paginator %}
+                    {% include "components/pagination.html" with paginator_page=paginator_page %}
+                {% endif %}
+            </section>
+        {% endif %}
+    </div>
+
+    {% include_block page.body %}
+
+{% endblock %}
+

@@ -1,0 +1,75 @@
+
+{% extends "base_page.html" %}
+{% load wagtailcore_tags wagtailimages_tags static %}
+
+{% block content %}
+{% block breadcrumbs %}
+    {% include "navigation/breadcrumbs.html" %}
+{% endblock %}
+<div class="site-padding site-container gap-10 pt-20 md:pt-28 tall:md:pt-40 pb-10 md:pb-20 flex flex-col lg:flex-row">
+    <div class="max-w-[872px]">
+        <p class="text-sm md:text-base text-grey-700 dark:text-grey-200 font-codepro pt-0 pb-10">
+            <span class="text-sm md:text-base text-mackerel-300 font-medium uppercase">
+                {{ page.topic }}
+            </span>{% include "icons/slash.html" with class="inline fill-current w-4 h-4" %}{% include "icons/slash.html" with class="inline -ml-1 fill-current w-4 h-4" %}<span class="text-sm md:text-base text-grey-700 dark:text-grey-200">
+                {{ page.display_date }}
+            </span>
+        </p>
+        <h1 class="font-serif4 font-bold text-4xl lg:text-7xl">
+            {{ page.title }}
+        </h1>
+
+        <p class="pt-7 rich-text">
+            {{ page.introduction|richtext }}
+        </p>
+    </div>
+    <div class="lg:self-end lg:ml-auto flex flex-row items-center gap-3 text-sm md:text-base text-grey-700 dark:text-grey-200 font-codepro">
+        {% image page.author.image format-webp fill-60x60 gray as author_avatar %}
+        <img
+        src="{{ author_avatar.url }}"
+        width="{{ author_avatar.width }}"
+        height="{{ author_avatar.height }}"
+        alt="{{ author_avatar.alt }}"
+        class="w-10 h-10 rounded-full"
+        />  
+        {{ page.author.title }}
+    </div>
+</div>
+
+{% if page.image %}
+<div class="site-padding site-container pb-10 md:pb-20">
+    <div class="bg-mackerel-300 pr-10 overflow-hidden w-full max-h-[350px] md:max-h-[400px] lg:max-h-[640px]">
+        {% image page.image.0.value.image format-jpeg width-1000 as page_image_1x_jpg %}
+        {% image page.image.0.value.image format-jpeg width-2000 as page_image_2x_jpg %}
+        {% image page.image.0.value.image format-webp width-1000 as page_image_1x_webp %}
+        {% image page.image.0.value.image format-webp width-2000 as page_image_2x_webp %}
+        <picture>
+            <source srcset="{{ page_image_1x_webp.url }} 1x, {{ page_image_2x_webp.url }} 2x" type="image/webp" />
+            <source srcset="{{ page_image_1x_jpg.url }} 1x, {{ page_image_2x_jpg.url }} 2x" type="image/jpeg" />
+            <img
+                src="{{ page_image_1x_webp.url }}"
+                width="{{ page_image_1x_webp.width }}"
+                height="{{ page_image_1x_webp.height }}"
+                alt="{% firstof page.image.0.value.image_alt_text page_image_1x_webp.alt %}"
+                class="aspect-video w-full object-cover"
+                {% if page_image_1x_webp.focal_point %}
+                style="{{ page_image_1x_webp.object_position_style }}"
+                {% endif %}
+            />
+        </picture>
+
+        
+
+    </div>
+    {% if value.caption %}
+        <p class="text-sm leading-6 py-5">{{ page.image.0.value.caption }}</p>
+    {% endif %}
+</div>
+{% endif %}
+
+{% include_block page.body %}
+
+{% include "components/related-pages.html" %}
+
+{% endblock %}
+

@@ -1,0 +1,25 @@
+
+{% extends "base_page.html" %}
+{% load wagtailcore_tags wagtailimages_tags static %}
+
+{% block content %}
+    {% block breadcrumbs %}
+        {% include "navigation/breadcrumbs.html" %}
+    {% endblock %}
+    <div class="site-padding site-container">
+        <div class="relative max-w-[872px] pt-32 tall:pt-40 pb-20">
+            <h1 class="font-serif4 [word-spacing:-6px] font-bold text-7xl lg:text-10xl">
+                {{ page.title }}
+            </h1>
+            <p class="max-w-[636px] pt-7 rich-text">
+                {{ page.introduction|richtext }}
+            </p>
+        </div>
+    </div>
+
+    {% include_block page.body %}
+
+    {% include "components/related-pages.html" %}
+
+{% endblock %}
+

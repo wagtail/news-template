@@ -1,0 +1,32 @@
+
+{% load wagtailcore_tags %}
+
+
+{% if page.get_ancestors|length > 1 %}
+    
+    <nav aria-label="breadcrumb" class="site-container hidden md:flex items-center w-full px-10 md:px-20 py-[15px]">
+        <ol class="flex flex-wrap gap-3.5">
+            {% for ancestor_page in page.get_ancestors.specific %}
+                {% if not ancestor_page.is_root %}
+                    <li class="flex flex-row gap-3.5 items-center">
+                        <a 
+                        href="{% pageurl ancestor_page %}"
+                        class="
+                        underline
+                        underline-offset-4
+                        decoration-[1.5px]
+                        decoration-mackerel-200
+                        hover:decoration-mackerel-300
+                        ">
+                            {% firstof ancestor_page.listing_title ancestor_page.title %}
+                        </a>
+
+                        {% include "icons/slash.html" with class="w-3 h-3 fill-grey-700 dark:fill-grey-200" %}
+
+                    </li>
+                {% endif %}
+            {% endfor %}
+        </ol>
+    </nav>
+{% endif %}
+

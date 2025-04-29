@@ -1,0 +1,26 @@
+
+{% extends "base.html" %}
+
+{% load static wagtailuserbar wagtailcore_tags wagtailimages_tags util_tags %}
+
+{% wagtail_site as current_site %}
+
+{% block meta_tags %}
+
+<link rel="icon" href="{% static 'images/favicons/favicon.ico' %}" sizes="32x32">
+<link rel="icon" href="{% static 'images/favicons/favicon.svg'%}" type="image/svg+xml">
+<link rel="apple-touch-icon" href="{% static 'images/favicons/apple-touch-icon.png' %}">
+<link rel="manifest" href="{% static 'images/favicons/favicon.webmanifest' %}">
+<meta name="theme-color" content="#26899E"/>
+
+{% endblock meta_tags %}
+
+{% block header %}
+    {% include "navigation/header.html" %}
+{% endblock header %}
+
+
+{% block footer %}
+    {% include "navigation/footer.html" %}
+{% endblock footer %}
+
