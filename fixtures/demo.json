@@ -575,10 +575,11 @@
         80
       ],
       "twitter_handle": "test",
-      "linkedin_handle": "test",
+      "linkedin_url_segment": "company/test",
       "facebook_app_id": "test",
       "instagram_handle": "test",
       "tiktok_handle": "test",
+	  "youtube_handle": "test",
       "default_sharing_text": ""
     }
   },
