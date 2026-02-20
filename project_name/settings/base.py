@@ -51,6 +51,8 @@ INSTALLED_APPS = [
     "wagtail.images",
     "wagtail.search",
     "wagtail.admin",
+    "wagtail.locales",
+    "wagtail.contrib.simple_translation",
     "wagtail.contrib.search_promotions",
     "wagtail",
     "modelcluster",
@@ -67,6 +69,7 @@ MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
+    "django.middleware.locale.LocaleMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
@@ -258,6 +261,14 @@ DATA_UPLOAD_MAX_NUMBER_FIELDS = 10_000
 
 
 # Wagtail settings
+WAGTAIL_I18N_ENABLED = True
+
+WAGTAIL_CONTENT_LANGUAGES = LANGUAGES = [
+    ("en", "English"),
+    ("de", "Deutsch"),
+    ("ar", "العربيّة"),
+    ("zh-hans", "中文"),
+]
 
 WAGTAIL_SITE_NAME = "{{ project_name }}"
 
