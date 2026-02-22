@@ -1,8 +1,7 @@
 {% verbatim %}
 {% load static wagtailcore_tags wagtailuserbar %}
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ request.LANGUAGE_CODE }}">
     <head>
         <meta charset="utf-8" />
         <title>
@@ -32,7 +31,29 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
+        
+        {% if page %}
+            <link rel="alternate"
+                hreflang="{{ page.locale.language_code }}"
+                href="{{ page.full_url }}">
+            {% if page.locale.language_code == settings.LANGUAGE_CODE %}
+                <link rel="alternate"
+                    hreflang="x-default"
+                    href="{{ page.full_url }}">
+            {% endif %}
 
+            {% for translation in page.get_translations.live %}
+                <link rel="alternate"
+                    hreflang="{{ translation.locale.language_code }}"
+                    href="{{ translation.full_url }}">
+                {% if translation.locale.language_code == settings.LANGUAGE_CODE %}
+                    <link rel="alternate"
+                        hreflang="x-default"
+                        href="{{ translation.full_url }}">
+                {% endif %}
+            {% endfor %}
+
+        {% endif %}
 
         
         {% if request.in_preview_panel %}
