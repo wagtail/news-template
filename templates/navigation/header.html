@@ -69,6 +69,11 @@
                         {% include "icons/magnifying-glass.html" with class="fill-current w-5 h-5" %}
                     </button>
                 </li>
+                {% if page.get_translations.live %}
+                    <li>
+                        {% include "components/language-switcher.html" %}
+                    </li>
+                {% endif %}
                 <li>
                     {% include "components/theme-toggle.html" %}
                 </li>
@@ -131,6 +136,7 @@
         </ul>
         {% include "components/search.html" with variant="mobile-menu" %}
         {% include "components/theme-toggle.html" %}
+        {% include "components/language-switcher.html" with variant="mobile-menu" %}
     </nav>
     </section>
 
@@ -154,6 +160,7 @@
         "
     >
         {% include "components/search.html" with variant="search-panel" %}
+    
     </div>
 </header>
 {% endverbatim %}
