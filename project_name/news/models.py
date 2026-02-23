@@ -1,7 +1,7 @@
 from django.conf import settings
 from django.db import models
 from django.db.models.functions import Coalesce
-from django.core.paginator import Paginator
+from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 from wagtail.admin.panels import FieldPanel, HelpPanel, InlinePanel, MultiFieldPanel
 from wagtail.fields import RichTextField
 from wagtail.search import index
