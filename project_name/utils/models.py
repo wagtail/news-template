@@ -177,6 +177,13 @@ class Statistic(models.Model):
 
 @register_setting
 class SocialMediaSettings(BaseSiteSetting):
+    LINKEDIN_PROFILE_COMPANY = "company"
+    LINKEDIN_PROFILE_PERSONAL = "in"
+    LINKEDIN_PROFILE_CHOICES = [
+        (LINKEDIN_PROFILE_COMPANY, "Company page"),
+        (LINKEDIN_PROFILE_PERSONAL, "Personal profile"),
+    ]
+
     twitter_handle = models.CharField(
         max_length=255,
         blank=True,
@@ -184,6 +191,12 @@ class SocialMediaSettings(BaseSiteSetting):
     )
     linkedin_handle = models.CharField(
         max_length=255, blank=True, help_text="Your Linkedin handle, e.g. katyperry."
+    )
+    linkedin_profile_type = models.CharField(
+        max_length=20,
+        choices=LINKEDIN_PROFILE_CHOICES,
+        default=LINKEDIN_PROFILE_COMPANY,
+        help_text="Choose whether the LinkedIn handle is for a company page or personal profile.",
     )
     facebook_app_id = models.CharField(
         max_length=255, blank=True, help_text="Your Facebook app ID."
