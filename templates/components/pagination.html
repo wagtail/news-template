@@ -24,7 +24,7 @@
                     min-w-10
                     min-h-10
                     "
-                    href="{% querystring_modify page=paginator_page.previous_page_number %}">
+                    href="?{% if request.GET %}{{ request.GET.urlencode }}&{% endif %}page={{ paginator_page.previous_page_number }}">
                     {% include "icons/arrow-right.html" with class="fill-current w-3 h-3 rotate-180" %}
                     <span class="sr-only">Previous page</span>
                 </a>
@@ -52,7 +52,7 @@
                         min-w-10
                         min-h-10
                         "
-                        href="{% querystring_modify page=1 %}"
+                        href="?{% if request.GET %}{{ request.GET.urlencode }}&{% endif %}page=1"
                         >
                         1
                     </a>
@@ -125,7 +125,7 @@
                             min-w-10
                             min-h-10
                             "
-                            href="{% querystring_modify page=i %}">
+                            href="?{% if request.GET %}{{ request.GET.urlencode }}&{% endif %}page={{ i }}">
                             {{ i }}
                         </a>
                     </li>
@@ -177,7 +177,7 @@
                         justify-center
                         min-w-10
                         min-h-10"
-                        href="{% querystring_modify page=paginator_page.paginator.num_pages %}"
+                        href="?{% if request.GET %}{{ request.GET.urlencode }}&{% endif %}page={{ paginator_page.paginator.num_pages }}"
                         >
                         {{ paginator_page.paginator.num_pages }}
                     </a>
@@ -203,7 +203,7 @@
                 min-w-10
                 min-h-10
                 "
-                href="{% querystring_modify page=paginator_page.next_page_number %}">
+                href="?{% if request.GET %}{{ request.GET.urlencode }}&{% endif %}page={{ paginator_page.next_page_number }}">
                 <span class="sr-only">Next page</span>
                 {% include "icons/arrow-right.html" with class="fill-current w-3 h-3" %}
             </a>
