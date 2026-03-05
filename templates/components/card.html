@@ -29,18 +29,18 @@ w-full h-full group
             <source srcset="{{ card_image_1x_webp.url }} 1x, {{ card_image_2x_webp.url }} 2x" type="image/webp" />
             <source srcset="{{ card_image_1x_jpg.url }} 1x, {{ card_image_2x_jpg.url }} 2x" type="image/jpeg" />
             <img
-                src="{{ card_image_1x_webp.url }}"
-                width="{{ card_image_1x_webp.width }}"
-                height="{{ card_image_1x_webp.height }}"
-                alt="{{ card_image_1x_webp.alt }}"
+                src="{{ card_image_1x_jpg.url }}"
+                width="{{ card_image_1x_jpg.width }}"
+                height="{{ card_image_1x_jpg.height }}"
+                alt="{{ card_image_1x_jpg.alt }}"
 
                 class="
                 aspect-[20/11] 
                 md:aspect-[4/3] lg:aspect-[20/11] 
                 
                 w-full h-full object-cover"
-                {% if card_image_1x_webp.focal_point %}
-                style='{{ card_image_1x_webp.object_position_style }}'
+                {% if card_image_1x_jpg.focal_point %}
+                style='{{ card_image_1x_jpg.object_position_style }}'
                 {% endif %}
             />
         </picture>
