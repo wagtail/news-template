@@ -1,8 +1,12 @@
 {% verbatim %}
 {% load static wagtailcore_tags wagtailuserbar %}
 
+
 <!DOCTYPE html>
-<html lang="{{ request.LANGUAGE_CODE }}" {% if request.LANGUAGE_CODE == 'ar' %}dir="rtl"{% endif %}>
+{% load i18n %}
+
+{% get_current_language_bidi as LANGUAGE_BIDI %}
+<html lang="{{ LANGUAGE_CODE }}" dir="{% if LANGUAGE_BIDI %}rtl{% else %}ltr{% endif %}">
     <head>
         <meta charset="utf-8" />
         <title>
@@ -14,6 +18,16 @@
             {% if current_site and current_site.site_name %}- {{ current_site.site_name }}{% endif %}
             {% endblock %}
         </title>
+
+        {# Hreflang Tags #}
+        {% if page.get_translations %}
+            <link rel="alternate" hreflang="{{ page.locale.language_code }}" href="{{ page.full_url }}" />
+            {% for translation in page.get_translations.live %}
+                <link rel="alternate" hreflang="{{ translation.locale.language_code }}" href="{{ translation.full_url }}" />
+            {% endfor %}
+            <link rel="alternate" hreflang="x-default" href="{{ page.get_site.root_url }}{{ page.url }}" />
+        {% endif %}
+
         {% if page.search_description %}
         <meta name="description" content="{{ page.search_description }}" />
         {% endif %}
@@ -47,6 +61,8 @@
         {% block extra_css %}
         
         {% endblock %}
+
+        
     </head>
 
     <body class="{% block body_class %}{% endblock %}">

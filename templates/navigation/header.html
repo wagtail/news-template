@@ -1,5 +1,6 @@
 {% verbatim %}
 {% load wagtailcore_tags wagtailsettings_tags %}
+{% load i18n %}
 {% wagtail_site as current_site %}
 
 
@@ -72,28 +73,9 @@
                 <li>
                     {% include "components/theme-toggle.html" %}
                 </li>
-
-                {% load i18n %}
-                <li class="flex items-center gap-x-3 ml-4 border-l border-mackerel-200 pl-6">
-                    {% get_current_language as LANGUAGE_CODE %}
-                    {% get_available_languages as LANGUAGES %}
-
-                    {% for lang_code, lang_name in LANGUAGES %}
-                        <a href="/{{ lang_code }}/" 
-                        class="text-xs font-bold uppercase font-codepro tracking-widest transition-colors
-                        {% if lang_code == LANGUAGE_CODE %}
-                            text-mackerel-300 underline underline-offset-4 decoration-2
-                        {% else %}
-                            text-gray-400 hover:text-mackerel-200
-                        {% endif %}">
-                            {{ lang_code }}
-                        </a>
-                        {% if not forloop.last %}
-                            <span class="text-gray-300 text-xs">|</span>
-                        {% endif %}
-                    {% endfor %}
-                </li>
-                
+                <li class="flex items-center">
+                    {% include "navigation/language_switcher.html" %}
+                </li>      
             </ul>
         </nav>
     </div>
@@ -153,6 +135,9 @@
         </ul>
         {% include "components/search.html" with variant="mobile-menu" %}
         {% include "components/theme-toggle.html" %}
+        <div class="mt-4 px-0">
+            {% include "navigation/language_switcher.html" %}
+        </div>
     </nav>
     </section>
 
