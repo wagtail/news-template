@@ -21,10 +21,14 @@
 
         {# Hreflang Tags #}
         {% if page.get_translations %}
-            <link rel="alternate" hreflang="{{ page.locale.language_code }}" href="{{ page.full_url }}" />
-            {% for translation in page.get_translations.live %}
-                <link rel="alternate" hreflang="{{ translation.locale.language_code }}" href="{{ translation.full_url }}" />
+            {# Current Page version #}
+            <link rel="alternate" hreflang="{{ page.locale.language_code }}" href="{{ page.get_full_url }}" />
+            
+            {# Other localized versions #}
+            {% for translation in page.get_translations.live.all %}
+                <link rel="alternate" hreflang="{{ translation.locale.language_code }}" href="{{ translation.get_full_url }}" />
             {% endfor %}
+            {# Fallback (Default) #}
             <link rel="alternate" hreflang="x-default" href="{{ page.get_site.root_url }}{{ page.url }}" />
         {% endif %}
 
