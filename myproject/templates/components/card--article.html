@@ -1,0 +1,102 @@
+
+{% load wagtailcore_tags wagtailsettings_tags wagtailimages_tags %}
+
+<div class="flex flex-col 
+    md:flex-row
+    md:gap-10
+    md:items-start
+    md:justify-start
+    md:max-w-[1192px]
+w-full h-full group
+">
+    <div class="
+        rounded-md
+        overflow-hidden 
+        md:h-full
+        md:min-w-[220px]
+        md:max-w-[220px]
+        lg:min-w-[345px]
+        lg:max-w-[345px]
+        w-full 
+    ">
+        {% if page.listing_image %}
+            {% image page.listing_image format-jpeg fill-800x600 as card_image_1x_jpg %}
+            {% image page.listing_image format-jpeg fill-1600x1200 as card_image_2x_jpg %}
+            {% image page.listing_image format-webp fill-800x600 as card_image_1x_webp %}
+            {% image page.listing_image format-webp fill-1600x1200 as card_image_2x_webp %}
+        {% else %}
+            
+            {% image settings.utils.SystemMessagesSettings.get_placeholder_image format-jpeg fill-800x600 as card_image_1x_jpg %}
+            {% image settings.utils.SystemMessagesSettings.get_placeholder_image format-jpeg fill-1600x1200 as card_image_2x_jpg %}
+            {% image settings.utils.SystemMessagesSettings.get_placeholder_image format-webp fill-800x600 as card_image_1x_webp %}
+            {% image settings.utils.SystemMessagesSettings.get_placeholder_image format-webp fill-1600x1200 as card_image_2x_webp %}
+        {% endif %}
+        <picture>
+            <source srcset="{{ card_image_1x_webp.url }} 1x, {{ card_image_2x_webp.url }} 2x" type="image/webp" />
+            <source srcset="{{ card_image_1x_jpg.url }} 1x, {{ card_image_2x_jpg.url }} 2x" type="image/jpeg" />
+            <img
+                src="{{ card_image_1x_webp.url }}"
+                width="{{ card_image_1x_webp.width }}"
+                height="{{ card_image_1x_webp.height }}"
+                alt="{{ card_image_1x_webp.alt }}"
+
+                class="
+                aspect-[20/11] 
+                md:aspect-[1]
+                w-full h-full object-cover"
+                {% if card_image_1x_webp.focal_point %}
+                style='{{ card_image_1x_webp.object_position_style }}'
+                {% endif %}
+            />
+        </picture>
+    </div>
+
+    <div class="
+        md:h-full
+        md:justify-center
+        md:flex
+        md:flex-col
+        md:max-w-[767px]
+    ">
+        {% if page.display_date %}
+            <p class="text-sm md:text-base text-grey-700 dark:text-grey-200 font-codepro pt-7 md:pt-0 pb-2.5">
+                <span class="text-sm md:text-base text-mackerel-300 font-medium uppercase mr-1">
+                    {{ page.topic }}
+                </span>{% include "icons/slash.html" with class="inline fill-current w-2.5 h-2.5" %}{% include "icons/slash.html" with class="inline fill-current w-2.5 h-2.5" %}<span class="text-sm md:text-base text-grey-700 dark:text-grey-200 ml-1">
+                    {{ page.display_date }}
+                </span>
+            </p>
+        {% endif %}
+        <a
+            href="{% pageurl page %}"
+            class="
+            text-xl md:text-2xl font-bold leading-8 md:leading-10
+            underline
+            underline-offset-8
+            decoration-[1.5px]
+            decoration-mackerel-200
+            hover:decoration-mackerel-300
+            "
+        >
+            {% firstof page.listing_title page.title %}
+        </a>
+        <p class="text-grey-700 dark:text-grey-200 pt-2.5 leading-6">
+            {% firstof page.listing_summary page.plain_introduction %}
+        </p>
+        {% if page.author %}
+            <div class="flex flex-row items-center gap-3 text-sm md:text-base text-grey-700 dark:text-grey-200 font-codepro pt-7">
+                {% image page.author.image format-webp fill-60x60 gray as author_avatar %}
+
+            <img
+                src="{{ author_avatar.url }}"
+                width="{{ author_avatar.width }}"
+                height="{{ author_avatar.height }}"
+                alt="{{ author_avatar.alt }}"
+                class="w-10 h-10 rounded-full"
+            />  
+                {{ page.author.title }}
+            </div>
+        {% endif %}
+    </div>
+</div>
+

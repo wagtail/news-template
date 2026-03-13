@@ -1,0 +1,38 @@
+{% load wagtailadmin_tags i18n %}
+
+{% block before_results %}
+    {% if view.active_filters %}
+        {% include "wagtailadmin/shared/active_filters.html" with active_filters=view.active_filters %}
+    {% endif %}
+
+    {% if render_filters_fragment %}
+        <template data-controller="w-teleport" data-w-teleport-target-value="#filters-drilldown" data-w-teleport-reset-value="true">
+            {% include "wagtailadmin/shared/headers/_filters.html" with filters=filters %}
+        </template>
+    {% endif %}
+
+    {% if render_buttons_fragment %}
+        <template data-controller="w-teleport" data-w-teleport-target-value="#w-slim-header-buttons" data-w-teleport-reset-value="true">
+            {% for button in header_buttons %}
+                {% component button %}
+            {% endfor %}
+        </template>
+    {% endif %}
+{% endblock %}
+
+{% if object_list %}
+    {% block results %}
+        {% component table %}
+    {% endblock %}
+    {% block pagination %}
+        {% if is_paginated %}
+            <div class="nice-padding">
+                {% include "wagtailadmin/shared/pagination_nav.html" with items=page_obj linkurl=index_url %}
+            </div>
+        {% endif %}
+    {% endblock %}
+{% else %}
+    <div class="nice-padding w-mt-8">
+        {% block no_results_message %}<p>{% trans "There are no results." %}</p>{% endblock %}
+    </div>
+{% endif %}

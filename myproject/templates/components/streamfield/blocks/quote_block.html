@@ -1,0 +1,12 @@
+
+<div class="mb-10 md:mb-20 last:mb-0">
+    <p class="font-serif4 text-3xl md:text-5xl font-semibold text-center mb-8 md:mb-10">
+        "{{ value.quote }}"
+    </p>
+    {% if value.attribution %}
+        <p class="font-serif4 text-base md:text-xl font-medium text-center mb-8 md:mb-10">
+            - {{ value.attribution }}
+        </p>
+    {% endif %}
+</div>
+

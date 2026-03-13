@@ -1,0 +1,159 @@
+
+{% load wagtailcore_tags wagtailsettings_tags %}
+{% wagtail_site as current_site %}
+
+
+<header class="site-container w-full px-10 pt-14 pb-8 md:py-8 md:px-20">
+    <div class="flex justify-between items-center ">
+        <a 
+            href="/"
+            data-header-logo
+            class="header-logo z-30 uppercase font-semibold text-3xl"
+            aria-label="Go to the Wagtail Starter Kit homepage">
+            {{ current_site.site_name|default:"Site name" }}
+        </a>
+
+        
+        <div class="flex md:hidden items-center gap-4">
+            <button 
+                class="z-30 button-menu-toggle" 
+                data-mobile-menu-toggle
+                aria-haspopup="true" 
+                aria-expanded="false" 
+                aria-label="Open navigation menu"
+            >
+                <span class="button-menu-toggle__line"></span>
+                <span class="button-menu-toggle__line"></span>
+                <span class="sr-only">Menu</span>
+            </button>
+        </div>
+        
+        
+        <nav aria-label="Primary" class="hidden md:block">
+            <ul class="flex gap-x-12 lg:gap-x-14">
+                {% for link in settings.navigation.NavigationSettings.primary_navigation %}
+                    <li>
+                        {% if link.value.page %}
+                            <a 
+                                class="
+                                flex 
+                                text-base 
+                                items-center 
+                                font-semibold 
+                                font-codepro
+                                underline
+                                underline-offset-8
+                                decoration-[1.5px]
+                                decoration-mackerel-200
+                                hover:decoration-mackerel-300
+                                " 
+                                href="{{ link.value.get_url }}" 
+                            >
+                                {{ link.value.get_title }}
+                            </a>
+                        {% endif %}
+                    </li>
+                {% endfor %}
+                <li class="flex items-center">
+                    <button 
+                        data-toggle-search-panel
+                        type="button"
+                        aria-expanded="true" 
+                        aria-controls="search-panel" 
+                        aria-label="Show search overlay" 
+                        class=""
+                        >
+                        <span class="sr-only">
+                        Search 
+                        </span>
+                        {% include "icons/magnifying-glass.html" with class="fill-current w-5 h-5" %}
+                    </button>
+                </li>
+                <li>
+                    {% include "components/theme-toggle.html" %}
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    
+    <section 
+        class="
+        md:hidden 
+        invisible 
+        transition-all 
+        duration-[640ms] 
+        ease-out-expo 
+        translate-x-full 
+        h-screen 
+        w-full
+        fixed 
+        top-0
+        left-0 
+        z-20
+        bg-mackerel-300
+        px-10 md:px-20
+        " 
+        data-mobile-menu-content
+    >
+    <nav aria-label="Primary" class="py-32">
+        <ul class="flex flex-col pt-5">
+            {% for link in settings.navigation.NavigationSettings.primary_navigation %}
+                <li class="
+                    border-t-[1px]
+                    border-dashed
+                    border-mackerel-200
+                    last-of-type:border-b-[1px]
+                ">
+                    {% if link.value.page %}
+                        <a 
+                            class="
+                            flex
+                            py-6
+                            text-lg
+                            items-center 
+                            font-semibold 
+                            font-codepro
+                            underline
+                            underline-offset-8
+                            text-white
+                            decoration-transparent
+                            hover:decoration-white
+                            decoration-[1.5px]
+                            " 
+                            href="" 
+                        >
+                             {{ link.value.get_title }}
+                        </a>
+                    {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+        {% include "components/search.html" with variant="mobile-menu" %}
+        {% include "components/theme-toggle.html" %}
+    </nav>
+    </section>
+
+    
+    <div 
+        id="search-panel"
+        data-search-panel
+        class="
+        z-10
+        absolute
+        hidden
+        md:block
+        invisible
+        top-0
+        right-0
+        pt-24
+        w-full
+        h-full 
+        bg-black
+        bg-opacity-20
+        "
+    >
+        {% include "components/search.html" with variant="search-panel" %}
+    </div>
+</header>
+

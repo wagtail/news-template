@@ -1,0 +1,55 @@
+
+{% extends "base_page.html" %}
+{% load wagtailcore_tags %}
+
+
+{% block content %}
+    {% block breadcrumbs %}
+        {% include "navigation/breadcrumbs.html" %}
+    {% endblock %}
+    <div class="site-padding site-container">
+
+        
+        <div class="flex flex-col md:flex-row md:items-center py-20">
+            <h1 class="min-w-fit max-w-[600px]font-serif4 [word-spacing:-6px] font-bold text-8xl lg:text-10xl
+            md:pr-16
+            lg:pr-20
+            {% if page.introduction %}
+                md:border-r-[1px]
+                md:basis-2/6
+                border-grey-200
+            {% endif %}
+            ">
+                {{ page.title }}
+            </h1>
+            {% if page.introduction %}
+                <div class="
+                    max-w-[636px]
+                    rich-text
+                    pt-5
+                    md:w-2/3
+                    md:pl-16
+                    lg:pl-20
+                ">
+                    {{ page.introduction|richtext }}
+                </div>
+            {% endif %}
+        </div>
+
+        <form class="pb-20 md:pb-40 max-w-[520px]" action="{% pageurl page %}" method="POST">
+            {% csrf_token %}
+
+
+            {% for field in form %}
+                {% include "components/form-field.html" with field=field %}
+            {% endfor %}
+
+            <button
+                type="Submit"
+                class="md:px-10 px-5 py-3 md:py-[15px] justify-center items-center text-sm md:text-base font-codepro uppercase inline-flex text-white bg-mackerel-300 dark:text-mackerel-400 rounded-[30px]">
+                {{ form.action_text|default:"Submit" }}
+            </button>
+        </form>
+    </div>
+{% endblock content %}
+

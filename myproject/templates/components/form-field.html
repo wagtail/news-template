@@ -1,0 +1,89 @@
+
+
+{% with field_type=field.field.widget.input_type %}
+    <div class="mb-10">
+        {% if field_type == "text" or field_type == "select" or field_type == "email" %}
+
+            {% if field.help_text %}
+                <p class="text-sm leading-7">{{ field.help_text }}<p>
+            {% endif %}
+                
+            {% if field.errors %}
+                <ul>
+                    {% for error in field.errors %}
+                    <li class="text-red-400 font-bold text-sm leading-7">
+                        {{ error {{
+                    </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+            {% if field_type == "text" or field_type == "email" %}
+                <input 
+                    class="text-base placeholder:text-base p-3.5 border border-mackerel-200 bg-white dark:bg-mackerel-100 dark:text-white placeholder:text-mackerel-400 dark:placeholder:text-white w-full rounded-[30px] min-h-[50px]"
+                    type="text"
+                    name="{{ field.name }}"
+                    {% if field.value %}
+                        value="{{ field.value }}"
+                    {% endif %}
+                    {% if field.label %}
+                        placeholder="{{ field.label }}"
+                    {% endif %}
+                />
+            {% elif field_type == "select" %}
+                <div class="relative">
+                    <select name="{{ field.name }}" class="text-base placeholder:text-base p-3.5 flex items-center border border-mackerel-200 bg-white dark:bg-mackerel-100 dark:text-white placeholder:text-mackerel-400 dark:placeholder:text-white rounded-[30px] appearance-none w-full cursor-pointer min-h-[50px]">
+                        {% if field.label %}
+                        <option value="">{{ field.label }}</option>
+                        {% endif %}
+                        {% for key, label in field.field.choices %}
+                            <option value="{{ key }}" 
+                            {% if field.value == key %} selected {% endif %}
+                            >
+                                {{ label }}
+                            </option>
+                        {% endfor %}
+                    </select>
+                    {% include "icons/arrow-right.html" with class="fill-current w-4 h-4 absolute right-4 top-1/2 -translate-y-1/2 rotate-90" %}
+                </div>
+            {% endif %}
+
+            {% elif field_type == "checkbox" or field_type == "radio" %}
+            {% if field.errors %}
+            <ul>
+                {% for error in field.errors %}
+                <li class="text-red-400 font-bold text-sm leading-7">
+                    {{ error {{
+                </li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+            
+            <div class="flex items-center">
+                {% if field_type == "checkbox" %}
+                <div class="checkbox">
+                    <input id="{{ field.id_for_label }}" class="h-[20px] w-[20px] bg-white dark:bg-mackerel-100 accent-mackerel-300" 
+                    type="checkbox" 
+                    {% if field.checked %}checked{% endif %}
+                    name="{{ field.name }}" 
+                    {% if field.value %}value="{{ field.value }}"{% endif %}
+                    {% if required %}required{% endif %}
+                    />
+                </div>
+                {% elif field_type == "radio" %}
+                <input 
+                    id="{{ field.id_for_label }}" 
+                    class="h-[30px] w-[30px] bg-white dark:bg-mackerel-100 accent-mackerel-300" 
+                    type="radio" 
+                    name="{{ field.name }}" 
+                    value="{{ field.value }}" 
+                />
+                {% endif %}
+
+                <label for="{{ field.id_for_label }}" class="ml-2 text-sm md:text-base leading-6 md:leading-7 cursor-pointer">
+                    {{ field.label }}
+                </label>
+            </div>
+        {% endif %}
+    </div>
+{% endwith %}
+

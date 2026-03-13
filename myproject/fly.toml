@@ -1,0 +1,36 @@
+app = 'wagtail-news-template'
+console_command = '/bin/bash'
+
+[build]
+  dockerfile = 'Dockerfile'
+
+[env]
+  DATABASE_URL = 'sqlite:////data/db.sqlite3'
+  MEDIA_ROOT = '/data/media'
+  PORT = '8000'
+
+[[mounts]]
+  source = 'wagtail'
+  destination = '/data'
+  initial_size = '1GB'
+
+[http_service]
+  internal_port = 8000
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 0
+
+  [http_service.concurrency]
+    type = 'requests'
+    soft_limit = 20
+
+[[vm]]
+  size = 'shared-cpu-1x'
+  memory = '512mb'
+  cpu_kind = 'shared'
+  cpus = 1
+
+[[statics]]
+  guest_path = "/data/media"
+  url_prefix = "/media"

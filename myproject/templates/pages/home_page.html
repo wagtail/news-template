@@ -1,0 +1,48 @@
+
+{% extends "base_page.html" %}
+{% load wagtailcore_tags wagtailimages_tags static %}
+
+{% block content %}
+    <div class="site-padding site-container">
+        <div class="relative max-w-[872px] pt-32 tall:pt-40 pb-40 md:pb-60">
+            <h1 class="font-serif4 [word-spacing:-6px] font-bold text-7xl lg:text-10xl">
+                {{ page.title }}
+            </h1>
+            
+            <div class="
+                absolute
+                overflow-hidden
+                z-[-1]
+                right-[-78px]
+                top-[98px]
+                w-52
+                h-52
+                md:right-[-131px]
+                md:top-[24px]
+                tall:md:top-[131px]
+                md:w-64
+                md:h-64
+                rotate-[32deg]
+                border-[3px]
+                rounded-3xl
+                border-dashed
+                border-mackerel-200"
+            >
+            </div>
+            <div class="max-w-[636px] pt-5 rich-text">
+                {{ page.introduction|richtext }}
+            </div>
+            {% if page.hero_cta %}
+                <div class="pt-10">
+                    {% include "components/button.html" with title=page.hero_cta.0.value.get_title url=page.hero_cta.0.value.get_url %}
+                </div>
+            {% endif %}
+        </div>
+    </div>
+
+    {% include_block page.body %}
+
+    {% include "components/related-pages.html" %}
+
+{% endblock %}
+

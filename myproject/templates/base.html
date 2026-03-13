@@ -1,0 +1,73 @@
+
+{% load static wagtailcore_tags wagtailuserbar %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>
+            {% block title %}
+            {% if page.seo_title %}{{ page.seo_title }}{% else %}{{ page.title }}{% endif %}
+            {% endblock %}
+            {% block title_suffix %}
+            {% wagtail_site as current_site %}
+            {% if current_site and current_site.site_name %}- {{ current_site.site_name }}{% endif %}
+            {% endblock %}
+        </title>
+        {% if page.search_description %}
+        <meta name="description" content="{{ page.search_description }}" />
+        {% endif %}
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+        {% comment %}
+        Set "noindex" if the site is not being requested on a configured
+        domain to prevent search engines crawling admin domains.
+        {% endcomment %}
+        {% if SEO_NOINDEX and not page.appear_in_search_results %}
+            <meta name="robots" content="noindex">
+        {% endif %}
+
+        <!-- TODO update -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
+
+
+        
+        {% if request.in_preview_panel %}
+        <base target="_blank">
+        {% endif %}
+
+        {% block meta_tags %}{% endblock %}
+
+        
+        <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+
+        {% block extra_css %}
+        
+        {% endblock %}
+    </head>
+
+    <body class="{% block body_class %}{% endblock %}">
+        {% wagtailuserbar %}
+
+        {% block header %}{% endblock header %}
+
+        <main class="flex-1" id="main-content">
+            {% block content %}
+
+            {% endblock content %}
+        </main>
+
+        {% block footer %}{% endblock footer %}
+
+        
+        <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+
+        {% block extra_js %}
+        
+        {% endblock %}
+    </body>
+</html>
+

@@ -1,0 +1,19 @@
+
+{% load util_tags %}
+
+{% if sr_only %}
+    <h2 class="sr-only">{{ value }}</h2>
+{% else %}
+    <h2
+        class="font-serif4 text-3xl md:text-5xl font-semibold
+        {% if large_spacing %}
+            mb-10 md:mb-20
+        {% else %}
+            mb-8 md:mb-10
+        {% endif %}
+        "
+        >
+        {{ value }}
+    </h2>
+{% endif %}
+

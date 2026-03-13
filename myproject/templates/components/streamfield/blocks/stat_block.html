@@ -1,0 +1,14 @@
+
+{% include "components/streamfield/blocks/heading2_block.html" with large_spacing=True value=value.heading sr_only=value.sr_only_label %}
+
+<div class="flex flex-col md:flex-row gap-20">
+    {% for statistic in value.statistics %}
+        <div class="flex flex-col gap-2 text-center items-center">
+            <div class="text-mackerel-300 text-8xl font-semibold font-codepro">
+                {{ statistic.statistic }}
+            </div>
+            <div class="text-lg md:text-xl">{{ statistic.description }}</div>
+        </div>
+    {% endfor %}
+</div>
+

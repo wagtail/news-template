@@ -1,0 +1,17 @@
+
+<div class="flex flex-col">
+    {% if value.heading %}
+        <h3 class="mb-8 text-xl md:text-2xl text-mackerel-300 font-semibold">{{ value.heading }}</h3>
+    {% endif %}
+    {% if value.description %}
+        <div class="mb-8 md:mb-12 md:pb-16 text-lg md:text-xl">
+            {{ value.description }}
+        </div>
+    {% endif %}
+    {% if value.link %}
+        {% with cta_link=value.link.0 %}
+            {% include "components/button.html" with title=cta_link.value.get_title url=cta_link.value.get_url classes="w-full md:w-auto" %}
+        {% endwith %}
+    {% endif %}
+</div>
+

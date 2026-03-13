@@ -1,0 +1,215 @@
+
+{% load util_tags %}
+
+
+{% if paginator_page.paginator.num_pages > 1 %}
+    <nav 
+        aria-label="Pagination results" 
+        role="navigation" 
+        class="flex flex-row justify-center items-center gap-2.5 pt-10">
+            {% if paginator_page.has_previous %}
+                
+                <a 
+                    class="
+                    rounded-md
+                    border-[1px]
+                    border-mackerel-200
+                    hover:bg-mackerel-200
+                    dark:border-mackerel-300
+                    dark:hover:bg-mackerel-300
+                    p-2
+                    flex
+                    items-center
+                    justify-center
+                    min-w-10
+                    min-h-10
+                    "
+                    href="{% querystring_modify page=paginator_page.previous_page_number %}">
+                    {% include "icons/arrow-right.html" with class="fill-current w-3 h-3 rotate-180" %}
+                    <span class="sr-only">Previous page</span>
+                </a>
+            {% endif %}
+
+        <ul class="flex flex-row justify-center items-center gap-2.5">
+            {% if paginator_page.number|add:'-1' > 1 %}
+                {% comment %}
+                    If the current page is more than 2 pages away from the first page,
+                    display a button for the first page.
+                {% endcomment %}
+                <li>
+                    <a 
+                        class="
+                        rounded-md
+                        border-[1px]
+                        border-mackerel-200
+                        hover:bg-mackerel-200
+                        dark:border-mackerel-300
+                        dark:hover:bg-mackerel-300
+                        p-2
+                        flex
+                        items-center
+                        justify-center
+                        min-w-10
+                        min-h-10
+                        "
+                        href="{% querystring_modify page=1 %}"
+                        >
+                        1
+                    </a>
+                </li>
+            {% endif %}
+
+            {% if paginator_page.number|add:'-2' > 1 %}
+                {% comment %}
+                    If the current page is more than 3 pages away from the first page,
+                    display an ellipsis (...) to indicate skipped pages.
+                {% endcomment %}
+                <li>
+                    <span 
+                        class="
+                        rounded-md
+                        border-[1px]
+                        border-mackerel-200
+                        dark:border-mackerel-300
+                        p-2
+                        flex
+                        items-center
+                        justify-center
+                        min-w-10
+                        min-h-10
+                        ">
+                        &hellip;
+                    </span>
+                </li>
+            {% endif %}
+
+            {% for i in paginator_page.paginator.page_range %}
+                {% if paginator_page.number == i %}
+                    
+                    <li aria-current="page" aria-label="Page {{ i }}">
+                        <span
+                            class="
+                            rounded-md
+                            border-[1px]
+                            bg-mackerel-200
+                            dark:border-mackerel-300
+                            dark:bg-mackerel-300
+                            p-2
+                            flex
+                            items-center
+                            justify-center
+                            min-w-10
+                            min-h-10
+                            ">
+                            {{ i }}
+                        </span>
+                    </li>
+                {% elif i > paginator_page.number|add:'-2' and i < paginator_page.number|add:'2' %}
+                {% comment %}
+                    Else if the loop iteration is within 2 pages of the current page,
+                    display it as a numeric pagination button.
+                {% endcomment %}
+                    <li>
+                        <a 
+                            class="
+                            rounded-md
+                            border-[1px]
+                            border-mackerel-200
+                            hover:bg-mackerel-200
+                            dark:border-mackerel-300
+                            dark:hover:bg-mackerel-300
+                            p-2
+                            flex
+                            items-center
+                            justify-center
+                            min-w-10
+                            min-h-10
+                            "
+                            href="{% querystring_modify page=i %}">
+                            {{ i }}
+                        </a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+
+
+            {% if paginator_page.paginator.num_pages > paginator_page.number|add:'2' %}
+                {% comment %}
+                    If there are more than 2 pages remaining after the current page,
+                    display an ellipsis (...) to indicate skipped pages.
+                {% endcomment %}
+                <li>
+                    <span
+                        class="
+                        rounded-md
+                        border-[1px]
+                        border-mackerel-200
+                        dark:border-mackerel-300
+                        p-2
+                        flex
+                        items-center
+                        justify-center
+                        min-w-10
+                        min-h-10
+                        "
+                        >
+                        &hellip;
+                    </span>
+                </li>
+            {% endif %}
+            {% if paginator_page.paginator.num_pages > paginator_page.number|add:'1' %}
+                {% comment %}
+                    If there is at least one page following the current page,
+                    display a button for the last page.
+                {% endcomment %}
+                <li>
+                    <a 
+                        class="
+                        rounded-md
+                        border-[1px]
+                        border-mackerel-200
+                        hover:bg-mackerel-200
+                        dark:border-mackerel-300
+                        dark:hover:bg-mackerel-300
+                        p-2
+                        flex
+                        items-center
+                        justify-center
+                        min-w-10
+                        min-h-10"
+                        href="{% querystring_modify page=paginator_page.paginator.num_pages %}"
+                        >
+                        {{ paginator_page.paginator.num_pages }}
+                    </a>
+                </li>
+            {% endif %}
+        </ul>
+
+        {% if paginator_page.has_next %}
+            
+            <a
+                class="
+            
+                rounded-md
+                border-[1px]
+                border-mackerel-200
+                hover:bg-mackerel-200
+                dark:border-mackerel-300
+                dark:hover:bg-mackerel-300
+                p-2
+                flex
+                items-center
+                justify-center
+                min-w-10
+                min-h-10
+                "
+                href="{% querystring_modify page=paginator_page.next_page_number %}">
+                <span class="sr-only">Next page</span>
+                {% include "icons/arrow-right.html" with class="fill-current w-3 h-3" %}
+            </a>
+
+
+        {% endif %}
+    </nav>
+{% endif %}
+
