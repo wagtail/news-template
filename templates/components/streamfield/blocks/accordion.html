@@ -1,5 +1,31 @@
 {% verbatim %}
-<div class="">
-    {{ self }}
-</div>
+{% load wagtailcore_tags %}
+
+{% load wagtailcore_tags %}
+<div class="container mx-auto my-16 text-black">
+    {% for accordion in value.sections %}
+    <details class="my-8 border-b border-grey-300 group">
+      <!-- webkit-details-marker hides the default arrow on safari -->
+      <summary
+        class="flex flex-col my-4 gap-2 hover:cursor-pointer focus-visible:outline-0 [&::-webkit-details-marker]:hidden">
+        <span class="font-semibold text-3xl hover:underline">{{ accordion.title }}</span>
+        <!-- Show/Hide Button with Tailwind classes for visibility -->
+        <div
+          class="text-base text-mackerel-400 hover:text-mackerel-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-mackerel-300 focus-visible:w-fit mb-4">
+          <!-- Show button - visible when details is closed (default) and hidden when open -->
+          <div class="flex items-center gap-1 group-open:hidden">
+            {% include "icons/chevron.html" with class="w-3.5 h-3.5 transform rotate-0" %}
+            Show
+          </div>
+          <!-- Hide button - hidden by default and visible when details is open -->
+          <div class="hidden items-center gap-1 group-open:flex">
+            {% include "icons/chevron.html" with class="w-3.5 h-3.5 transform rotate-90" %}
+            Hide
+          </div>
+        </div>
+      </summary>
+      <div class="rich-text mb-8">{{ accordion.content }}</div>
+    </details>
+    {% endfor %}
+  </div>
 {% endverbatim %}
