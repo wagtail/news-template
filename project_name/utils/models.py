@@ -262,29 +262,9 @@ class SystemMessagesSettings(BaseSiteSetting):
 
     def get_placeholder_image(self):
         """
+        Return the configured placeholder image.
         """
-        if self.placeholder_image:
-            return self.placeholder_image
-
-        # Get the absolute path to the image file
-        absolute_path = find('images/placeholder-image.webp')
-        if absolute_path:
-            with open(absolute_path, 'rb') as f:
-                image_bytes = f.read()
-
-            img_file = ImageFile(BytesIO(image_bytes), name="Placeholder Image")
-            im = WillowImage.open(img_file)
-            width, height = im.get_size()
-
-            new_default_image = CustomImage(title="Placeholder Image", file=img_file, width=width, height=height)
-            new_default_image.save()
-            new_default_image.tags.add("placeholder")
-
-            self.placeholder_image = new_default_image
-            self.save()  # Save to persist new image as placeholder
-            return self.placeholder_image
-        raise ValidationError("No placeholder image found. Please upload a placeholder image.")
-
+        return self.placeholder_image 
 
 # Apply default cache headers on this page model's serve method.
 @method_decorator(get_default_cache_control_decorator(), name="serve")
