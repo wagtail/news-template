@@ -6,3 +6,4 @@ whitenoise
 gunicorn==23.0.0
 django-storages[s3]
 wagtail-storages
+wagtail-localize
