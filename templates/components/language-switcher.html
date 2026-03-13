@@ -1,0 +1,68 @@
+{% verbatim %}
+{% load wagtailcore_tags %}
+
+{% if page and page.get_translations.live %}
+    {% if variant == "mobile-menu" %}
+        <details class="border-t border-dashed border-mackerel-200">
+            <summary class="
+                flex
+                py-6
+                text-lg
+                font-semibold
+                font-codepro
+                text-white
+                cursor-pointer
+                list-none
+                items-center
+                gap-2
+            ">
+                {% include "icons/globe.html" with class="w-5 h-5" %}
+                {{ page.locale.language_name_local }}
+                {% include "icons/chevron-down.html" with class="w-4 h-4 ml-auto" %}
+            </summary>
+            <ul class="flex flex-col pb-4">
+                {% for translation in page.get_translations.live %}
+                    <li>
+                        <a href="{% pageurl translation %}"
+                           hreflang="{{ translation.locale.language_code }}"
+                           class="
+                               flex
+                               py-3
+                               pl-7
+                               text-lg
+                               font-semibold
+                               font-codepro
+                               text-white
+                               underline
+                               underline-offset-8
+                               decoration-transparent
+                               hover:decoration-white
+                               decoration-[1.5px]
+                           ">
+                            {{ translation.locale.language_name_local }}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </details>
+    {% else %}
+        <details class="relative">
+            <summary class="relative flex justify-center items-center p-1 cursor-pointer list-none">
+                <span class="sr-only">Language switcher</span>
+                {% include "icons/globe.html"  with class="w-3 h-3" %}
+                {% include "icons/chevron-down.html" with class="w-4 h-4" %}
+            </summary>
+            <ul style="width: 100px;" class="absolute top-full left-0 mt-2 bg-white dark:bg-mackerel-100 shadow-md rounded-md py-1 z-50 whitespace-nowrap">
+                {% for translation in page.get_translations.live %}
+                    <li>
+                        <a href="{% pageurl translation %}"
+                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors text-right">
+                            {{ translation.locale.language_name_local }}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </details>
+    {% endif %}
+{% endif %}
+{% endverbatim %}
