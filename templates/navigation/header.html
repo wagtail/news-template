@@ -1,5 +1,6 @@
 {% verbatim %}
 {% load wagtailcore_tags wagtailsettings_tags %}
+{% load i18n %}
 {% wagtail_site as current_site %}
 
 
@@ -71,6 +72,9 @@
                 <li>
                     {% include "components/theme-toggle.html" %}
                 </li>
+                <li class="flex items-center">
+                    {% include "navigation/language_switcher.html" %}
+                </li>      
             </ul>
         </nav>
     </div>
@@ -130,6 +134,9 @@
         </ul>
         {% include "components/search.html" with variant="mobile-menu" %}
         {% include "components/theme-toggle.html" %}
+        <div class="mt-4 px-0">
+            {% include "navigation/language_switcher.html" %}
+        </div>
     </nav>
     </section>
 
