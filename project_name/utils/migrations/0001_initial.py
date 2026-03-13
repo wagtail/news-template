@@ -54,6 +54,7 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('twitter_handle', models.CharField(blank=True, help_text='Your Twitter username without the @, e.g. katyperry', max_length=255)),
                 ('linkedin_handle', models.CharField(blank=True, help_text='Your Linkedin handle, e.g. katyperry.', max_length=255)),
+                ('linkedin_profile_type', models.CharField(choices=[('company', 'Company page'), ('in', 'Personal profile')], default='company', help_text='Choose whether the LinkedIn handle is for a company page or personal profile.', max_length=20)),
                 ('facebook_app_id', models.CharField(blank=True, help_text='Your Facebook app ID.', max_length=255)),
                 ('instagram_handle', models.CharField(blank=True, help_text='Your Instagram username, e.g. katyperry', max_length=255)),
                 ('tiktok_handle', models.CharField(blank=True, help_text='Your TikTok username, e.g. katyperry', max_length=255)),

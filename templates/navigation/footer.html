@@ -68,7 +68,7 @@
                 <p class="sr-only">Follow us</p>
                 <div class="flex flex-row gap-10 pt-14">
                     {% if settings.utils.SocialMediaSettings.linkedin_handle %}
-                    <a href="https://linkedin.com/company/{{ settings.utils.SocialMediaSettings.linkedin_handle }}"
+                    <a href="https://linkedin.com/{{ settings.utils.SocialMediaSettings.linkedin_profile_type }}/{{ settings.utils.SocialMediaSettings.linkedin_handle }}"
                         aria-label="{{ current_site.site_name|default:'We&apos;re' }} on LinkedIn"
                         class="hover:text-mackerel-300">
                         <svg aria-hidden="true" class="fill-current w-7 h-7" width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
