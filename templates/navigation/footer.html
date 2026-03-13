@@ -64,11 +64,11 @@
                 </div>
             {% endif %}
 
-            {% if settings.utils.SocialMediaSettings.linkedin_handle or settings.utils.SocialMediaSettings.facebook_app_id or settings.utils.SocialMediaSettings.instagram_handle or settings.utils.SocialMediaSettings.tiktok_handle %}
+            {% if settings.utils.SocialMediaSettings.linkedin_url_segment or settings.utils.SocialMediaSettings.facebook_app_id or settings.utils.SocialMediaSettings.instagram_handle or settings.utils.SocialMediaSettings.tiktok_handle or settings.utils.SocialMediaSettings.youtube_handle %}
                 <p class="sr-only">Follow us</p>
                 <div class="flex flex-row gap-10 pt-14">
-                    {% if settings.utils.SocialMediaSettings.linkedin_handle %}
-                    <a href="https://linkedin.com/company/{{ settings.utils.SocialMediaSettings.linkedin_handle }}"
+                    {% if settings.utils.SocialMediaSettings.linkedin_url_segment %}
+                    <a href="https://linkedin.com/{{ settings.utils.SocialMediaSettings.linkedin_url_segment }}"
                         aria-label="{{ current_site.site_name|default:'We&apos;re' }} on LinkedIn"
                         class="hover:text-mackerel-300">
                         <svg aria-hidden="true" class="fill-current w-7 h-7" width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -109,6 +109,16 @@
                         class="hover:text-mackerel-300">
                         <svg aria-hidden="true" class="fill-current w-7 h-7" viewBox="0 0 18 31">
                             <path d="m4.05469 17.9141v12.4629h6.79691v-12.4629h5.0683l1.0547-5.7305h-6.123v-2.0274c0-3.02925 1.1894-4.1894 4.2597-4.1894.9551 0 1.7227.02343 2.168.07031v-5.197266c-.8379-.228516-2.8887-.462891-4.0723-.462891-6.26364 0-9.15231 2.958987-9.15231 9.339847v2.4668h-3.86719v5.7305z" />
+                        </svg>
+                    </a>
+                    {% endif %}
+                    {% if settings.utils.SocialMediaSettings.youtube_handle %}
+                    <a href="https://www.youtube.com/@{{ settings.utils.SocialMediaSettings.youtube_handle }}"
+                        aria-label="{{ current_site.site_name|default:'We&apos;re' }} on Youtube"
+                        class="hover:text-mackerel-300">
+                        <svg aria-hidden="true" class="fill-current w-7 h-7" viewBox="0 0 31 31">
+                            <path d="M29.5 9.5c0-2.2-1.8-4-4-4H5.5c-2.2 0-4 1.8-4 4v12c0 2.2 1.8 4 4 4h20c2.2 0 4-1.8 4-4v-12z" />
+                            <path fill="white" d="M12.5 21l8-5.5-8-5.5v11z" />
                         </svg>
                     </a>
                     {% endif %}

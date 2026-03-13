@@ -53,10 +53,11 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('twitter_handle', models.CharField(blank=True, help_text='Your Twitter username without the @, e.g. katyperry', max_length=255)),
-                ('linkedin_handle', models.CharField(blank=True, help_text='Your Linkedin handle, e.g. katyperry.', max_length=255)),
+                ('linkedin_url_segment', models.CharField(blank=True, help_text="Your Linkedin url segment after 'linkedin.com/', e.g. in/katyperry or company/katy-perry-collections .", max_length=255)),
                 ('facebook_app_id', models.CharField(blank=True, help_text='Your Facebook app ID.', max_length=255)),
                 ('instagram_handle', models.CharField(blank=True, help_text='Your Instagram username, e.g. katyperry', max_length=255)),
                 ('tiktok_handle', models.CharField(blank=True, help_text='Your TikTok username, e.g. katyperry', max_length=255)),
+                ('youtube_handle', models.CharField(blank=True, help_text='Your Youtube handle without the @, e.g. katyperry.', max_length=255)),
                 ('default_sharing_text', models.CharField(blank=True, help_text='Default sharing text to use if social text has not been set on a page.', max_length=255)),
                 ('site', models.OneToOneField(editable=False, on_delete=django.db.models.deletion.CASCADE, to='wagtailcore.site')),
             ],
