@@ -17,3 +17,7 @@ reset-db:
 	python ./manage.py createcachetable
 	python ./manage.py migrate
 	python ./manage.py load_initial_data
+
+test:
+	python ./manage.py check
+	python ./manage.py test
