@@ -7,6 +7,7 @@ from django.db import models
 from django.db.models import QuerySet
 from django.utils.decorators import method_decorator
 from django.utils.functional import cached_property
+from django.utils.text import slugify
 from modelcluster.fields import ParentalKey
 from willow.image import Image as WillowImage
 
