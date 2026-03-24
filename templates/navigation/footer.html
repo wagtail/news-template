@@ -53,14 +53,16 @@
                         {{ settings.utils.SystemMessagesSettings.footer_newsletter_signup_description }}
                     </p>
                     {% endif %}
-                    <div class="pt-5 flex gap-1 md:gap-2.5">
-                        <input 
-                            type="email" 
-                            placeholder="Enter your email" 
+                    <form class="pt-5 flex gap-1 md:gap-2.5" action="{{ settings.utils.SystemMessagesSettings.footer_newsletter_signup_link }}" method="get">
+                        <input
+                            type="email"
+                            name="email"
+                            required
+                            placeholder="Enter your email"
                             aria-labelledby="footer-newsletter-signup-title"
                             class="border-[1px] border-mackerel-200 rounded-[3px] px-5 md:py-2.5 md:px-5 text-base md:text-lg bg-white dark:bg-mackerel-100 dark:text-white">
-                        {% include "components/button.html" with variant="footer" title="Sign up" url=settings.utils.SystemMessagesSettings.footer_newsletter_signup_link %}
-                    </div>
+                        {% include "components/button.html" with variant="footer" title="Sign up" %}
+                    </form>
                 </div>
             {% endif %}
 
