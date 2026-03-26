@@ -51,6 +51,8 @@ class InternalLinkBlock(blocks.StructBlock):
 
     class Meta:
         icon = "link"
+        template = "components/streamfield/blocks/internal_link_block.html"
+        label = "Internal link"
         value_class = LinkStructValue
 
 
@@ -66,6 +68,8 @@ class ExternalLinkBlock(blocks.StructBlock):
 
     class Meta:
         icon = "link"
+        template = "components/streamfield/blocks/external_link_block.html"
+        label = "External link"
         value_class = LinkStructValue
 
 
