@@ -134,6 +134,12 @@ You can add additional commands as needed.
 
    **Media Storage**: From the **Services** view of your application, add an [object storage](https://docs.divio.com/reference/work-media-storage/) to store user-uploaded files.
 
+## Troubleshooting
+
+### Template not working after cloning
+
+This project is a template and should be used with `wagtail start --template=...`. Cloning the repository directly may result in errors such as `{{ project_name }}` not being resolved.
+
 ## Contributing
 
 To customize this template, you can either make changes directly or backport changes from a generated project (via the `wagtail start` command) by following these steps:
