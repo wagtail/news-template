@@ -1,0 +1,4 @@
+PR Description (Use directly)
+Overview
+
+This PR improves the news listing page by introducing a reusable news_card component and slightly enhancing the layout for better readability and maintainability.
