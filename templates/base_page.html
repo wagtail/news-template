@@ -1,10 +1,11 @@
 {% verbatim %}
 {% extends "base.html" %}
 
-{% load static wagtailuserbar wagtailcore_tags wagtailimages_tags util_tags %}
+{% load static wagtailuserbar wagtailcore_tags wagtailimages_tags wagtailsettings_tags util_tags %}
 
 {% wagtail_site as current_site %}
 
+{% get_settings %}
 {% block meta_tags %}
 
 <link rel="icon" href="{% static 'images/favicons/favicon.ico' %}" sizes="32x32">
@@ -12,6 +13,28 @@
 <link rel="apple-touch-icon" href="{% static 'images/favicons/apple-touch-icon.png' %}">
 <link rel="manifest" href="{% static 'images/favicons/favicon.webmanifest' %}">
 <meta name="theme-color" content="#26899E"/>
+
+<meta property="og:type" content="website" />
+<meta property="og:url" content="{{ page.full_url|default:request.build_absolute_uri }}" />
+<meta property="og:title" content="{{ page.seo_title|default:page.title|default:current_site.site_name }}" />
+ 
+    {% with desc=page.social_text|default:page.search_description|default:settings.utils.SocialMediaSettings.default_sharing_text|default:page.title %}
+        <meta name="description" content="{{ desc }}" />
+        <meta property="og:description" content="{{ desc }}" />
+        <meta name="twitter:description" content="{{ desc }}" />
+    {% endwith %}
+
+
+    {% if page.social_image %}
+        {% image page.social_image fill-1200x630 as og_img %}
+        <meta property="og:image" content="{{ og_img.full_url }}" />
+        <meta name="twitter:image" content="{{ og_img.full_url }}" />
+        <meta name="twitter:card" content="summary_large_image" />
+    {% endif %}
+
+    {% if settings.utils.SocialMediaSettings.twitter_handle %}
+        <meta name="twitter:site" content="@{{ settings.utils.SocialMediaSettings.twitter_handle }}" />
+    {% endif %}
 
 {% endblock meta_tags %}
 
