@@ -1,0 +1,9 @@
+{% load wagtailcore_tags %}
+
+{% if value %}
+    {% for block in value %}
+        <div class="link-stream link-stream--{{ block.block_type }}">
+            {% include_block block %}
+        </div>
+    {% endfor %}
+{% endif %}
