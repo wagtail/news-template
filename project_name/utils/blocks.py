@@ -11,7 +11,7 @@ from wagtail.snippets.blocks import SnippetChooserBlock
 from {{ project_name }}.utils.struct_values import CardStructValue, LinkStructValue
 
 
-class AccordionBlock(blocks.StructBlock):
+class AccordionPanelBlock(blocks.StructBlock):
     title = blocks.CharBlock(max_length=255)
     content = blocks.RichTextBlock()
 
@@ -21,8 +21,8 @@ class AccordionBlock(blocks.StructBlock):
 
 
 class AccordionBlock(blocks.StructBlock):
-    heading = blocks.ListBlock(AccordionBlock())
-    list = blocks.ListBlock(AccordionBlock())
+    heading = blocks.CharBlock(max_length=255, required=False)
+    panels = blocks.ListBlock(AccordionPanelBlock())
 
     class Meta:
         icon = "list-ol"
