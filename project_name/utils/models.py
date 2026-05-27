@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 from django.core.exceptions import FieldDoesNotExist, ValidationError
 from django.core.files.images import ImageFile
 from django.contrib.staticfiles.finders import find
-from django.db import models
+from django.db import models, transaction, router
 from django.db.models import QuerySet
 from django.utils.decorators import method_decorator
 from django.utils.functional import cached_property
