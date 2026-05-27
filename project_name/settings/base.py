@@ -264,6 +264,10 @@ WAGTAIL_SITE_NAME = "{{ project_name }}"
 WAGTAILSEARCH_BACKENDS = {
     "default": {
         "BACKEND": "wagtail.search.backends.database",
+        # Disable per-object auto updates and run `update_index` explicitly
+        # (e.g. in load_initial_data) to avoid noisy task failures during
+        # fixture imports/deletes on newer Django/Wagtail combinations.
+        "AUTO_UPDATE": False,
     }
 }
 
