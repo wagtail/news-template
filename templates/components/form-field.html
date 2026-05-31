@@ -18,7 +18,13 @@
                 </ul>
             {% endif %}
             {% if field_type == "text" or field_type == "email" %}
-                <input 
+                {% if field.label %}
+                    <label for="{{ field.id_for_label }}" class="block text-sm md:text-base font-medium leading-7 mb-1">
+                        {{ field.label }}
+                    </label>
+                {% endif %}
+                <input
+                    id="{{ field.id_for_label }}"
                     class="text-base placeholder:text-base p-3.5 border border-mackerel-200 bg-white dark:bg-mackerel-100 dark:text-white placeholder:text-mackerel-400 dark:placeholder:text-white w-full rounded-[30px] min-h-[50px]"
                     type="text"
                     name="{{ field.name }}"
@@ -30,8 +36,13 @@
                     {% endif %}
                 />
             {% elif field_type == "select" %}
+                {% if field.label %}
+                    <label for="{{ field.id_for_label }}" class="block text-sm md:text-base font-medium leading-7 mb-1">
+                        {{ field.label }}
+                    </label>
+                {% endif %}
                 <div class="relative">
-                    <select name="{{ field.name }}" class="text-base placeholder:text-base p-3.5 flex items-center border border-mackerel-200 bg-white dark:bg-mackerel-100 dark:text-white placeholder:text-mackerel-400 dark:placeholder:text-white rounded-[30px] appearance-none w-full cursor-pointer min-h-[50px]">
+                    <select id="{{ field.id_for_label }}" name="{{ field.name }}" class="text-base placeholder:text-base p-3.5 flex items-center border border-mackerel-200 bg-white dark:bg-mackerel-100 dark:text-white placeholder:text-mackerel-400 dark:placeholder:text-white rounded-[30px] appearance-none w-full cursor-pointer min-h-[50px]">
                         {% if field.label %}
                         <option value="">{{ field.label }}</option>
                         {% endif %}
