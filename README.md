@@ -64,6 +64,35 @@ All commands from now on should be run from inside the virtual environment.
     - Username: admin
     - Password: password
 
+### Testing
+
+To verify the project works with the current Wagtail and Django versions:
+
+1. **System check** (validates settings and models):
+
+   ```bash
+   python manage.py check
+   ```
+
+2. **Run tests** (from the project directory, e.g. `myproject/`):
+
+   ```bash
+   make test
+   # or: python manage.py test
+   ```
+
+   On **Python 3.14**, the search view tests are skipped due to a [Django test client bug](https://code.djangoproject.com/). The run still succeeds; use Python 3.10–3.13 for full test coverage until Django is updated.
+
+3. **Check for deprecation warnings** (optional, before upgrading dependencies):
+
+   ```bash
+   python -Wa manage.py test
+   ```
+
+   Fix any deprecation warnings from your code (third-party warnings can often be ignored until those packages are updated).
+
+4. **Smoke test**: After `make load-data`, visit `http://localhost:8000` and `http://localhost:8000/admin` and confirm the site and admin load.
+
 ### Deploying
 
 Once you have your own copy of the template, you can extend and configure it however you like.

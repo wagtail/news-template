@@ -8,6 +8,7 @@ from django.conf import settings
 from django.core.files.storage import FileSystemStorage, default_storage
 from django.core.management import call_command
 from django.core.management.base import BaseCommand
+from django.test.utils import override_settings
 from wagtail.models import Page, Site
 
 
@@ -34,14 +35,24 @@ class Command(BaseCommand):
         local_storage = FileSystemStorage(os.path.join(fixtures_dir, "media"))
         self._copy_files(local_storage, "")  # file storage paths are relative
 
-        # Wagtail creates default Site and Page instances during install, but we already have
-        # them in the data load. Remove the auto-generated ones.
-        if Site.objects.filter(hostname="localhost").exists():
-            Site.objects.get(hostname="localhost").delete()
-        if Page.objects.filter(title="Welcome to your new Wagtail site!").exists():
-            Page.objects.get(title="Welcome to your new Wagtail site!").delete()
+        # During fixture imports, Wagtail / modelsearch may enqueue per-object
+        # indexing tasks for objects that are about to be replaced/deleted,
+        # causing noisy DoesNotExist tracebacks. Disable task execution while
+        # loading fixtures, then run update_index explicitly afterwards.
+        task_override = {
+            "default": {
+                "BACKEND": "django_tasks.backends.dummy.DummyBackend",
+            }
+        }
+        with override_settings(TASKS=task_override):
+            # Wagtail creates default Site and Page instances during install,
+            # but we already have them in the fixture load.
+            if Site.objects.filter(hostname="localhost").exists():
+                Site.objects.get(hostname="localhost").delete()
+            if Page.objects.filter(title="Welcome to your new Wagtail site!").exists():
+                Page.objects.get(title="Welcome to your new Wagtail site!").delete()
 
-        call_command("loaddata", fixture_file, verbosity=0)
+            call_command("loaddata", fixture_file, verbosity=0)
         call_command("update_index", verbosity=0)
         call_command("rebuild_references_index", verbosity=0)
 
