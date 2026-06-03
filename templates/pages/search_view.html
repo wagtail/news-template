@@ -26,9 +26,9 @@
                             aria-label="Search our website"
                             placeholder="Search our website"
                             name="query"
-                            
+
                             {% if search_query %}value="{{ search_query }}"{% endif %}
-                            class="placeholder:text-base text-base border border-mackerel-200 bg-white dark:bg-mackerel-100 dark:text-white w-full md:max-w-[500px] h-[50px] rounded-[30px] px-4 pt-3 pb-2 mr-3 mb-3 md:mb-0" 
+                            class="placeholder:text-base text-base border border-mackerel-200 bg-white dark:bg-mackerel-100 dark:text-white w-full md:max-w-[500px] h-[50px] rounded-[30px] px-4 pt-3 pb-2 mr-3 mb-3 md:mb-0"
                         />
                         <button class="px-5 py-3 justify-center items-center text-sm md:text-base font-codepro uppercase inline-flex text-white bg-mackerel-300 dark:text-mackerel-400 rounded-[30px]">
                             Search
@@ -39,14 +39,14 @@
         </div>
 
         <div class="pb-20 md:pb-40">
-            
+
             {% if search_results %}
                 <section class="grid grid-cols-1 gap-8 lg:gap-10">
                     {% for page in search_results %}
                         {% include "components/card--search.html" with page=page.specific %}
                     {% endfor %}
 
-                    
+
                     {% include "components/pagination.html" with paginator_page=search_results %}
                 </section>
             {% elif search_query %}

@@ -2,7 +2,7 @@ class ThemeToggle {
     static selector() {
         return '[data-theme-toggle]';
     }
-    
+
     constructor(node) {
         this.toggleSwitch = node;
         this.currentTheme = localStorage.getItem('theme');

@@ -15,16 +15,16 @@ class NavigationSettings(BaseSiteSetting, ClusterableModel):
         [("link", InternalLinkBlock())],
         blank=True,
         help_text="Main site navigation",
-        
+
     )
     footer_navigation = StreamField(
         [("link_section", blocks.StructBlock([
                 ("section_heading", blocks.CharBlock()),
                 ("links", LinkStreamBlock(
-                    label = "Links", 
+                    label = "Links",
                     max_num = None
                 )),
-            ])) 
+            ]))
         ],
         blank=True,
     )

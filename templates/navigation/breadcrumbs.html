@@ -3,13 +3,13 @@
 
 
 {% if page.get_ancestors|length > 1 %}
-    
+
     <nav aria-label="breadcrumb" class="site-container hidden md:flex items-center w-full px-10 md:px-20 py-[15px]">
         <ol class="flex flex-wrap gap-3.5">
             {% for ancestor_page in page.get_ancestors.specific %}
                 {% if not ancestor_page.is_root %}
                     <li class="flex flex-row gap-3.5 items-center">
-                        <a 
+                        <a
                         href="{% pageurl ancestor_page %}"
                         class="
                         underline

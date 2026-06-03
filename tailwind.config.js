@@ -10,7 +10,7 @@ module.exports = {
     theme: {
         // Properties directly inside of theme will overwrite all tailwinds default properties for that attribute
         screens: {
-            'tall': 
+            'tall':
             {
                 'raw': '(min-height: 840px)'
             },

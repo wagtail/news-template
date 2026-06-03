@@ -2,7 +2,7 @@
 <form action="{% url 'search' %}" method="get" role="search"
     class="
         {% if variant == 'search-panel' %}
-            site-container 
+            site-container
             px-10 md:px-20
             w-full
             m-auto
@@ -12,12 +12,12 @@
             py-14
         {% endif %}
     ">
-    <div 
+    <div
         class="
-        flex 
+        flex
         grow
         {% if variant != 'mobile-menu' %}
-            flex-col 
+            flex-col
             md:flex-row
             max-w-[520px]
         {% endif %}
@@ -35,15 +35,15 @@
             text-white
             dark:text-white
             {% else %}
-                bg-white dark:bg-mackerel-100 
+                bg-white dark:bg-mackerel-100
                 mb-3 md:mb-0
             {% endif %}
-            border border-mackerel-200 
-            placeholder:text-base text-base 
-            w-full h-[50px] 
-            rounded-[30px] 
+            border border-mackerel-200
+            placeholder:text-base text-base
+            w-full h-[50px]
+            rounded-[30px]
             px-4 pt-3 pb-2 mr-3
-            " 
+            "
             type="search"
             aria-label="Search our website"
             placeholder="Search our website"
@@ -52,25 +52,25 @@
                 data-search-input
             {% endif %}
         />
-        <button 
+        <button
             class="
             {% if variant == 'mobile-menu' %}
-            text-white 
+            text-white
             bg-mackerel-400
             {% else %}
-                text-white 
-                dark:text-mackerel-400 
-                bg-mackerel-300 
+                text-white
+                dark:text-mackerel-400
+                bg-mackerel-300
             {% endif %}
-            px-5 
-            py-3 
-            justify-center 
-            items-center 
-            text-sm 
-            md:text-base 
-            font-codepro 
-            uppercase 
-            inline-flex 
+            px-5
+            py-3
+            justify-center
+            items-center
+            text-sm
+            md:text-base
+            font-codepro
+            uppercase
+            inline-flex
             rounded-[30px]
             "
         >

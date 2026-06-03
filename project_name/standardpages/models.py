@@ -54,4 +54,3 @@ class IndexPage(BasePage):
         ),
         FieldPanel("body")
     ]
-
