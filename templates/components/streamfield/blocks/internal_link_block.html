@@ -1,0 +1,9 @@
+{% verbatim %}
+<div>
+    {% if value.page %}
+        <a href="{{ value.page.url }}">
+            {{ value.text|default:value.page.title }}
+        </a>
+    {% endif %}
+</div>
+{% endverbatim %}
