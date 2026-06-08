@@ -1,7 +1,7 @@
 {% verbatim %}
 {% load wagtailcore_tags wagtailsettings_tags wagtailimages_tags %}
 
-<div class="flex flex-col 
+<div class="flex flex-col
     md:flex-row
     md:gap-10
     md:items-start
@@ -11,13 +11,13 @@ w-full h-full group
 ">
     <div class="
         rounded-md
-        overflow-hidden 
+        overflow-hidden
         md:h-full
         md:min-w-[220px]
         md:max-w-[220px]
         lg:min-w-[345px]
         lg:max-w-[345px]
-        w-full 
+        w-full
     ">
         {% if page.listing_image %}
             {% image page.listing_image format-jpeg fill-800x600 as card_image_1x_jpg %}
@@ -25,7 +25,7 @@ w-full h-full group
             {% image page.listing_image format-webp fill-800x600 as card_image_1x_webp %}
             {% image page.listing_image format-webp fill-1600x1200 as card_image_2x_webp %}
         {% else %}
-            
+
             {% image settings.utils.SystemMessagesSettings.get_placeholder_image format-jpeg fill-800x600 as card_image_1x_jpg %}
             {% image settings.utils.SystemMessagesSettings.get_placeholder_image format-jpeg fill-1600x1200 as card_image_2x_jpg %}
             {% image settings.utils.SystemMessagesSettings.get_placeholder_image format-webp fill-800x600 as card_image_1x_webp %}
@@ -41,7 +41,7 @@ w-full h-full group
                 alt="{{ card_image_1x_webp.alt }}"
 
                 class="
-                aspect-[20/11] 
+                aspect-[20/11]
                 md:aspect-[1]
                 w-full h-full object-cover"
                 {% if card_image_1x_webp.focal_point %}
@@ -93,7 +93,7 @@ w-full h-full group
                 height="{{ author_avatar.height }}"
                 alt="{{ author_avatar.alt }}"
                 class="w-10 h-10 rounded-full"
-            />  
+            />
                 {{ page.author.title }}
             </div>
         {% endif %}

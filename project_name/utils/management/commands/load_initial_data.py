@@ -1,4 +1,4 @@
-# Django management command to load initial data via fixtures, 
+# Django management command to load initial data via fixtures,
 # code taken from the WagtailBakerydemo:
 # https://github.com/wagtail/bakerydemo/blob/main/bakerydemo/base/management/commands/load_initial_data.py
 

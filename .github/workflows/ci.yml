@@ -1,0 +1,79 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lint:
+    name: Pre-commit checks
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install pre-commit
+        run: pip install pre-commit
+
+      - name: Run pre-commit
+        run: pre-commit run --all-files
+
+  template-smoke-test:
+    name: Template smoke test
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Wagtail
+        run: pip install "wagtail>=6.4,<6.5"
+
+      - name: Generate project from template
+        run: |
+          mkdir smoketest
+          cd smoketest
+          wagtail start --template="$GITHUB_WORKSPACE" testproject
+
+      - name: Install generated project dependencies
+        run: |
+          cd smoketest/testproject
+          pip install -r requirements.txt
+
+      - name: Django check
+        run: |
+          cd smoketest/testproject
+          python manage.py check
+
+      - name: Run migrations
+        run: |
+          cd smoketest/testproject
+          python manage.py migrate
+
+      - name: Create cache table
+        run: |
+          cd smoketest/testproject
+          python manage.py createcachetable
+
+      - name: Load initial data
+        run: |
+          cd smoketest/testproject
+          python manage.py load_initial_data
+
+      - name: Collect static files
+        run: |
+          cd smoketest/testproject
+          python manage.py collectstatic --noinput

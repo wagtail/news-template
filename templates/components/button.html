@@ -1,7 +1,7 @@
 {% verbatim %}
 {% if url %}
-    <a 
-        href="{{ url }}" 
+    <a
+        href="{{ url }}"
         class="
         {{ classes }}
         {% if variant == 'footer' %}
@@ -15,11 +15,11 @@
             {{ title }}
     </a>
 {% else %}
-    <button 
+    <button
         class="
         {{ classes }}
         {% if variant == 'footer' %}
-            md:px-5 
+            md:px-5
         {% else %}
             md:px-10
         {% endif %}
