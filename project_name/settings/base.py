@@ -53,6 +53,8 @@ INSTALLED_APPS = [
     "wagtail.admin",
     "wagtail.contrib.search_promotions",
     "wagtail",
+    "wagtail_localize",
+    "wagtail_localize.locales",
     "modelcluster",
     "taggit",
     "django.contrib.admin",
@@ -139,6 +141,14 @@ LANGUAGE_CODE = "en-us"
 TIME_ZONE = "UTC"
 
 USE_I18N = True
+WAGTAIL_I18N_ENABLED = True
+
+WAGTAIL_CONTENT_LANGUAGES = LANGUAGES = [
+    ('en', "English"),
+    ('fr', "French"),
+    ('es', "Spanish"),
+    ('ar', "Arabic"), 
+]
 
 USE_TZ = True
 

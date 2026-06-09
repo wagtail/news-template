@@ -2,7 +2,7 @@
 {% load static wagtailcore_tags wagtailuserbar %}
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ request.LANGUAGE_CODE }}" {% if request.LANGUAGE_CODE == 'ar' %}dir="rtl"{% endif %}>
     <head>
         <meta charset="utf-8" />
         <title>
