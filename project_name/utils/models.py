@@ -183,7 +183,7 @@ class SocialMediaSettings(BaseSiteSetting):
         help_text="Your Twitter username without the @, e.g. katyperry.",
     )
     linkedin_url_segment = models.CharField(
-        max_length=255, blank=True, 
+        max_length=255, blank=True,
         help_text="Your Linkedin url segment after 'linkedin.com/', e.g. in/katyperry or company/katy-perry-collections."
     )
     facebook_app_id = models.CharField(
