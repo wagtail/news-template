@@ -44,36 +44,35 @@ jobs:
 
       - name: Generate project from template
         run: |
-          mkdir smoketest
-          cd smoketest
+          cd /tmp
           wagtail start --template="$GITHUB_WORKSPACE" testproject
 
       - name: Install generated project dependencies
         run: |
-          cd smoketest/testproject
+          cd /tmp/testproject
           pip install -r requirements.txt
 
       - name: Django check
         run: |
-          cd smoketest/testproject
+          cd /tmp/testproject
           python manage.py check
 
       - name: Run migrations
         run: |
-          cd smoketest/testproject
+          cd /tmp/testproject
           python manage.py migrate
 
       - name: Create cache table
         run: |
-          cd smoketest/testproject
+          cd /tmp/testproject
           python manage.py createcachetable
 
       - name: Load initial data
         run: |
-          cd smoketest/testproject
+          cd /tmp/testproject
           python manage.py load_initial_data
 
       - name: Collect static files
         run: |
-          cd smoketest/testproject
+          cd /tmp/testproject
           python manage.py collectstatic --noinput
