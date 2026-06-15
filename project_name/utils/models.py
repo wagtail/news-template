@@ -113,7 +113,7 @@ class AuthorSnippet(models.Model):
 @register_snippet
 class ArticleTopic(models.Model):
     title = models.CharField(blank=False, max_length=255)
-    slug = models.SlugField(blank=False, max_length=255)
+    slug = models.SlugField(unique=True, max_length=255)
 
     def __str__(self):
         return self.title
