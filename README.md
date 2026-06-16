@@ -4,65 +4,112 @@ This project template is designed for creating [Wagtail](https://wagtail.org) bu
 
 ## Getting Started
 
-1. **Check that you have an appropriate version of Python 3** You want to make sure that you have a [compatible version](https://docs.wagtail.org/en/stable/releases/upgrading.html#compatible-django-python-versions) installed:
+### Check your Python version
 
-   ```sh
-   python --version
-   # Or:
-   python3 --version
-   # **On Windows** (cmd.exe, with the Python Launcher for Windows):
-   py --version
-   ```
+Make sure you have a compatible version of Python installed:
 
-2. **Create a Virtual Environment**: Set up a virtual environment to isolate your project dependencies. These instructions are for GNU/Linux or macOS, but there are [other operating systems in the Wagtail docs](https://docs.wagtail.org/en/stable/getting_started/tutorial.html#create-and-activate-a-virtual-environment).
+```bash
+python --version
 
-   ```bash
-   python -m venv myproject/env
-   source myproject/env/bin/activate
-   ```
+# Or:
+python3 --version
 
-3. **Navigate to Project Directory**: Move into the newly created project directory.
+# On Windows:
+py --version
+```
 
-   ```bash
-   cd myproject
-   ```
+### Create a virtual environment
 
-4. **Install Wagtail**: Install the Wagtail CMS package using pip.
+Create and activate a virtual environment for your project.
 
-   ```bash
-   pip install wagtail
-   ```
+#### Linux / macOS
 
-5. **Initialize Project**: Use the `wagtail start` command to create a new project based on the Wagtail Starter Kit template.
+```bash
+python -m venv .venv
+source .venv/bin/activate
+```
 
-   ```bash
-   wagtail start --template=https://github.com/wagtail/news-template/archive/refs/heads/main.zip myproject .
-   ```
+#### Windows
 
-6. **Install Project Dependencies**: Install the project's dependencies into a virtual environment.
+```bash
+python -m venv .venv
+.venv\Scripts\activate
+```
 
-   ```bash
-   pip install -r requirements.txt
-   ```
+### Install Wagtail
 
-All commands from now on should be run from inside the virtual environment.
+Install the Wagtail CMS package using pip:
 
-8. **Load Dummy Data**: Load in some dummy data to populate the site with some content.
+```bash
+pip install wagtail
+```
 
-   ```bash
-   make load-data
-   ```
+### Create a new project
 
-9. **Start the Server**: Start the Django development server.
+Use the Wagtail News Template to generate a new project:
 
-   ```bash
-   make start
-   ```
+```bash
+wagtail start --template=https://github.com/wagtail/news-template/archive/refs/heads/main.zip myproject
+```
 
-10. **Access the Site and Admin**: Once the server is running, you can view the site at `localhost:8000` and access the Wagtail admin interface at `localhost:8000/admin`. Log in with the default credentials provided by :
+Navigate to the project directory:
 
-    - Username: admin
-    - Password: password
+```bash
+cd myproject
+```
+
+### Bootstrap the project
+
+Run the bootstrap command to install project dependencies and set up the development environment:
+
+```bash
+python bootstrap.py
+```
+
+This command will:
+
+* Install project dependencies
+* Run database migrations
+* Create the cache table
+* Load sample content
+* Create the default administrator account
+* Collect static files
+
+### Optional: Skip sample content
+
+If you prefer to start with a clean project without demo content:
+
+```bash
+python bootstrap.py --no-sample-data
+```
+
+This skips loading the sample content and default administrator account.
+
+To create an administrator account manually, run:
+
+```bash
+python manage.py createsuperuser
+```
+
+### Start the development server
+
+```bash
+python manage.py runserver
+```
+
+### Access the site
+
+Once the server is running:
+
+* Site: `http://localhost:8000`
+* Admin: `http://localhost:8000/admin`
+
+If sample content was loaded, you can log in with:
+
+```text
+Username: admin
+Password: password
+```
 
 ### Deploying
 
@@ -152,5 +199,22 @@ To customize this template, you can either make changes directly or backport cha
 5. Update fixtures using `make dump-data`
 
 Make sure to test any changes by reviewing them against a newly created project, by following the [Getting Started](#getting-started) instructions again.
+
+### Before Opening a Pull Request
+
+Please install the project's pre-commit hooks:
+
+```bash id="l8u5jy"
+pre-commit install
+```
+
+Run the linting checks before submitting a pull request:
+
+```bash id="vjlwmg"
+pre-commit run --all-files
+```
+
+This helps catch formatting and linting issues locally before the CI checks run.
+
 
 Happy coding with Wagtail! If you encounter any issues or have suggestions for improvement, feel free to contribute or open an issue.
