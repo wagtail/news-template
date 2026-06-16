@@ -6,7 +6,8 @@ This project template is designed for creating [Wagtail](https://wagtail.org) bu
 
 ### Check your Python version
 
-Make sure you have a compatible version of Python installed:
+**Check that you have an appropriate version of Python 3** You want to make sure that you have a [compatible version](https://docs.wagtail.org/en/stable/releases/upgrading.html#compatible-django-python-versions) installed:
+
 
 ```bash
 python --version
@@ -18,9 +19,13 @@ python3 --version
 py --version
 ```
 
-### Create a virtual environment
+### Navigate to the project directory:
 
-Create and activate a virtual environment for your project.
+```bash
+cd myproject
+```
+
+### Create and Activate virtual environment
 
 #### Linux / macOS
 
@@ -49,13 +54,7 @@ pip install wagtail
 Use the Wagtail News Template to generate a new project:
 
 ```bash
-wagtail start --template=https://github.com/wagtail/news-template/archive/refs/heads/main.zip myproject
-```
-
-Navigate to the project directory:
-
-```bash
-cd myproject
+wagtail start --template=https://github.com/wagtail/news-template/archive/refs/heads/main.zip myproject .
 ```
 
 ### Bootstrap the project
