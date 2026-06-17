@@ -12,6 +12,8 @@
 <link rel="apple-touch-icon" href="{% static 'images/favicons/apple-touch-icon.png' %}">
 <link rel="manifest" href="{% static 'images/favicons/favicon.webmanifest' %}">
 <meta name="theme-color" content="#26899E"/>
+{% url 'news_feed' as news_feed_url %}
+<link rel="alternate" type="application/rss+xml" title="{{ current_site.site_name|default:'News' }} RSS feed" href="{{ news_feed_url }}">
 
 {% endblock meta_tags %}
 
