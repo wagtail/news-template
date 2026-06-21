@@ -180,29 +180,35 @@ class SocialMediaSettings(BaseSiteSetting):
     twitter_handle = models.CharField(
         max_length=255,
         blank=True,
-        help_text="Your Twitter username without the @, e.g. katyperry.",
+        help_text="Your Twitter username without the @.",
     )
     linkedin_url_segment = models.CharField(
-        max_length=255, blank=True,
-        help_text="Your Linkedin url segment after 'linkedin.com/', e.g. in/katyperry or company/katy-perry-collections."
+        verbose_name="LinkedIn URL segment",
+        max_length=255,
+        blank=True,
+        help_text="Your LinkedIn URL segment after 'linkedin.com/' (e.g., in/jsmith for a personal profile or company/smith-and-co for a company profile).",
     )
     facebook_app_id = models.CharField(
-        max_length=255, blank=True, help_text="Your Facebook app ID."
+        max_length=255,
+        blank=True,
+        help_text="Your Facebook URL segment after 'facebook.com'.",
     )
     instagram_handle = models.CharField(
         max_length=255,
         blank=True,
-        help_text="Your Instagram username, e.g. katyperry.",
+        help_text="Your Instagram username.",
     )
     tiktok_handle = models.CharField(
+        verbose_name="TikTok username",
         max_length=255,
         blank=True,
-        help_text="Your TikTok username, e.g. katyperry.",
+        help_text="Your TikTok username.",
     )
     youtube_handle = models.CharField(
+        verbose_name="YouTube username",
         max_length=255,
         blank=True,
-        help_text="Your Youtube handle without the @, e.g. katyperry.",
+        help_text="Your YouTube username without the @.",
     )
     default_sharing_text = models.CharField(
         max_length=255,
