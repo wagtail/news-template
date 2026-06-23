@@ -19,9 +19,12 @@ python3 --version
 py --version
 ```
 
-### Navigate to the project directory:
+###  Create and navigate to your project directory
+
+NOTE :Replace `myproject` with your preferred project name.
 
 ```bash
+mkdir myproject
 cd myproject
 ```
 
@@ -30,14 +33,14 @@ cd myproject
 #### Linux / macOS
 
 ```bash
-python -m venv .venv
+py -m venv .venv
 source .venv/bin/activate
 ```
 
 #### Windows
 
 ```bash
-python -m venv .venv
+py -m venv .venv
 .venv\Scripts\activate
 ```
 
@@ -51,7 +54,9 @@ pip install wagtail
 
 ### Create a new project
 
-Use the Wagtail News Template to generate a new project:
+Use the Wagtail Starter Kit to generate a new project:
+
+NOTE : You can Replace `myproject` with your preferred project name.
 
 ```bash
 wagtail start --template=https://github.com/wagtail/news-template/archive/refs/heads/main.zip myproject .
@@ -74,7 +79,7 @@ This command will:
 * Create the default administrator account
 * Collect static files
 
-### Optional: Skip sample content
+#### Optional: Skip sample content
 
 If you prefer to start with a clean project without demo content:
 
@@ -101,7 +106,7 @@ python manage.py runserver
 Once the server is running:
 
 * Site: `http://localhost:8000`
-* Admin: `http://localhost:8000/admin`
+* Admin: `http://localhost:8000/admin/`
 
 If sample content was loaded, you can log in with:
 
@@ -203,13 +208,13 @@ Make sure to test any changes by reviewing them against a newly created project,
 
 Please install the project's pre-commit hooks:
 
-```bash id="l8u5jy"
+```bash
 pre-commit install
 ```
 
 Run the linting checks before submitting a pull request:
 
-```bash id="vjlwmg"
+```bash
 pre-commit run --all-files
 ```
 
