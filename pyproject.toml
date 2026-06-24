@@ -1,0 +1,5 @@
+[tool.ruff]
+target-version = "py312"
+
+[tool.ruff.lint.per-file-ignores]
+"*/settings/dev.py" = ["F403"]

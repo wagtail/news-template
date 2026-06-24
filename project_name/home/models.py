@@ -1,5 +1,4 @@
 from django.db import models
-from django.db import models
 from wagtail.admin.panels import FieldPanel, InlinePanel, MultiFieldPanel
 from wagtail.search import index
 
