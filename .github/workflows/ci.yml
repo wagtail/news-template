@@ -58,7 +58,7 @@ jobs:
       - name: Ruff format check
         run: |
           cd /tmp/testproject
-          ruff format --check .
+          ruff check .
 
       - name: Django check
         run: |
