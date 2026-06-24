@@ -2,11 +2,11 @@
 
 This project template is designed for creating [Wagtail](https://wagtail.org) builds quickly, intended for developers to bootstrap their Wagtail site development using `wagtail start --template=`. The template comes with pre-defined pages, blocks, functionalities, and fixtures to streamline the initial setup process.
 
-## Getting Started
+## Getting started
 
 ### Check your Python version
 
-**Check that you have an appropriate version of Python 3** You want to make sure that you have a [compatible version](https://docs.wagtail.org/en/stable/releases/upgrading.html#compatible-django-python-versions) installed:
+**Check that you have an appropriate version of Python.** You want to make sure that you have a [compatible version](https://docs.wagtail.org/en/stable/releases/upgrading.html#compatible-django-python-versions) installed:
 
 
 ```bash
@@ -15,25 +15,25 @@ python --version
 # Or:
 python3 --version
 
-# On Windows:
+# On Windows you may want to use py.exe:
 py --version
 ```
 
 ###  Create and navigate to your project directory
 
-NOTE :Replace `myproject` with your preferred project name.
+You can replace `myproject` with your preferred project name.
 
 ```bash
 mkdir myproject
 cd myproject
 ```
 
-### Create and Activate virtual environment
+### Create and activate virtual environment
 
 #### Linux / macOS
 
 ```bash
-py -m venv .venv
+python -m venv .venv
 source .venv/bin/activate
 ```
 
@@ -54,9 +54,7 @@ pip install wagtail
 
 ### Create a new project
 
-Use the Wagtail Starter Kit to generate a new project:
-
-NOTE : You can Replace `myproject` with your preferred project name.
+Use the Wagtail Starter Kit to generate a new project. Here again, you can replace `myproject` with your preferred project name. The project name chosen here will be used throughout the generated code.
 
 ```bash
 wagtail start --template=https://github.com/wagtail/news-template/archive/refs/heads/main.zip myproject .
@@ -105,15 +103,13 @@ python manage.py runserver
 
 Once the server is running:
 
-* Site: `http://localhost:8000`
-* Admin: `http://localhost:8000/admin/`
+* Site: http://localhost:8000
+* Admin: http://localhost:8000/admin/
 
 If sample content was loaded, you can log in with:
 
-```text
-Username: admin
-Password: password
-```
+* Username: `admin`
+* Password: `password`
 
 ### Deploying
 
@@ -204,7 +200,7 @@ To customize this template, you can either make changes directly or backport cha
 
 Make sure to test any changes by reviewing them against a newly created project, by following the [Getting Started](#getting-started) instructions again.
 
-### Before Opening a Pull Request
+### Before opening a pull request
 
 Please install the project's pre-commit hooks:
 
@@ -220,5 +216,6 @@ pre-commit run --all-files
 
 This helps catch formatting and linting issues locally before the CI checks run.
 
+---
 
 Happy coding with Wagtail! If you encounter any issues or have suggestions for improvement, feel free to contribute or open an issue.
