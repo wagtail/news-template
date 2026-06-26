@@ -53,7 +53,8 @@
                         {{ settings.utils.SystemMessagesSettings.footer_newsletter_signup_description }}
                     </p>
                     {% endif %}
-                    <form class="pt-5 flex gap-1 md:gap-2.5" action="{{ settings.utils.SystemMessagesSettings.footer_newsletter_signup_link }}" method="get">
+                    <form class="pt-5 flex gap-1 md:gap-2.5" action="{{ settings.utils.SystemMessagesSettings.footer_newsletter_signup_link }}" method="post">
+                        {% csrf_token %}
                         <input
                             type="email"
                             name="email"

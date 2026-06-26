@@ -291,10 +291,7 @@
     "pk": 1,
     "fields": {
       "name": "Moderators approval",
-      "content_type": [
-        "wagtailcore",
-        "groupapprovaltask"
-      ],
+      "content_type": ["wagtailcore", "groupapprovaltask"],
       "active": true
     }
   },
@@ -319,10 +316,7 @@
     "pk": 1,
     "fields": {
       "tag": 1,
-      "content_type": [
-        "images",
-        "customimage"
-      ],
+      "content_type": ["images", "customimage"],
       "object_id": 1
     }
   },
@@ -332,51 +326,15 @@
     "fields": {
       "name": "Moderators",
       "permissions": [
-        [
-          "access_admin",
-          "wagtailadmin",
-          "admin"
-        ],
-        [
-          "add_document",
-          "wagtaildocs",
-          "document"
-        ],
-        [
-          "change_document",
-          "wagtaildocs",
-          "document"
-        ],
-        [
-          "choose_document",
-          "wagtaildocs",
-          "document"
-        ],
-        [
-          "delete_document",
-          "wagtaildocs",
-          "document"
-        ],
-        [
-          "add_image",
-          "wagtailimages",
-          "image"
-        ],
-        [
-          "change_image",
-          "wagtailimages",
-          "image"
-        ],
-        [
-          "choose_image",
-          "wagtailimages",
-          "image"
-        ],
-        [
-          "delete_image",
-          "wagtailimages",
-          "image"
-        ]
+        ["access_admin", "wagtailadmin", "admin"],
+        ["add_document", "wagtaildocs", "document"],
+        ["change_document", "wagtaildocs", "document"],
+        ["choose_document", "wagtaildocs", "document"],
+        ["delete_document", "wagtaildocs", "document"],
+        ["add_image", "wagtailimages", "image"],
+        ["change_image", "wagtailimages", "image"],
+        ["choose_image", "wagtailimages", "image"],
+        ["delete_image", "wagtailimages", "image"]
       ]
     }
   },
@@ -386,51 +344,15 @@
     "fields": {
       "name": "Editors",
       "permissions": [
-        [
-          "access_admin",
-          "wagtailadmin",
-          "admin"
-        ],
-        [
-          "add_document",
-          "wagtaildocs",
-          "document"
-        ],
-        [
-          "change_document",
-          "wagtaildocs",
-          "document"
-        ],
-        [
-          "choose_document",
-          "wagtaildocs",
-          "document"
-        ],
-        [
-          "delete_document",
-          "wagtaildocs",
-          "document"
-        ],
-        [
-          "add_image",
-          "wagtailimages",
-          "image"
-        ],
-        [
-          "change_image",
-          "wagtailimages",
-          "image"
-        ],
-        [
-          "choose_image",
-          "wagtailimages",
-          "image"
-        ],
-        [
-          "delete_image",
-          "wagtailimages",
-          "image"
-        ]
+        ["access_admin", "wagtailadmin", "admin"],
+        ["add_document", "wagtaildocs", "document"],
+        ["change_document", "wagtaildocs", "document"],
+        ["choose_document", "wagtaildocs", "document"],
+        ["delete_document", "wagtaildocs", "document"],
+        ["add_image", "wagtailimages", "image"],
+        ["change_image", "wagtailimages", "image"],
+        ["choose_image", "wagtailimages", "image"],
+        ["delete_image", "wagtailimages", "image"]
       ]
     }
   },
@@ -438,142 +360,90 @@
     "model": "wagtailcore.groupapprovaltask",
     "pk": 1,
     "fields": {
-      "groups": [
-        [
-          "Moderators"
-        ]
-      ]
+      "groups": [["Moderators"]]
     }
   },
   {
     "model": "wagtailcore.grouppagepermission",
     "pk": 1,
     "fields": {
-      "group": [
-        "Moderators"
-      ],
+      "group": ["Moderators"],
       "page": 1,
-      "permission": [
-        "add_page",
-        "wagtailcore",
-        "page"
-      ]
+      "permission": ["add_page", "wagtailcore", "page"]
     }
   },
   {
     "model": "wagtailcore.grouppagepermission",
     "pk": 2,
     "fields": {
-      "group": [
-        "Moderators"
-      ],
+      "group": ["Moderators"],
       "page": 1,
-      "permission": [
-        "change_page",
-        "wagtailcore",
-        "page"
-      ]
+      "permission": ["change_page", "wagtailcore", "page"]
     }
   },
   {
     "model": "wagtailcore.grouppagepermission",
     "pk": 3,
     "fields": {
-      "group": [
-        "Moderators"
-      ],
+      "group": ["Moderators"],
       "page": 1,
-      "permission": [
-        "publish_page",
-        "wagtailcore",
-        "page"
-      ]
+      "permission": ["publish_page", "wagtailcore", "page"]
     }
   },
   {
     "model": "wagtailcore.grouppagepermission",
     "pk": 4,
     "fields": {
-      "group": [
-        "Editors"
-      ],
+      "group": ["Editors"],
       "page": 1,
-      "permission": [
-        "add_page",
-        "wagtailcore",
-        "page"
-      ]
+      "permission": ["add_page", "wagtailcore", "page"]
     }
   },
   {
     "model": "wagtailcore.grouppagepermission",
     "pk": 5,
     "fields": {
-      "group": [
-        "Editors"
-      ],
+      "group": ["Editors"],
       "page": 1,
-      "permission": [
-        "change_page",
-        "wagtailcore",
-        "page"
-      ]
+      "permission": ["change_page", "wagtailcore", "page"]
     }
   },
   {
     "model": "wagtailcore.grouppagepermission",
     "pk": 6,
     "fields": {
-      "group": [
-        "Moderators"
-      ],
+      "group": ["Moderators"],
       "page": 1,
-      "permission": [
-        "lock_page",
-        "wagtailcore",
-        "page"
-      ]
+      "permission": ["lock_page", "wagtailcore", "page"]
     }
   },
   {
     "model": "wagtailcore.grouppagepermission",
     "pk": 7,
     "fields": {
-      "group": [
-        "Moderators"
-      ],
+      "group": ["Moderators"],
       "page": 1,
-      "permission": [
-        "unlock_page",
-        "wagtailcore",
-        "page"
-      ]
+      "permission": ["unlock_page", "wagtailcore", "page"]
     }
   },
   {
     "model": "utils.systemmessagessettings",
     "pk": 1,
     "fields": {
-      "site": [
-        "localhost",
-        80
-      ],
+      "site": ["localhost", 80],
       "title_404": "Page not found",
-      "body_404": "<p data-block-key=\"uh77c\">You may be trying to find a page that doesn’t exist or has been moved.</p>",
+      "body_404": "<p data-block-key=\"uh77c\">You may be trying to find a page that doesn't exist or has been moved.</p>",
       "placeholder_image": 3,
       "footer_newsletter_signup_title": "Sign up for our newsletter",
       "footer_newsletter_signup_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
-      "footer_newsletter_signup_link": "http://www.wagtail.org"
+      "footer_newsletter_signup_link": "/newsletter-signup/"
     }
   },
   {
     "model": "utils.socialmediasettings",
     "pk": 1,
     "fields": {
-      "site": [
-        "localhost",
-        80
-      ],
+      "site": ["localhost", 80],
       "twitter_handle": "test",
       "linkedin_url_segment": "company/test",
       "facebook_app_id": "test",
@@ -1066,10 +936,7 @@
     "model": "navigation.navigationsettings",
     "pk": 1,
     "fields": {
-      "site": [
-        "localhost",
-        80
-      ],
+      "site": ["localhost", 80],
       "primary_navigation": "[{\"type\": \"link\", \"value\": {\"page\": 5, \"title\": \"\"}, \"id\": \"a47a6e79-39f8-4965-a004-3d70e36502da\"}, {\"type\": \"link\", \"value\": {\"page\": 4, \"title\": \"\"}, \"id\": \"ef8e1849-2cc7-4e96-a945-de46d0df5407\"}, {\"type\": \"link\", \"value\": {\"page\": 30, \"title\": \"\"}, \"id\": \"3bd4f07e-07e1-41dc-9b34-d057875a94e4\"}]",
       "footer_navigation": "[{\"type\": \"link_section\", \"value\": {\"section_heading\": \"Heading\", \"links\": [{\"type\": \"internal\", \"value\": {\"page\": 5, \"title\": \"Footer link\"}, \"id\": \"e6bc7124-5f74-449b-8c41-ae32f81f0eeb\"}, {\"type\": \"external\", \"value\": {\"link\": \"http://www.wagtail.org\", \"title\": \"Footer link\"}, \"id\": \"d143f16a-4dfc-4cd7-9aea-8037da032297\"}]}, \"id\": \"812efc4b-b882-4c18-9965-ba6416ccb0d3\"}, {\"type\": \"link_section\", \"value\": {\"section_heading\": \"Heading\", \"links\": [{\"type\": \"internal\", \"value\": {\"page\": 5, \"title\": \"Footer link\"}, \"id\": \"5c94bc39-3beb-4602-8094-a44891e7dcd3\"}, {\"type\": \"external\", \"value\": {\"link\": \"http://www.wagtail.org\", \"title\": \"Footer link\"}, \"id\": \"9bb262e5-bf13-44ef-b072-0c6079ed353e\"}]}, \"id\": \"61d2518a-2ba7-45d7-b8dc-e421d5388b75\"}]"
     }
@@ -1105,9 +972,7 @@
       "width": 430,
       "height": 436,
       "created_at": "2024-02-26T15:30:40.198Z",
-      "uploaded_by_user": [
-        "admin"
-      ],
+      "uploaded_by_user": ["admin"],
       "focal_point_x": null,
       "focal_point_y": null,
       "focal_point_width": null,
@@ -1127,9 +992,7 @@
       "width": 640,
       "height": 457,
       "created_at": "2024-02-26T15:54:21.403Z",
-      "uploaded_by_user": [
-        "admin"
-      ],
+      "uploaded_by_user": ["admin"],
       "focal_point_x": 501,
       "focal_point_y": 222,
       "focal_point_width": 182,
@@ -1176,9 +1039,7 @@
     "model": "wagtailusers.userprofile",
     "pk": 1,
     "fields": {
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "submitted_notifications": true,
       "approved_notifications": true,
       "rejected_notifications": true,
@@ -1194,18 +1055,13 @@
     "model": "wagtailcore.modellogentry",
     "pk": 1,
     "fields": {
-      "content_type": [
-        "utils",
-        "statistic"
-      ],
+      "content_type": ["utils", "statistic"],
       "label": "95%",
       "action": "wagtail.create",
       "data": {},
       "timestamp": "2024-02-26T15:26:27.654Z",
       "uuid": "a1098aaf-826d-4d0f-9a3f-b1d6fc0d0486",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": null,
       "content_changed": true,
       "deleted": false,
@@ -1216,18 +1072,13 @@
     "model": "wagtailcore.modellogentry",
     "pk": 2,
     "fields": {
-      "content_type": [
-        "utils",
-        "statistic"
-      ],
+      "content_type": ["utils", "statistic"],
       "label": "120m",
       "action": "wagtail.create",
       "data": {},
       "timestamp": "2024-02-26T15:26:34.440Z",
       "uuid": "40e268a0-3a38-4395-b0c8-cd22f140ee72",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": null,
       "content_changed": true,
       "deleted": false,
@@ -1238,18 +1089,13 @@
     "model": "wagtailcore.modellogentry",
     "pk": 3,
     "fields": {
-      "content_type": [
-        "utils",
-        "statistic"
-      ],
+      "content_type": ["utils", "statistic"],
       "label": "22+",
       "action": "wagtail.create",
       "data": {},
       "timestamp": "2024-02-26T15:26:43.706Z",
       "uuid": "a2e847ab-122e-43f7-9e59-9c158f172fd2",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": null,
       "content_changed": true,
       "deleted": false,
@@ -1260,18 +1106,13 @@
     "model": "wagtailcore.modellogentry",
     "pk": 4,
     "fields": {
-      "content_type": [
-        "utils",
-        "authorsnippet"
-      ],
+      "content_type": ["utils", "authorsnippet"],
       "label": "Frank Nigelson",
       "action": "wagtail.create",
       "data": {},
       "timestamp": "2024-02-26T15:30:41.908Z",
       "uuid": "b1978850-0c6f-4aea-a491-71b2c2dd517f",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": null,
       "content_changed": true,
       "deleted": false,
@@ -1282,18 +1123,13 @@
     "model": "wagtailcore.modellogentry",
     "pk": 5,
     "fields": {
-      "content_type": [
-        "utils",
-        "articletopic"
-      ],
+      "content_type": ["utils", "articletopic"],
       "label": "Insight",
       "action": "wagtail.create",
       "data": {},
       "timestamp": "2024-02-26T15:30:49.123Z",
       "uuid": "1df90e4a-6fc0-46b5-a595-3485ebd94f8f",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": null,
       "content_changed": true,
       "deleted": false,
@@ -1304,18 +1140,13 @@
     "model": "wagtailcore.modellogentry",
     "pk": 6,
     "fields": {
-      "content_type": [
-        "utils",
-        "articletopic"
-      ],
+      "content_type": ["utils", "articletopic"],
       "label": "News",
       "action": "wagtail.create",
       "data": {},
       "timestamp": "2024-02-26T15:31:51.595Z",
       "uuid": "a20b4265-ba8e-4264-b4cb-248d4fb99718",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": null,
       "content_changed": true,
       "deleted": false,
@@ -1326,18 +1157,13 @@
     "model": "wagtailcore.modellogentry",
     "pk": 7,
     "fields": {
-      "content_type": [
-        "navigation",
-        "navigationsettings"
-      ],
+      "content_type": ["navigation", "navigationsettings"],
       "label": "navigation settings for myproject [default]",
       "action": "wagtail.edit",
       "data": {},
       "timestamp": "2024-02-26T15:36:29.683Z",
       "uuid": "1928f864-3735-4181-808c-1db68f01571e",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": null,
       "content_changed": true,
       "deleted": false,
@@ -1348,18 +1174,13 @@
     "model": "wagtailcore.modellogentry",
     "pk": 8,
     "fields": {
-      "content_type": [
-        "utils",
-        "systemmessagessettings"
-      ],
+      "content_type": ["utils", "systemmessagessettings"],
       "label": "system messages for myproject [default]",
       "action": "wagtail.edit",
       "data": {},
       "timestamp": "2024-02-26T15:37:19.539Z",
       "uuid": "88db8fb6-74dc-4d8a-b72b-7832f4f6684b",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": null,
       "content_changed": true,
       "deleted": false,
@@ -1370,18 +1191,13 @@
     "model": "wagtailcore.modellogentry",
     "pk": 9,
     "fields": {
-      "content_type": [
-        "navigation",
-        "navigationsettings"
-      ],
+      "content_type": ["navigation", "navigationsettings"],
       "label": "navigation settings for myproject [default]",
       "action": "wagtail.edit",
       "data": {},
       "timestamp": "2024-02-27T08:26:49.116Z",
       "uuid": "d7e87ebf-1adb-412d-9cdd-a0e9e7742ced",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": null,
       "content_changed": true,
       "deleted": false,
@@ -1392,18 +1208,13 @@
     "model": "wagtailcore.modellogentry",
     "pk": 10,
     "fields": {
-      "content_type": [
-        "navigation",
-        "navigationsettings"
-      ],
+      "content_type": ["navigation", "navigationsettings"],
       "label": "navigation settings for myproject [default]",
       "action": "wagtail.edit",
       "data": {},
       "timestamp": "2024-02-27T09:25:44.378Z",
       "uuid": "3691c45d-b114-4051-8fb4-bc665263f947",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": null,
       "content_changed": true,
       "deleted": false,
@@ -1414,18 +1225,13 @@
     "model": "wagtailcore.modellogentry",
     "pk": 11,
     "fields": {
-      "content_type": [
-        "utils",
-        "socialmediasettings"
-      ],
+      "content_type": ["utils", "socialmediasettings"],
       "label": "social media settings for myproject [default]",
       "action": "wagtail.edit",
       "data": {},
       "timestamp": "2024-03-01T09:34:22.098Z",
       "uuid": "20dc0f25-b6d4-44a3-af86-911edced5105",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": null,
       "content_changed": true,
       "deleted": false,
@@ -1436,18 +1242,13 @@
     "model": "wagtailcore.modellogentry",
     "pk": 12,
     "fields": {
-      "content_type": [
-        "utils",
-        "systemmessagessettings"
-      ],
+      "content_type": ["utils", "systemmessagessettings"],
       "label": "system messages for myproject [default]",
       "action": "wagtail.edit",
       "data": {},
       "timestamp": "2024-04-22T13:24:46.138Z",
       "uuid": "b0b0c700-9a2a-469f-8866-68d3540eff1a",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": null,
       "content_changed": true,
       "deleted": false,
@@ -1458,18 +1259,13 @@
     "model": "wagtailcore.modellogentry",
     "pk": 13,
     "fields": {
-      "content_type": [
-        "utils",
-        "articletopic"
-      ],
+      "content_type": ["utils", "articletopic"],
       "label": "News",
       "action": "wagtail.edit",
       "data": {},
       "timestamp": "2024-04-23T06:31:17.467Z",
       "uuid": "18865c5d-2a19-4df8-8635-b3f68a8660f6",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": null,
       "content_changed": true,
       "deleted": false,
@@ -1480,18 +1276,13 @@
     "model": "wagtailcore.modellogentry",
     "pk": 14,
     "fields": {
-      "content_type": [
-        "utils",
-        "articletopic"
-      ],
+      "content_type": ["utils", "articletopic"],
       "label": "Insight",
       "action": "wagtail.edit",
       "data": {},
       "timestamp": "2024-04-23T06:31:20.963Z",
       "uuid": "d0ba277d-7314-4b65-a06a-b3596addc39f",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": null,
       "content_changed": true,
       "deleted": false,
@@ -1522,10 +1313,7 @@
       "title": "Root",
       "draft_title": "Root",
       "slug": "root",
-      "content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["wagtailcore", "page"],
       "url_path": "/",
       "owner": null,
       "seo_title": "",
@@ -1541,7 +1329,7 @@
     "fields": {
       "path": "00010001",
       "depth": 2,
-      "numchild": 4,
+      "numchild": 5,
       "translation_key": "54273bfc-1036-4830-9b24-d6194c55f7e6",
       "locale": 1,
       "latest_revision": 121,
@@ -1559,10 +1347,7 @@
       "title": "Curvy dark guppy",
       "draft_title": "Curvy dark guppy",
       "slug": "home",
-      "content_type": [
-        "home",
-        "homepage"
-      ],
+      "content_type": ["home", "homepage"],
       "url_path": "/home/",
       "owner": null,
       "seo_title": "",
@@ -1596,14 +1381,9 @@
       "title": "Blog",
       "draft_title": "Blog",
       "slug": "blog",
-      "content_type": [
-        "news",
-        "newslistingpage"
-      ],
+      "content_type": ["news", "newslistingpage"],
       "url_path": "/home/blog/",
-      "owner": [
-        "admin"
-      ],
+      "owner": ["admin"],
       "seo_title": "",
       "show_in_menus": true,
       "search_description": "",
@@ -1635,14 +1415,9 @@
       "title": "About",
       "draft_title": "About",
       "slug": "about",
-      "content_type": [
-        "standardpages",
-        "indexpage"
-      ],
+      "content_type": ["standardpages", "indexpage"],
       "url_path": "/home/about/",
-      "owner": [
-        "admin"
-      ],
+      "owner": ["admin"],
       "seo_title": "",
       "show_in_menus": true,
       "search_description": "",
@@ -1674,14 +1449,9 @@
       "title": "This is a standard page template",
       "draft_title": "This is a standard page template",
       "slug": "this-is-a-standard-page-template",
-      "content_type": [
-        "standardpages",
-        "standardpage"
-      ],
+      "content_type": ["standardpages", "standardpage"],
       "url_path": "/home/this-is-a-standard-page-template/",
-      "owner": [
-        "admin"
-      ],
+      "owner": ["admin"],
       "seo_title": "",
       "show_in_menus": true,
       "search_description": "",
@@ -1713,14 +1483,9 @@
       "title": "There are more mackerel in Kent, than people in China",
       "draft_title": "There are more mackerel in Kent, than people in China",
       "slug": "there-are-more-mackerel-in-kent-than-people-in-china",
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "url_path": "/home/blog/there-are-more-mackerel-in-kent-than-people-in-china/",
-      "owner": [
-        "admin"
-      ],
+      "owner": ["admin"],
       "seo_title": "",
       "show_in_menus": true,
       "search_description": "",
@@ -1752,14 +1517,9 @@
       "title": "Article title goes here and can be quite long actually",
       "draft_title": "Article title goes here and can be quite long actually",
       "slug": "article-title-goes-here-and-can-be-quite-long-actually",
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "url_path": "/home/blog/article-title-goes-here-and-can-be-quite-long-actually/",
-      "owner": [
-        "admin"
-      ],
+      "owner": ["admin"],
       "seo_title": "",
       "show_in_menus": true,
       "search_description": "",
@@ -1791,14 +1551,9 @@
       "title": "Article 1",
       "draft_title": "Article 1",
       "slug": "article-1-1",
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "url_path": "/home/blog/article-1-1/",
-      "owner": [
-        "admin"
-      ],
+      "owner": ["admin"],
       "seo_title": "",
       "show_in_menus": true,
       "search_description": "",
@@ -1830,14 +1585,9 @@
       "title": "Article 2",
       "draft_title": "Article 2",
       "slug": "article-2-2",
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "url_path": "/home/blog/article-2-2/",
-      "owner": [
-        "admin"
-      ],
+      "owner": ["admin"],
       "seo_title": "",
       "show_in_menus": true,
       "search_description": "",
@@ -1869,14 +1619,9 @@
       "title": "Article 3",
       "draft_title": "Article 3",
       "slug": "article-3-3",
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "url_path": "/home/blog/article-3-3/",
-      "owner": [
-        "admin"
-      ],
+      "owner": ["admin"],
       "seo_title": "",
       "show_in_menus": true,
       "search_description": "",
@@ -1908,14 +1653,9 @@
       "title": "Article 4",
       "draft_title": "Article 4",
       "slug": "article-4-4",
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "url_path": "/home/blog/article-4-4/",
-      "owner": [
-        "admin"
-      ],
+      "owner": ["admin"],
       "seo_title": "",
       "show_in_menus": true,
       "search_description": "",
@@ -1947,14 +1687,9 @@
       "title": "Article 5",
       "draft_title": "Article 5",
       "slug": "article-5-5",
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "url_path": "/home/blog/article-5-5/",
-      "owner": [
-        "admin"
-      ],
+      "owner": ["admin"],
       "seo_title": "",
       "show_in_menus": true,
       "search_description": "",
@@ -1986,14 +1721,9 @@
       "title": "Article 6",
       "draft_title": "Article 6",
       "slug": "article-6-6",
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "url_path": "/home/blog/article-6-6/",
-      "owner": [
-        "admin"
-      ],
+      "owner": ["admin"],
       "seo_title": "",
       "show_in_menus": true,
       "search_description": "",
@@ -2025,14 +1755,9 @@
       "title": "Article 7",
       "draft_title": "Article 7",
       "slug": "article-7-7",
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "url_path": "/home/blog/article-7-7/",
-      "owner": [
-        "admin"
-      ],
+      "owner": ["admin"],
       "seo_title": "",
       "show_in_menus": true,
       "search_description": "",
@@ -2064,14 +1789,9 @@
       "title": "Article 8",
       "draft_title": "Article 8",
       "slug": "article-8-8",
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "url_path": "/home/blog/article-8-8/",
-      "owner": [
-        "admin"
-      ],
+      "owner": ["admin"],
       "seo_title": "",
       "show_in_menus": true,
       "search_description": "",
@@ -2103,14 +1823,9 @@
       "title": "Article 9",
       "draft_title": "Article 9",
       "slug": "article-9-9",
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "url_path": "/home/blog/article-9-9/",
-      "owner": [
-        "admin"
-      ],
+      "owner": ["admin"],
       "seo_title": "",
       "show_in_menus": true,
       "search_description": "",
@@ -2142,14 +1857,9 @@
       "title": "Article 10",
       "draft_title": "Article 10",
       "slug": "article-10-10",
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "url_path": "/home/blog/article-10-10/",
-      "owner": [
-        "admin"
-      ],
+      "owner": ["admin"],
       "seo_title": "",
       "show_in_menus": true,
       "search_description": "",
@@ -2181,14 +1891,9 @@
       "title": "Article 11",
       "draft_title": "Article 11",
       "slug": "article-11-11",
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "url_path": "/home/blog/article-11-11/",
-      "owner": [
-        "admin"
-      ],
+      "owner": ["admin"],
       "seo_title": "",
       "show_in_menus": true,
       "search_description": "",
@@ -2220,14 +1925,9 @@
       "title": "Article 12",
       "draft_title": "Article 12",
       "slug": "article-12-12",
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "url_path": "/home/blog/article-12-12/",
-      "owner": [
-        "admin"
-      ],
+      "owner": ["admin"],
       "seo_title": "",
       "show_in_menus": true,
       "search_description": "",
@@ -2259,14 +1959,9 @@
       "title": "Article 13",
       "draft_title": "Article 13",
       "slug": "article-13-13",
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "url_path": "/home/blog/article-13-13/",
-      "owner": [
-        "admin"
-      ],
+      "owner": ["admin"],
       "seo_title": "",
       "show_in_menus": true,
       "search_description": "",
@@ -2298,14 +1993,9 @@
       "title": "Article 14",
       "draft_title": "Article 14",
       "slug": "article-14-14",
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "url_path": "/home/blog/article-14-14/",
-      "owner": [
-        "admin"
-      ],
+      "owner": ["admin"],
       "seo_title": "",
       "show_in_menus": true,
       "search_description": "",
@@ -2337,14 +2027,9 @@
       "title": "Article 15",
       "draft_title": "Article 15",
       "slug": "article-15-15",
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "url_path": "/home/blog/article-15-15/",
-      "owner": [
-        "admin"
-      ],
+      "owner": ["admin"],
       "seo_title": "",
       "show_in_menus": true,
       "search_description": "",
@@ -2376,14 +2061,9 @@
       "title": "Article 16",
       "draft_title": "Article 16",
       "slug": "article-16-16",
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "url_path": "/home/blog/article-16-16/",
-      "owner": [
-        "admin"
-      ],
+      "owner": ["admin"],
       "seo_title": "",
       "show_in_menus": true,
       "search_description": "",
@@ -2415,14 +2095,9 @@
       "title": "Article 17",
       "draft_title": "Article 17",
       "slug": "article-17-17",
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "url_path": "/home/blog/article-17-17/",
-      "owner": [
-        "admin"
-      ],
+      "owner": ["admin"],
       "seo_title": "",
       "show_in_menus": true,
       "search_description": "",
@@ -2454,14 +2129,9 @@
       "title": "Article 18",
       "draft_title": "Article 18",
       "slug": "article-18-18",
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "url_path": "/home/blog/article-18-18/",
-      "owner": [
-        "admin"
-      ],
+      "owner": ["admin"],
       "seo_title": "",
       "show_in_menus": true,
       "search_description": "",
@@ -2493,14 +2163,9 @@
       "title": "Article 19",
       "draft_title": "Article 19",
       "slug": "article-19-19",
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "url_path": "/home/blog/article-19-19/",
-      "owner": [
-        "admin"
-      ],
+      "owner": ["admin"],
       "seo_title": "",
       "show_in_menus": true,
       "search_description": "",
@@ -2532,14 +2197,9 @@
       "title": "Article 20",
       "draft_title": "Article 20",
       "slug": "article-20-20",
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "url_path": "/home/blog/article-20-20/",
-      "owner": [
-        "admin"
-      ],
+      "owner": ["admin"],
       "seo_title": "",
       "show_in_menus": true,
       "search_description": "",
@@ -2571,14 +2231,9 @@
       "title": "Get in touch",
       "draft_title": "Get in touch",
       "slug": "get-in-touch",
-      "content_type": [
-        "forms",
-        "formpage"
-      ],
+      "content_type": ["forms", "formpage"],
       "url_path": "/home/get-in-touch/",
-      "owner": [
-        "admin"
-      ],
+      "owner": ["admin"],
       "seo_title": "",
       "show_in_menus": true,
       "search_description": "",
@@ -2590,19 +2245,11 @@
     "model": "wagtailcore.revision",
     "pk": 1,
     "fields": {
-      "content_type": [
-        "home",
-        "homepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["home", "homepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "3",
       "created_at": "2024-02-26T15:27:30.590Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "Curvy dark guppy",
       "content": {
         "pk": 3,
@@ -2654,19 +2301,11 @@
     "model": "wagtailcore.revision",
     "pk": 2,
     "fields": {
-      "content_type": [
-        "news",
-        "newslistingpage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "newslistingpage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "4",
       "created_at": "2024-02-26T15:28:26.312Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "Blog",
       "content": {
         "pk": 4,
@@ -2715,19 +2354,11 @@
     "model": "wagtailcore.revision",
     "pk": 3,
     "fields": {
-      "content_type": [
-        "standardpages",
-        "indexpage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["standardpages", "indexpage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "5",
       "created_at": "2024-02-26T15:28:58.100Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "About",
       "content": {
         "pk": 5,
@@ -2796,19 +2427,11 @@
     "model": "wagtailcore.revision",
     "pk": 4,
     "fields": {
-      "content_type": [
-        "standardpages",
-        "standardpage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["standardpages", "standardpage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "6",
       "created_at": "2024-02-26T15:29:35.125Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "This is a standard page template",
       "content": {
         "pk": 6,
@@ -2860,19 +2483,11 @@
     "model": "wagtailcore.revision",
     "pk": 5,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "7",
       "created_at": "2024-02-26T15:31:06.311Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "There are more mackerel in Kent, than people in China",
       "content": {
         "pk": 7,
@@ -2927,19 +2542,11 @@
     "model": "wagtailcore.revision",
     "pk": 6,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "8",
       "created_at": "2024-02-26T15:32:07.284Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "Article title goes here and can be quite long actually",
       "content": {
         "pk": 8,
@@ -2994,19 +2601,11 @@
     "model": "wagtailcore.revision",
     "pk": 8,
     "fields": {
-      "content_type": [
-        "standardpages",
-        "indexpage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["standardpages", "indexpage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "5",
       "created_at": "2024-02-26T15:40:17.296Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "About",
       "content": {
         "pk": 5,
@@ -3075,19 +2674,11 @@
     "model": "wagtailcore.revision",
     "pk": 9,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "7",
       "created_at": "2024-02-26T15:54:29.640Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "There are more mackerel in Kent, than people in China",
       "content": {
         "pk": 7,
@@ -3142,19 +2733,11 @@
     "model": "wagtailcore.revision",
     "pk": 10,
     "fields": {
-      "content_type": [
-        "standardpages",
-        "indexpage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["standardpages", "indexpage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "5",
       "created_at": "2024-02-26T15:55:57.686Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "About",
       "content": {
         "pk": 5,
@@ -3241,19 +2824,11 @@
     "model": "wagtailcore.revision",
     "pk": 11,
     "fields": {
-      "content_type": [
-        "standardpages",
-        "indexpage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["standardpages", "indexpage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "5",
       "created_at": "2024-02-26T16:31:50.329Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "About",
       "content": {
         "pk": 5,
@@ -3334,19 +2909,11 @@
     "model": "wagtailcore.revision",
     "pk": 13,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "7",
       "created_at": "2024-02-26T20:54:50.848Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "There are more mackerel in Kent, than people in China",
       "content": {
         "pk": 7,
@@ -3401,19 +2968,11 @@
     "model": "wagtailcore.revision",
     "pk": 14,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "10",
       "created_at": "2024-02-26T15:31:06.311Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "There are more mackerel in Kent, than people in China",
       "content": {
         "pk": 10,
@@ -3468,19 +3027,11 @@
     "model": "wagtailcore.revision",
     "pk": 15,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "10",
       "created_at": "2024-02-26T15:54:29.640Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "There are more mackerel in Kent, than people in China",
       "content": {
         "pk": 10,
@@ -3535,19 +3086,11 @@
     "model": "wagtailcore.revision",
     "pk": 16,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "10",
       "created_at": "2024-02-26T20:54:50.848Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "There are more mackerel in Kent, than people in China",
       "content": {
         "pk": 10,
@@ -3602,14 +3145,8 @@
     "model": "wagtailcore.revision",
     "pk": 17,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "10",
       "created_at": "2024-02-27T06:06:45.747Z",
       "user": null,
@@ -3667,14 +3204,8 @@
     "model": "wagtailcore.revision",
     "pk": 18,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "10",
       "created_at": "2024-02-27T06:06:45.763Z",
       "user": null,
@@ -3732,19 +3263,11 @@
     "model": "wagtailcore.revision",
     "pk": 19,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "11",
       "created_at": "2024-02-26T15:31:06.311Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "There are more mackerel in Kent, than people in China",
       "content": {
         "pk": 11,
@@ -3799,19 +3322,11 @@
     "model": "wagtailcore.revision",
     "pk": 20,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "11",
       "created_at": "2024-02-26T15:54:29.640Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "There are more mackerel in Kent, than people in China",
       "content": {
         "pk": 11,
@@ -3866,19 +3381,11 @@
     "model": "wagtailcore.revision",
     "pk": 21,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "11",
       "created_at": "2024-02-26T20:54:50.848Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "There are more mackerel in Kent, than people in China",
       "content": {
         "pk": 11,
@@ -3933,14 +3440,8 @@
     "model": "wagtailcore.revision",
     "pk": 22,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "11",
       "created_at": "2024-02-27T06:06:45.804Z",
       "user": null,
@@ -3998,14 +3499,8 @@
     "model": "wagtailcore.revision",
     "pk": 23,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "11",
       "created_at": "2024-02-27T06:06:45.818Z",
       "user": null,
@@ -4063,19 +3558,11 @@
     "model": "wagtailcore.revision",
     "pk": 24,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "12",
       "created_at": "2024-02-26T15:31:06.311Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "There are more mackerel in Kent, than people in China",
       "content": {
         "pk": 12,
@@ -4130,19 +3617,11 @@
     "model": "wagtailcore.revision",
     "pk": 25,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "12",
       "created_at": "2024-02-26T15:54:29.640Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "There are more mackerel in Kent, than people in China",
       "content": {
         "pk": 12,
@@ -4197,19 +3676,11 @@
     "model": "wagtailcore.revision",
     "pk": 26,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "12",
       "created_at": "2024-02-26T20:54:50.848Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "There are more mackerel in Kent, than people in China",
       "content": {
         "pk": 12,
@@ -4264,14 +3735,8 @@
     "model": "wagtailcore.revision",
     "pk": 27,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "12",
       "created_at": "2024-02-27T06:06:45.847Z",
       "user": null,
@@ -4329,14 +3794,8 @@
     "model": "wagtailcore.revision",
     "pk": 28,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "12",
       "created_at": "2024-02-27T06:06:45.861Z",
       "user": null,
@@ -4394,19 +3853,11 @@
     "model": "wagtailcore.revision",
     "pk": 29,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "13",
       "created_at": "2024-02-26T15:31:06.311Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "There are more mackerel in Kent, than people in China",
       "content": {
         "pk": 13,
@@ -4461,19 +3912,11 @@
     "model": "wagtailcore.revision",
     "pk": 30,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "13",
       "created_at": "2024-02-26T15:54:29.640Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "There are more mackerel in Kent, than people in China",
       "content": {
         "pk": 13,
@@ -4528,19 +3971,11 @@
     "model": "wagtailcore.revision",
     "pk": 31,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "13",
       "created_at": "2024-02-26T20:54:50.848Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "There are more mackerel in Kent, than people in China",
       "content": {
         "pk": 13,
@@ -4595,14 +4030,8 @@
     "model": "wagtailcore.revision",
     "pk": 32,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "13",
       "created_at": "2024-02-27T06:06:45.890Z",
       "user": null,
@@ -4660,14 +4089,8 @@
     "model": "wagtailcore.revision",
     "pk": 33,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "13",
       "created_at": "2024-02-27T06:06:45.964Z",
       "user": null,
@@ -4725,19 +4148,11 @@
     "model": "wagtailcore.revision",
     "pk": 34,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "14",
       "created_at": "2024-02-26T15:31:06.311Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "There are more mackerel in Kent, than people in China",
       "content": {
         "pk": 14,
@@ -4792,19 +4207,11 @@
     "model": "wagtailcore.revision",
     "pk": 35,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "14",
       "created_at": "2024-02-26T15:54:29.640Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "There are more mackerel in Kent, than people in China",
       "content": {
         "pk": 14,
@@ -4859,19 +4266,11 @@
     "model": "wagtailcore.revision",
     "pk": 36,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "14",
       "created_at": "2024-02-26T20:54:50.848Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "There are more mackerel in Kent, than people in China",
       "content": {
         "pk": 14,
@@ -4926,14 +4325,8 @@
     "model": "wagtailcore.revision",
     "pk": 37,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "14",
       "created_at": "2024-02-27T06:06:45.995Z",
       "user": null,
@@ -4991,14 +4384,8 @@
     "model": "wagtailcore.revision",
     "pk": 38,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "14",
       "created_at": "2024-02-27T06:06:46.009Z",
       "user": null,
@@ -5056,19 +4443,11 @@
     "model": "wagtailcore.revision",
     "pk": 39,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "15",
       "created_at": "2024-02-26T15:31:06.311Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "There are more mackerel in Kent, than people in China",
       "content": {
         "pk": 15,
@@ -5123,19 +4502,11 @@
     "model": "wagtailcore.revision",
     "pk": 40,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "15",
       "created_at": "2024-02-26T15:54:29.640Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "There are more mackerel in Kent, than people in China",
       "content": {
         "pk": 15,
@@ -5190,19 +4561,11 @@
     "model": "wagtailcore.revision",
     "pk": 41,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "15",
       "created_at": "2024-02-26T20:54:50.848Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "There are more mackerel in Kent, than people in China",
       "content": {
         "pk": 15,
@@ -5257,14 +4620,8 @@
     "model": "wagtailcore.revision",
     "pk": 42,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "15",
       "created_at": "2024-02-27T06:06:46.038Z",
       "user": null,
@@ -5322,14 +4679,8 @@
     "model": "wagtailcore.revision",
     "pk": 43,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "15",
       "created_at": "2024-02-27T06:06:46.050Z",
       "user": null,
@@ -5387,19 +4738,11 @@
     "model": "wagtailcore.revision",
     "pk": 44,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "16",
       "created_at": "2024-02-26T15:31:06.311Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "There are more mackerel in Kent, than people in China",
       "content": {
         "pk": 16,
@@ -5454,19 +4797,11 @@
     "model": "wagtailcore.revision",
     "pk": 45,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "16",
       "created_at": "2024-02-26T15:54:29.640Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "There are more mackerel in Kent, than people in China",
       "content": {
         "pk": 16,
@@ -5521,19 +4856,11 @@
     "model": "wagtailcore.revision",
     "pk": 46,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "16",
       "created_at": "2024-02-26T20:54:50.848Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "There are more mackerel in Kent, than people in China",
       "content": {
         "pk": 16,
@@ -5588,14 +4915,8 @@
     "model": "wagtailcore.revision",
     "pk": 47,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "16",
       "created_at": "2024-02-27T06:06:46.081Z",
       "user": null,
@@ -5653,14 +4974,8 @@
     "model": "wagtailcore.revision",
     "pk": 48,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "16",
       "created_at": "2024-02-27T06:06:46.095Z",
       "user": null,
@@ -5718,19 +5033,11 @@
     "model": "wagtailcore.revision",
     "pk": 49,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "17",
       "created_at": "2024-02-26T15:31:06.311Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "There are more mackerel in Kent, than people in China",
       "content": {
         "pk": 17,
@@ -5785,19 +5092,11 @@
     "model": "wagtailcore.revision",
     "pk": 50,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "17",
       "created_at": "2024-02-26T15:54:29.640Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "There are more mackerel in Kent, than people in China",
       "content": {
         "pk": 17,
@@ -5852,19 +5151,11 @@
     "model": "wagtailcore.revision",
     "pk": 51,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "17",
       "created_at": "2024-02-26T20:54:50.848Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "There are more mackerel in Kent, than people in China",
       "content": {
         "pk": 17,
@@ -5919,14 +5210,8 @@
     "model": "wagtailcore.revision",
     "pk": 52,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "17",
       "created_at": "2024-02-27T06:06:46.124Z",
       "user": null,
@@ -5984,14 +5269,8 @@
     "model": "wagtailcore.revision",
     "pk": 53,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "17",
       "created_at": "2024-02-27T06:06:46.139Z",
       "user": null,
@@ -6049,19 +5328,11 @@
     "model": "wagtailcore.revision",
     "pk": 54,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "18",
       "created_at": "2024-02-26T15:31:06.311Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "There are more mackerel in Kent, than people in China",
       "content": {
         "pk": 18,
@@ -6116,19 +5387,11 @@
     "model": "wagtailcore.revision",
     "pk": 55,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "18",
       "created_at": "2024-02-26T15:54:29.640Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "There are more mackerel in Kent, than people in China",
       "content": {
         "pk": 18,
@@ -6183,19 +5446,11 @@
     "model": "wagtailcore.revision",
     "pk": 56,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "18",
       "created_at": "2024-02-26T20:54:50.848Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "There are more mackerel in Kent, than people in China",
       "content": {
         "pk": 18,
@@ -6250,14 +5505,8 @@
     "model": "wagtailcore.revision",
     "pk": 57,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "18",
       "created_at": "2024-02-27T06:06:46.171Z",
       "user": null,
@@ -6315,14 +5564,8 @@
     "model": "wagtailcore.revision",
     "pk": 58,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "18",
       "created_at": "2024-02-27T06:06:46.194Z",
       "user": null,
@@ -6380,19 +5623,11 @@
     "model": "wagtailcore.revision",
     "pk": 59,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "19",
       "created_at": "2024-02-26T15:31:06.311Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "There are more mackerel in Kent, than people in China",
       "content": {
         "pk": 19,
@@ -6447,19 +5682,11 @@
     "model": "wagtailcore.revision",
     "pk": 60,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "19",
       "created_at": "2024-02-26T15:54:29.640Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "There are more mackerel in Kent, than people in China",
       "content": {
         "pk": 19,
@@ -6514,19 +5741,11 @@
     "model": "wagtailcore.revision",
     "pk": 61,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "19",
       "created_at": "2024-02-26T20:54:50.848Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "There are more mackerel in Kent, than people in China",
       "content": {
         "pk": 19,
@@ -6581,14 +5800,8 @@
     "model": "wagtailcore.revision",
     "pk": 62,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "19",
       "created_at": "2024-02-27T06:06:46.227Z",
       "user": null,
@@ -6646,14 +5859,8 @@
     "model": "wagtailcore.revision",
     "pk": 63,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "19",
       "created_at": "2024-02-27T06:06:46.241Z",
       "user": null,
@@ -6711,19 +5918,11 @@
     "model": "wagtailcore.revision",
     "pk": 64,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "20",
       "created_at": "2024-02-26T15:31:06.311Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "There are more mackerel in Kent, than people in China",
       "content": {
         "pk": 20,
@@ -6778,19 +5977,11 @@
     "model": "wagtailcore.revision",
     "pk": 65,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "20",
       "created_at": "2024-02-26T15:54:29.640Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "There are more mackerel in Kent, than people in China",
       "content": {
         "pk": 20,
@@ -6845,19 +6036,11 @@
     "model": "wagtailcore.revision",
     "pk": 66,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "20",
       "created_at": "2024-02-26T20:54:50.848Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "There are more mackerel in Kent, than people in China",
       "content": {
         "pk": 20,
@@ -6912,14 +6095,8 @@
     "model": "wagtailcore.revision",
     "pk": 67,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "20",
       "created_at": "2024-02-27T06:06:46.270Z",
       "user": null,
@@ -6977,14 +6154,8 @@
     "model": "wagtailcore.revision",
     "pk": 68,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "20",
       "created_at": "2024-02-27T06:06:46.283Z",
       "user": null,
@@ -7042,19 +6213,11 @@
     "model": "wagtailcore.revision",
     "pk": 69,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "21",
       "created_at": "2024-02-26T15:31:06.311Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "There are more mackerel in Kent, than people in China",
       "content": {
         "pk": 21,
@@ -7109,19 +6272,11 @@
     "model": "wagtailcore.revision",
     "pk": 70,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "21",
       "created_at": "2024-02-26T15:54:29.640Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "There are more mackerel in Kent, than people in China",
       "content": {
         "pk": 21,
@@ -7176,19 +6331,11 @@
     "model": "wagtailcore.revision",
     "pk": 71,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "21",
       "created_at": "2024-02-26T20:54:50.848Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "There are more mackerel in Kent, than people in China",
       "content": {
         "pk": 21,
@@ -7243,14 +6390,8 @@
     "model": "wagtailcore.revision",
     "pk": 72,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "21",
       "created_at": "2024-02-27T06:06:46.313Z",
       "user": null,
@@ -7308,14 +6449,8 @@
     "model": "wagtailcore.revision",
     "pk": 73,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "21",
       "created_at": "2024-02-27T06:06:46.327Z",
       "user": null,
@@ -7373,19 +6508,11 @@
     "model": "wagtailcore.revision",
     "pk": 74,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "22",
       "created_at": "2024-02-26T15:31:06.311Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "There are more mackerel in Kent, than people in China",
       "content": {
         "pk": 22,
@@ -7440,19 +6567,11 @@
     "model": "wagtailcore.revision",
     "pk": 75,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "22",
       "created_at": "2024-02-26T15:54:29.640Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "There are more mackerel in Kent, than people in China",
       "content": {
         "pk": 22,
@@ -7507,19 +6626,11 @@
     "model": "wagtailcore.revision",
     "pk": 76,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "22",
       "created_at": "2024-02-26T20:54:50.848Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "There are more mackerel in Kent, than people in China",
       "content": {
         "pk": 22,
@@ -7574,14 +6685,8 @@
     "model": "wagtailcore.revision",
     "pk": 77,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "22",
       "created_at": "2024-02-27T06:06:46.356Z",
       "user": null,
@@ -7639,14 +6744,8 @@
     "model": "wagtailcore.revision",
     "pk": 78,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "22",
       "created_at": "2024-02-27T06:06:46.369Z",
       "user": null,
@@ -7704,19 +6803,11 @@
     "model": "wagtailcore.revision",
     "pk": 79,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "23",
       "created_at": "2024-02-26T15:31:06.311Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "There are more mackerel in Kent, than people in China",
       "content": {
         "pk": 23,
@@ -7771,19 +6862,11 @@
     "model": "wagtailcore.revision",
     "pk": 80,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "23",
       "created_at": "2024-02-26T15:54:29.640Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "There are more mackerel in Kent, than people in China",
       "content": {
         "pk": 23,
@@ -7838,19 +6921,11 @@
     "model": "wagtailcore.revision",
     "pk": 81,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "23",
       "created_at": "2024-02-26T20:54:50.848Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "There are more mackerel in Kent, than people in China",
       "content": {
         "pk": 23,
@@ -7905,14 +6980,8 @@
     "model": "wagtailcore.revision",
     "pk": 82,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "23",
       "created_at": "2024-02-27T06:06:46.399Z",
       "user": null,
@@ -7970,14 +7039,8 @@
     "model": "wagtailcore.revision",
     "pk": 83,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "23",
       "created_at": "2024-02-27T06:06:46.412Z",
       "user": null,
@@ -8035,19 +7098,11 @@
     "model": "wagtailcore.revision",
     "pk": 84,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "24",
       "created_at": "2024-02-26T15:31:06.311Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "There are more mackerel in Kent, than people in China",
       "content": {
         "pk": 24,
@@ -8102,19 +7157,11 @@
     "model": "wagtailcore.revision",
     "pk": 85,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "24",
       "created_at": "2024-02-26T15:54:29.640Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "There are more mackerel in Kent, than people in China",
       "content": {
         "pk": 24,
@@ -8169,19 +7216,11 @@
     "model": "wagtailcore.revision",
     "pk": 86,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "24",
       "created_at": "2024-02-26T20:54:50.848Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "There are more mackerel in Kent, than people in China",
       "content": {
         "pk": 24,
@@ -8236,14 +7275,8 @@
     "model": "wagtailcore.revision",
     "pk": 87,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "24",
       "created_at": "2024-02-27T06:06:46.442Z",
       "user": null,
@@ -8301,14 +7334,8 @@
     "model": "wagtailcore.revision",
     "pk": 88,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "24",
       "created_at": "2024-02-27T06:06:46.456Z",
       "user": null,
@@ -8366,19 +7393,11 @@
     "model": "wagtailcore.revision",
     "pk": 89,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "25",
       "created_at": "2024-02-26T15:31:06.311Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "There are more mackerel in Kent, than people in China",
       "content": {
         "pk": 25,
@@ -8433,19 +7452,11 @@
     "model": "wagtailcore.revision",
     "pk": 90,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "25",
       "created_at": "2024-02-26T15:54:29.640Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "There are more mackerel in Kent, than people in China",
       "content": {
         "pk": 25,
@@ -8500,19 +7511,11 @@
     "model": "wagtailcore.revision",
     "pk": 91,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "25",
       "created_at": "2024-02-26T20:54:50.848Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "There are more mackerel in Kent, than people in China",
       "content": {
         "pk": 25,
@@ -8567,14 +7570,8 @@
     "model": "wagtailcore.revision",
     "pk": 92,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "25",
       "created_at": "2024-02-27T06:06:46.484Z",
       "user": null,
@@ -8632,14 +7629,8 @@
     "model": "wagtailcore.revision",
     "pk": 93,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "25",
       "created_at": "2024-02-27T06:06:46.505Z",
       "user": null,
@@ -8697,19 +7688,11 @@
     "model": "wagtailcore.revision",
     "pk": 94,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "26",
       "created_at": "2024-02-26T15:31:06.311Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "There are more mackerel in Kent, than people in China",
       "content": {
         "pk": 26,
@@ -8764,19 +7747,11 @@
     "model": "wagtailcore.revision",
     "pk": 95,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "26",
       "created_at": "2024-02-26T15:54:29.640Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "There are more mackerel in Kent, than people in China",
       "content": {
         "pk": 26,
@@ -8831,19 +7806,11 @@
     "model": "wagtailcore.revision",
     "pk": 96,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "26",
       "created_at": "2024-02-26T20:54:50.848Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "There are more mackerel in Kent, than people in China",
       "content": {
         "pk": 26,
@@ -8898,14 +7865,8 @@
     "model": "wagtailcore.revision",
     "pk": 97,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "26",
       "created_at": "2024-02-27T06:06:46.535Z",
       "user": null,
@@ -8963,14 +7924,8 @@
     "model": "wagtailcore.revision",
     "pk": 98,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "26",
       "created_at": "2024-02-27T06:06:46.548Z",
       "user": null,
@@ -9028,19 +7983,11 @@
     "model": "wagtailcore.revision",
     "pk": 99,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "27",
       "created_at": "2024-02-26T15:31:06.311Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "There are more mackerel in Kent, than people in China",
       "content": {
         "pk": 27,
@@ -9095,19 +8042,11 @@
     "model": "wagtailcore.revision",
     "pk": 100,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "27",
       "created_at": "2024-02-26T15:54:29.640Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "There are more mackerel in Kent, than people in China",
       "content": {
         "pk": 27,
@@ -9162,19 +8101,11 @@
     "model": "wagtailcore.revision",
     "pk": 101,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "27",
       "created_at": "2024-02-26T20:54:50.848Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "There are more mackerel in Kent, than people in China",
       "content": {
         "pk": 27,
@@ -9229,14 +8160,8 @@
     "model": "wagtailcore.revision",
     "pk": 102,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "27",
       "created_at": "2024-02-27T06:06:46.578Z",
       "user": null,
@@ -9294,14 +8219,8 @@
     "model": "wagtailcore.revision",
     "pk": 103,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "27",
       "created_at": "2024-02-27T06:06:46.592Z",
       "user": null,
@@ -9359,19 +8278,11 @@
     "model": "wagtailcore.revision",
     "pk": 104,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "28",
       "created_at": "2024-02-26T15:31:06.311Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "There are more mackerel in Kent, than people in China",
       "content": {
         "pk": 28,
@@ -9426,19 +8337,11 @@
     "model": "wagtailcore.revision",
     "pk": 105,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "28",
       "created_at": "2024-02-26T15:54:29.640Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "There are more mackerel in Kent, than people in China",
       "content": {
         "pk": 28,
@@ -9493,19 +8396,11 @@
     "model": "wagtailcore.revision",
     "pk": 106,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "28",
       "created_at": "2024-02-26T20:54:50.848Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "There are more mackerel in Kent, than people in China",
       "content": {
         "pk": 28,
@@ -9560,14 +8455,8 @@
     "model": "wagtailcore.revision",
     "pk": 107,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "28",
       "created_at": "2024-02-27T06:06:46.620Z",
       "user": null,
@@ -9625,14 +8514,8 @@
     "model": "wagtailcore.revision",
     "pk": 108,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "28",
       "created_at": "2024-02-27T06:06:46.633Z",
       "user": null,
@@ -9690,19 +8573,11 @@
     "model": "wagtailcore.revision",
     "pk": 109,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "29",
       "created_at": "2024-02-26T15:31:06.311Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "There are more mackerel in Kent, than people in China",
       "content": {
         "pk": 29,
@@ -9757,19 +8632,11 @@
     "model": "wagtailcore.revision",
     "pk": 110,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "29",
       "created_at": "2024-02-26T15:54:29.640Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "There are more mackerel in Kent, than people in China",
       "content": {
         "pk": 29,
@@ -9824,19 +8691,11 @@
     "model": "wagtailcore.revision",
     "pk": 111,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "29",
       "created_at": "2024-02-26T20:54:50.848Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "There are more mackerel in Kent, than people in China",
       "content": {
         "pk": 29,
@@ -9891,14 +8750,8 @@
     "model": "wagtailcore.revision",
     "pk": 112,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "29",
       "created_at": "2024-02-27T06:06:46.662Z",
       "user": null,
@@ -9956,14 +8809,8 @@
     "model": "wagtailcore.revision",
     "pk": 113,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "29",
       "created_at": "2024-02-27T06:06:46.675Z",
       "user": null,
@@ -10021,19 +8868,11 @@
     "model": "wagtailcore.revision",
     "pk": 114,
     "fields": {
-      "content_type": [
-        "news",
-        "newslistingpage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "newslistingpage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "4",
       "created_at": "2024-02-27T06:47:21.055Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "Blog",
       "content": {
         "pk": 4,
@@ -10082,19 +8921,11 @@
     "model": "wagtailcore.revision",
     "pk": 116,
     "fields": {
-      "content_type": [
-        "standardpages",
-        "standardpage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["standardpages", "standardpage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "6",
       "created_at": "2024-02-27T06:48:21.666Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "This is a standard page template",
       "content": {
         "pk": 6,
@@ -10165,19 +8996,11 @@
     "model": "wagtailcore.revision",
     "pk": 117,
     "fields": {
-      "content_type": [
-        "standardpages",
-        "standardpage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["standardpages", "standardpage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "6",
       "created_at": "2024-02-27T06:48:46.295Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "This is a standard page template",
       "content": {
         "pk": 6,
@@ -10248,19 +9071,11 @@
     "model": "wagtailcore.revision",
     "pk": 118,
     "fields": {
-      "content_type": [
-        "standardpages",
-        "indexpage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["standardpages", "indexpage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "5",
       "created_at": "2024-02-27T06:49:10.628Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "About",
       "content": {
         "pk": 5,
@@ -10341,19 +9156,11 @@
     "model": "wagtailcore.revision",
     "pk": 119,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["news", "articlepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "8",
       "created_at": "2024-02-27T06:49:54.015Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "Article title goes here and can be quite long actually",
       "content": {
         "pk": 8,
@@ -10408,19 +9215,11 @@
     "model": "wagtailcore.revision",
     "pk": 120,
     "fields": {
-      "content_type": [
-        "standardpages",
-        "standardpage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["standardpages", "standardpage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "6",
       "created_at": "2024-02-27T06:50:04.283Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "This is a standard page template",
       "content": {
         "pk": 6,
@@ -10485,19 +9284,11 @@
     "model": "wagtailcore.revision",
     "pk": 121,
     "fields": {
-      "content_type": [
-        "home",
-        "homepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["home", "homepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "3",
       "created_at": "2024-02-27T06:51:17.963Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "Curvy dark guppy",
       "content": {
         "pk": 3,
@@ -10549,19 +9340,11 @@
     "model": "wagtailcore.revision",
     "pk": 122,
     "fields": {
-      "content_type": [
-        "forms",
-        "formpage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["forms", "formpage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "30",
       "created_at": "2024-02-27T08:26:29.414Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "Get in touch",
       "content": {
         "pk": 30,
@@ -10665,19 +9448,11 @@
     "model": "wagtailcore.revision",
     "pk": 123,
     "fields": {
-      "content_type": [
-        "standardpages",
-        "indexpage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["standardpages", "indexpage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "5",
       "created_at": "2024-02-27T08:57:20.409Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "About",
       "content": {
         "pk": 5,
@@ -10764,19 +9539,11 @@
     "model": "wagtailcore.revision",
     "pk": 124,
     "fields": {
-      "content_type": [
-        "standardpages",
-        "standardpage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["standardpages", "standardpage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "6",
       "created_at": "2024-02-27T08:57:42.536Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "This is a standard page template",
       "content": {
         "pk": 6,
@@ -10847,19 +9614,11 @@
     "model": "wagtailcore.revision",
     "pk": 125,
     "fields": {
-      "content_type": [
-        "home",
-        "homepage"
-      ],
-      "base_content_type": [
-        "wagtailcore",
-        "page"
-      ],
+      "content_type": ["home", "homepage"],
+      "base_content_type": ["wagtailcore", "page"],
       "object_id": "3",
       "created_at": "2024-02-27T08:59:00.286Z",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "object_str": "Curvy dark guppy",
       "content": {
         "pk": 3,
@@ -10942,18 +9701,13 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 1,
     "fields": {
-      "content_type": [
-        "home",
-        "homepage"
-      ],
+      "content_type": ["home", "homepage"],
       "label": "Home",
       "action": "wagtail.edit",
       "data": {},
       "timestamp": "2024-02-26T15:27:30.598Z",
       "uuid": "a471f71a-8a10-492e-961d-4512d43fd317",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": 1,
       "content_changed": true,
       "deleted": false,
@@ -10964,18 +9718,13 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 2,
     "fields": {
-      "content_type": [
-        "home",
-        "homepage"
-      ],
+      "content_type": ["home", "homepage"],
       "label": "Curvy dark guppy",
       "action": "wagtail.publish",
       "data": {},
       "timestamp": "2024-02-26T15:27:30.612Z",
       "uuid": "a471f71a-8a10-492e-961d-4512d43fd317",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": 1,
       "content_changed": true,
       "deleted": false,
@@ -10986,18 +9735,13 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 3,
     "fields": {
-      "content_type": [
-        "news",
-        "newslistingpage"
-      ],
+      "content_type": ["news", "newslistingpage"],
       "label": "Blog",
       "action": "wagtail.create",
       "data": {},
       "timestamp": "2024-02-26T15:28:26.305Z",
       "uuid": "728801ef-cb48-4e2d-8374-e122e686478d",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": null,
       "content_changed": true,
       "deleted": false,
@@ -11008,18 +9752,13 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 4,
     "fields": {
-      "content_type": [
-        "news",
-        "newslistingpage"
-      ],
+      "content_type": ["news", "newslistingpage"],
       "label": "Blog",
       "action": "wagtail.edit",
       "data": {},
       "timestamp": "2024-02-26T15:28:26.321Z",
       "uuid": "728801ef-cb48-4e2d-8374-e122e686478d",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": 2,
       "content_changed": true,
       "deleted": false,
@@ -11030,18 +9769,13 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 5,
     "fields": {
-      "content_type": [
-        "news",
-        "newslistingpage"
-      ],
+      "content_type": ["news", "newslistingpage"],
       "label": "Blog",
       "action": "wagtail.publish",
       "data": {},
       "timestamp": "2024-02-26T15:28:26.341Z",
       "uuid": "728801ef-cb48-4e2d-8374-e122e686478d",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": 2,
       "content_changed": true,
       "deleted": false,
@@ -11052,18 +9786,13 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 6,
     "fields": {
-      "content_type": [
-        "standardpages",
-        "indexpage"
-      ],
+      "content_type": ["standardpages", "indexpage"],
       "label": "About",
       "action": "wagtail.create",
       "data": {},
       "timestamp": "2024-02-26T15:28:58.089Z",
       "uuid": "6e920bb6-f0bb-4050-a5b0-9b7214b4e459",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": null,
       "content_changed": true,
       "deleted": false,
@@ -11074,18 +9803,13 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 7,
     "fields": {
-      "content_type": [
-        "standardpages",
-        "indexpage"
-      ],
+      "content_type": ["standardpages", "indexpage"],
       "label": "About",
       "action": "wagtail.edit",
       "data": {},
       "timestamp": "2024-02-26T15:28:58.106Z",
       "uuid": "6e920bb6-f0bb-4050-a5b0-9b7214b4e459",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": 3,
       "content_changed": true,
       "deleted": false,
@@ -11096,18 +9820,13 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 8,
     "fields": {
-      "content_type": [
-        "standardpages",
-        "indexpage"
-      ],
+      "content_type": ["standardpages", "indexpage"],
       "label": "About",
       "action": "wagtail.publish",
       "data": {},
       "timestamp": "2024-02-26T15:28:58.125Z",
       "uuid": "6e920bb6-f0bb-4050-a5b0-9b7214b4e459",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": 3,
       "content_changed": true,
       "deleted": false,
@@ -11118,18 +9837,13 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 9,
     "fields": {
-      "content_type": [
-        "standardpages",
-        "standardpage"
-      ],
+      "content_type": ["standardpages", "standardpage"],
       "label": "This is a standard page template",
       "action": "wagtail.create",
       "data": {},
       "timestamp": "2024-02-26T15:29:35.121Z",
       "uuid": "3fca5fff-4f4d-40d5-b81b-2c9e9641b913",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": null,
       "content_changed": true,
       "deleted": false,
@@ -11140,18 +9854,13 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 10,
     "fields": {
-      "content_type": [
-        "standardpages",
-        "standardpage"
-      ],
+      "content_type": ["standardpages", "standardpage"],
       "label": "This is a standard page template",
       "action": "wagtail.edit",
       "data": {},
       "timestamp": "2024-02-26T15:29:35.130Z",
       "uuid": "3fca5fff-4f4d-40d5-b81b-2c9e9641b913",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": 4,
       "content_changed": true,
       "deleted": false,
@@ -11162,18 +9871,13 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 11,
     "fields": {
-      "content_type": [
-        "standardpages",
-        "standardpage"
-      ],
+      "content_type": ["standardpages", "standardpage"],
       "label": "This is a standard page template",
       "action": "wagtail.publish",
       "data": {},
       "timestamp": "2024-02-26T15:29:35.147Z",
       "uuid": "3fca5fff-4f4d-40d5-b81b-2c9e9641b913",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": 4,
       "content_changed": true,
       "deleted": false,
@@ -11184,18 +9888,13 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 12,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "There are more mackerel in Kent, than people in China",
       "action": "wagtail.create",
       "data": {},
       "timestamp": "2024-02-26T15:31:06.303Z",
       "uuid": "7820622d-44f4-4617-bee0-32de3e4c114a",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": null,
       "content_changed": true,
       "deleted": false,
@@ -11206,18 +9905,13 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 13,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "There are more mackerel in Kent, than people in China",
       "action": "wagtail.edit",
       "data": {},
       "timestamp": "2024-02-26T15:31:06.320Z",
       "uuid": "7820622d-44f4-4617-bee0-32de3e4c114a",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": 5,
       "content_changed": true,
       "deleted": false,
@@ -11228,18 +9922,13 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 14,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "There are more mackerel in Kent, than people in China",
       "action": "wagtail.publish",
       "data": {},
       "timestamp": "2024-02-26T15:31:06.341Z",
       "uuid": "7820622d-44f4-4617-bee0-32de3e4c114a",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": 5,
       "content_changed": true,
       "deleted": false,
@@ -11250,18 +9939,13 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 15,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "Article title goes here and can be quite long actually",
       "action": "wagtail.create",
       "data": {},
       "timestamp": "2024-02-26T15:32:07.275Z",
       "uuid": "c0738fe5-7f38-4fb9-ae2c-94564d113fe4",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": null,
       "content_changed": true,
       "deleted": false,
@@ -11272,18 +9956,13 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 16,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "Article title goes here and can be quite long actually",
       "action": "wagtail.edit",
       "data": {},
       "timestamp": "2024-02-26T15:32:07.293Z",
       "uuid": "c0738fe5-7f38-4fb9-ae2c-94564d113fe4",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": 6,
       "content_changed": true,
       "deleted": false,
@@ -11294,18 +9973,13 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 17,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "Article title goes here and can be quite long actually",
       "action": "wagtail.publish",
       "data": {},
       "timestamp": "2024-02-26T15:32:07.311Z",
       "uuid": "c0738fe5-7f38-4fb9-ae2c-94564d113fe4",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": 6,
       "content_changed": true,
       "deleted": false,
@@ -11316,18 +9990,13 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 21,
     "fields": {
-      "content_type": [
-        "standardpages",
-        "indexpage"
-      ],
+      "content_type": ["standardpages", "indexpage"],
       "label": "About",
       "action": "wagtail.edit",
       "data": {},
       "timestamp": "2024-02-26T15:40:17.303Z",
       "uuid": "0e51a2af-049c-4e89-933a-dfc1cb751c8c",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": 8,
       "content_changed": true,
       "deleted": false,
@@ -11338,18 +10007,13 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 22,
     "fields": {
-      "content_type": [
-        "standardpages",
-        "indexpage"
-      ],
+      "content_type": ["standardpages", "indexpage"],
       "label": "About",
       "action": "wagtail.publish",
       "data": {},
       "timestamp": "2024-02-26T15:40:17.329Z",
       "uuid": "0e51a2af-049c-4e89-933a-dfc1cb751c8c",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": 8,
       "content_changed": true,
       "deleted": false,
@@ -11360,18 +10024,13 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 23,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "There are more mackerel in Kent, than people in China",
       "action": "wagtail.edit",
       "data": {},
       "timestamp": "2024-02-26T15:54:29.659Z",
       "uuid": "1f4eeff0-4deb-42e7-b453-02e271e991f6",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": 9,
       "content_changed": true,
       "deleted": false,
@@ -11382,18 +10041,13 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 24,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "There are more mackerel in Kent, than people in China",
       "action": "wagtail.publish",
       "data": {},
       "timestamp": "2024-02-26T15:54:29.688Z",
       "uuid": "1f4eeff0-4deb-42e7-b453-02e271e991f6",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": 9,
       "content_changed": true,
       "deleted": false,
@@ -11404,18 +10058,13 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 25,
     "fields": {
-      "content_type": [
-        "standardpages",
-        "indexpage"
-      ],
+      "content_type": ["standardpages", "indexpage"],
       "label": "About",
       "action": "wagtail.edit",
       "data": {},
       "timestamp": "2024-02-26T15:55:57.696Z",
       "uuid": "5df27573-b129-46a7-968b-df3674d94a81",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": 10,
       "content_changed": true,
       "deleted": false,
@@ -11426,18 +10075,13 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 26,
     "fields": {
-      "content_type": [
-        "standardpages",
-        "indexpage"
-      ],
+      "content_type": ["standardpages", "indexpage"],
       "label": "About",
       "action": "wagtail.publish",
       "data": {},
       "timestamp": "2024-02-26T15:55:57.731Z",
       "uuid": "5df27573-b129-46a7-968b-df3674d94a81",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": 10,
       "content_changed": true,
       "deleted": false,
@@ -11448,18 +10092,13 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 27,
     "fields": {
-      "content_type": [
-        "standardpages",
-        "indexpage"
-      ],
+      "content_type": ["standardpages", "indexpage"],
       "label": "About",
       "action": "wagtail.edit",
       "data": {},
       "timestamp": "2024-02-26T16:31:50.336Z",
       "uuid": "a680147f-701e-4d1e-8891-033de5cc3c15",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": 11,
       "content_changed": true,
       "deleted": false,
@@ -11470,18 +10109,13 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 28,
     "fields": {
-      "content_type": [
-        "standardpages",
-        "indexpage"
-      ],
+      "content_type": ["standardpages", "indexpage"],
       "label": "About",
       "action": "wagtail.publish",
       "data": {},
       "timestamp": "2024-02-26T16:31:50.359Z",
       "uuid": "a680147f-701e-4d1e-8891-033de5cc3c15",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": 11,
       "content_changed": true,
       "deleted": false,
@@ -11492,18 +10126,13 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 32,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "There are more mackerel in Kent, than people in China",
       "action": "wagtail.edit",
       "data": {},
       "timestamp": "2024-02-26T20:54:50.856Z",
       "uuid": "d0772af3-7c1b-45d6-afcf-b7bfa7e199c7",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": 13,
       "content_changed": true,
       "deleted": false,
@@ -11514,18 +10143,13 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 33,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "There are more mackerel in Kent, than people in China",
       "action": "wagtail.publish",
       "data": {},
       "timestamp": "2024-02-26T20:54:50.879Z",
       "uuid": "d0772af3-7c1b-45d6-afcf-b7bfa7e199c7",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": 13,
       "content_changed": true,
       "deleted": false,
@@ -11536,18 +10160,13 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 34,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "There are more mackerel in Kent, than people in China",
       "action": "wagtail.create",
       "data": {},
       "timestamp": "2024-02-27T06:06:45.739Z",
       "uuid": null,
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": null,
       "content_changed": true,
       "deleted": false,
@@ -11558,10 +10177,7 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 35,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "Article 1",
       "action": "wagtail.copy",
       "data": {
@@ -11597,10 +10213,7 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 36,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "Article 1",
       "action": "wagtail.publish",
       "data": {},
@@ -11617,10 +10230,7 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 37,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "Article 1",
       "action": "wagtail.publish",
       "data": {},
@@ -11637,18 +10247,13 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 38,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "There are more mackerel in Kent, than people in China",
       "action": "wagtail.create",
       "data": {},
       "timestamp": "2024-02-27T06:06:45.799Z",
       "uuid": null,
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": null,
       "content_changed": true,
       "deleted": false,
@@ -11659,10 +10264,7 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 39,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "Article 2",
       "action": "wagtail.copy",
       "data": {
@@ -11698,10 +10300,7 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 40,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "Article 2",
       "action": "wagtail.publish",
       "data": {},
@@ -11718,10 +10317,7 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 41,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "Article 2",
       "action": "wagtail.publish",
       "data": {},
@@ -11738,18 +10334,13 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 42,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "There are more mackerel in Kent, than people in China",
       "action": "wagtail.create",
       "data": {},
       "timestamp": "2024-02-27T06:06:45.843Z",
       "uuid": null,
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": null,
       "content_changed": true,
       "deleted": false,
@@ -11760,10 +10351,7 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 43,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "Article 3",
       "action": "wagtail.copy",
       "data": {
@@ -11799,10 +10387,7 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 44,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "Article 3",
       "action": "wagtail.publish",
       "data": {},
@@ -11819,10 +10404,7 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 45,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "Article 3",
       "action": "wagtail.publish",
       "data": {},
@@ -11839,18 +10421,13 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 46,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "There are more mackerel in Kent, than people in China",
       "action": "wagtail.create",
       "data": {},
       "timestamp": "2024-02-27T06:06:45.886Z",
       "uuid": null,
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": null,
       "content_changed": true,
       "deleted": false,
@@ -11861,10 +10438,7 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 47,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "Article 4",
       "action": "wagtail.copy",
       "data": {
@@ -11900,10 +10474,7 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 48,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "Article 4",
       "action": "wagtail.publish",
       "data": {},
@@ -11920,10 +10491,7 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 49,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "Article 4",
       "action": "wagtail.publish",
       "data": {},
@@ -11940,18 +10508,13 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 50,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "There are more mackerel in Kent, than people in China",
       "action": "wagtail.create",
       "data": {},
       "timestamp": "2024-02-27T06:06:45.990Z",
       "uuid": null,
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": null,
       "content_changed": true,
       "deleted": false,
@@ -11962,10 +10525,7 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 51,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "Article 5",
       "action": "wagtail.copy",
       "data": {
@@ -12001,10 +10561,7 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 52,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "Article 5",
       "action": "wagtail.publish",
       "data": {},
@@ -12021,10 +10578,7 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 53,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "Article 5",
       "action": "wagtail.publish",
       "data": {},
@@ -12041,18 +10595,13 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 54,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "There are more mackerel in Kent, than people in China",
       "action": "wagtail.create",
       "data": {},
       "timestamp": "2024-02-27T06:06:46.034Z",
       "uuid": null,
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": null,
       "content_changed": true,
       "deleted": false,
@@ -12063,10 +10612,7 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 55,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "Article 6",
       "action": "wagtail.copy",
       "data": {
@@ -12102,10 +10648,7 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 56,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "Article 6",
       "action": "wagtail.publish",
       "data": {},
@@ -12122,10 +10665,7 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 57,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "Article 6",
       "action": "wagtail.publish",
       "data": {},
@@ -12142,18 +10682,13 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 58,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "There are more mackerel in Kent, than people in China",
       "action": "wagtail.create",
       "data": {},
       "timestamp": "2024-02-27T06:06:46.077Z",
       "uuid": null,
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": null,
       "content_changed": true,
       "deleted": false,
@@ -12164,10 +10699,7 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 59,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "Article 7",
       "action": "wagtail.copy",
       "data": {
@@ -12203,10 +10735,7 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 60,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "Article 7",
       "action": "wagtail.publish",
       "data": {},
@@ -12223,10 +10752,7 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 61,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "Article 7",
       "action": "wagtail.publish",
       "data": {},
@@ -12243,18 +10769,13 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 62,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "There are more mackerel in Kent, than people in China",
       "action": "wagtail.create",
       "data": {},
       "timestamp": "2024-02-27T06:06:46.120Z",
       "uuid": null,
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": null,
       "content_changed": true,
       "deleted": false,
@@ -12265,10 +10786,7 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 63,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "Article 8",
       "action": "wagtail.copy",
       "data": {
@@ -12304,10 +10822,7 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 64,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "Article 8",
       "action": "wagtail.publish",
       "data": {},
@@ -12324,10 +10839,7 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 65,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "Article 8",
       "action": "wagtail.publish",
       "data": {},
@@ -12344,18 +10856,13 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 66,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "There are more mackerel in Kent, than people in China",
       "action": "wagtail.create",
       "data": {},
       "timestamp": "2024-02-27T06:06:46.165Z",
       "uuid": null,
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": null,
       "content_changed": true,
       "deleted": false,
@@ -12366,10 +10873,7 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 67,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "Article 9",
       "action": "wagtail.copy",
       "data": {
@@ -12405,10 +10909,7 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 68,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "Article 9",
       "action": "wagtail.publish",
       "data": {},
@@ -12425,10 +10926,7 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 69,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "Article 9",
       "action": "wagtail.publish",
       "data": {},
@@ -12445,18 +10943,13 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 70,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "There are more mackerel in Kent, than people in China",
       "action": "wagtail.create",
       "data": {},
       "timestamp": "2024-02-27T06:06:46.223Z",
       "uuid": null,
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": null,
       "content_changed": true,
       "deleted": false,
@@ -12467,10 +10960,7 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 71,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "Article 10",
       "action": "wagtail.copy",
       "data": {
@@ -12506,10 +10996,7 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 72,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "Article 10",
       "action": "wagtail.publish",
       "data": {},
@@ -12526,10 +11013,7 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 73,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "Article 10",
       "action": "wagtail.publish",
       "data": {},
@@ -12546,18 +11030,13 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 74,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "There are more mackerel in Kent, than people in China",
       "action": "wagtail.create",
       "data": {},
       "timestamp": "2024-02-27T06:06:46.265Z",
       "uuid": null,
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": null,
       "content_changed": true,
       "deleted": false,
@@ -12568,10 +11047,7 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 75,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "Article 11",
       "action": "wagtail.copy",
       "data": {
@@ -12607,10 +11083,7 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 76,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "Article 11",
       "action": "wagtail.publish",
       "data": {},
@@ -12627,10 +11100,7 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 77,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "Article 11",
       "action": "wagtail.publish",
       "data": {},
@@ -12647,18 +11117,13 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 78,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "There are more mackerel in Kent, than people in China",
       "action": "wagtail.create",
       "data": {},
       "timestamp": "2024-02-27T06:06:46.308Z",
       "uuid": null,
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": null,
       "content_changed": true,
       "deleted": false,
@@ -12669,10 +11134,7 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 79,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "Article 12",
       "action": "wagtail.copy",
       "data": {
@@ -12708,10 +11170,7 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 80,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "Article 12",
       "action": "wagtail.publish",
       "data": {},
@@ -12728,10 +11187,7 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 81,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "Article 12",
       "action": "wagtail.publish",
       "data": {},
@@ -12748,18 +11204,13 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 82,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "There are more mackerel in Kent, than people in China",
       "action": "wagtail.create",
       "data": {},
       "timestamp": "2024-02-27T06:06:46.352Z",
       "uuid": null,
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": null,
       "content_changed": true,
       "deleted": false,
@@ -12770,10 +11221,7 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 83,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "Article 13",
       "action": "wagtail.copy",
       "data": {
@@ -12809,10 +11257,7 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 84,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "Article 13",
       "action": "wagtail.publish",
       "data": {},
@@ -12829,10 +11274,7 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 85,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "Article 13",
       "action": "wagtail.publish",
       "data": {},
@@ -12849,18 +11291,13 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 86,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "There are more mackerel in Kent, than people in China",
       "action": "wagtail.create",
       "data": {},
       "timestamp": "2024-02-27T06:06:46.395Z",
       "uuid": null,
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": null,
       "content_changed": true,
       "deleted": false,
@@ -12871,10 +11308,7 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 87,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "Article 14",
       "action": "wagtail.copy",
       "data": {
@@ -12910,10 +11344,7 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 88,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "Article 14",
       "action": "wagtail.publish",
       "data": {},
@@ -12930,10 +11361,7 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 89,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "Article 14",
       "action": "wagtail.publish",
       "data": {},
@@ -12950,18 +11378,13 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 90,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "There are more mackerel in Kent, than people in China",
       "action": "wagtail.create",
       "data": {},
       "timestamp": "2024-02-27T06:06:46.438Z",
       "uuid": null,
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": null,
       "content_changed": true,
       "deleted": false,
@@ -12972,10 +11395,7 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 91,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "Article 15",
       "action": "wagtail.copy",
       "data": {
@@ -13011,10 +11431,7 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 92,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "Article 15",
       "action": "wagtail.publish",
       "data": {},
@@ -13031,10 +11448,7 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 93,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "Article 15",
       "action": "wagtail.publish",
       "data": {},
@@ -13051,18 +11465,13 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 94,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "There are more mackerel in Kent, than people in China",
       "action": "wagtail.create",
       "data": {},
       "timestamp": "2024-02-27T06:06:46.480Z",
       "uuid": null,
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": null,
       "content_changed": true,
       "deleted": false,
@@ -13073,10 +11482,7 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 95,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "Article 16",
       "action": "wagtail.copy",
       "data": {
@@ -13112,10 +11518,7 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 96,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "Article 16",
       "action": "wagtail.publish",
       "data": {},
@@ -13132,10 +11535,7 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 97,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "Article 16",
       "action": "wagtail.publish",
       "data": {},
@@ -13152,18 +11552,13 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 98,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "There are more mackerel in Kent, than people in China",
       "action": "wagtail.create",
       "data": {},
       "timestamp": "2024-02-27T06:06:46.531Z",
       "uuid": null,
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": null,
       "content_changed": true,
       "deleted": false,
@@ -13174,10 +11569,7 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 99,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "Article 17",
       "action": "wagtail.copy",
       "data": {
@@ -13213,10 +11605,7 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 100,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "Article 17",
       "action": "wagtail.publish",
       "data": {},
@@ -13233,10 +11622,7 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 101,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "Article 17",
       "action": "wagtail.publish",
       "data": {},
@@ -13253,18 +11639,13 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 102,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "There are more mackerel in Kent, than people in China",
       "action": "wagtail.create",
       "data": {},
       "timestamp": "2024-02-27T06:06:46.574Z",
       "uuid": null,
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": null,
       "content_changed": true,
       "deleted": false,
@@ -13275,10 +11656,7 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 103,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "Article 18",
       "action": "wagtail.copy",
       "data": {
@@ -13314,10 +11692,7 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 104,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "Article 18",
       "action": "wagtail.publish",
       "data": {},
@@ -13334,10 +11709,7 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 105,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "Article 18",
       "action": "wagtail.publish",
       "data": {},
@@ -13354,18 +11726,13 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 106,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "There are more mackerel in Kent, than people in China",
       "action": "wagtail.create",
       "data": {},
       "timestamp": "2024-02-27T06:06:46.615Z",
       "uuid": null,
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": null,
       "content_changed": true,
       "deleted": false,
@@ -13376,10 +11743,7 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 107,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "Article 19",
       "action": "wagtail.copy",
       "data": {
@@ -13415,10 +11779,7 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 108,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "Article 19",
       "action": "wagtail.publish",
       "data": {},
@@ -13435,10 +11796,7 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 109,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "Article 19",
       "action": "wagtail.publish",
       "data": {},
@@ -13455,18 +11813,13 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 110,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "There are more mackerel in Kent, than people in China",
       "action": "wagtail.create",
       "data": {},
       "timestamp": "2024-02-27T06:06:46.658Z",
       "uuid": null,
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": null,
       "content_changed": true,
       "deleted": false,
@@ -13477,10 +11830,7 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 111,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "Article 20",
       "action": "wagtail.copy",
       "data": {
@@ -13516,10 +11866,7 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 112,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "Article 20",
       "action": "wagtail.publish",
       "data": {},
@@ -13536,10 +11883,7 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 113,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "Article 20",
       "action": "wagtail.publish",
       "data": {},
@@ -13556,18 +11900,13 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 114,
     "fields": {
-      "content_type": [
-        "news",
-        "newslistingpage"
-      ],
+      "content_type": ["news", "newslistingpage"],
       "label": "Blog",
       "action": "wagtail.edit",
       "data": {},
       "timestamp": "2024-02-27T06:47:21.065Z",
       "uuid": "09c468d8-f52e-4327-8d28-86553889475f",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": 114,
       "content_changed": true,
       "deleted": false,
@@ -13578,18 +11917,13 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 115,
     "fields": {
-      "content_type": [
-        "news",
-        "newslistingpage"
-      ],
+      "content_type": ["news", "newslistingpage"],
       "label": "Blog",
       "action": "wagtail.publish",
       "data": {},
       "timestamp": "2024-02-27T06:47:21.086Z",
       "uuid": "09c468d8-f52e-4327-8d28-86553889475f",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": 114,
       "content_changed": true,
       "deleted": false,
@@ -13600,18 +11934,13 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 118,
     "fields": {
-      "content_type": [
-        "standardpages",
-        "standardpage"
-      ],
+      "content_type": ["standardpages", "standardpage"],
       "label": "This is a standard page template",
       "action": "wagtail.edit",
       "data": {},
       "timestamp": "2024-02-27T06:48:21.681Z",
       "uuid": "869913f4-c976-44fc-b923-30c5c7af4db6",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": 116,
       "content_changed": true,
       "deleted": false,
@@ -13622,18 +11951,13 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 119,
     "fields": {
-      "content_type": [
-        "standardpages",
-        "standardpage"
-      ],
+      "content_type": ["standardpages", "standardpage"],
       "label": "This is a standard page template",
       "action": "wagtail.publish",
       "data": {},
       "timestamp": "2024-02-27T06:48:21.712Z",
       "uuid": "869913f4-c976-44fc-b923-30c5c7af4db6",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": 116,
       "content_changed": true,
       "deleted": false,
@@ -13644,18 +11968,13 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 120,
     "fields": {
-      "content_type": [
-        "standardpages",
-        "standardpage"
-      ],
+      "content_type": ["standardpages", "standardpage"],
       "label": "This is a standard page template",
       "action": "wagtail.edit",
       "data": {},
       "timestamp": "2024-02-27T06:48:46.305Z",
       "uuid": "4ef86aa5-4873-48df-b189-3d57e9fb734a",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": 117,
       "content_changed": true,
       "deleted": false,
@@ -13666,18 +11985,13 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 121,
     "fields": {
-      "content_type": [
-        "standardpages",
-        "standardpage"
-      ],
+      "content_type": ["standardpages", "standardpage"],
       "label": "This is a standard page template",
       "action": "wagtail.publish",
       "data": {},
       "timestamp": "2024-02-27T06:48:46.333Z",
       "uuid": "4ef86aa5-4873-48df-b189-3d57e9fb734a",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": 117,
       "content_changed": true,
       "deleted": false,
@@ -13688,18 +12002,13 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 122,
     "fields": {
-      "content_type": [
-        "standardpages",
-        "indexpage"
-      ],
+      "content_type": ["standardpages", "indexpage"],
       "label": "About",
       "action": "wagtail.edit",
       "data": {},
       "timestamp": "2024-02-27T06:49:10.636Z",
       "uuid": "041357c1-9863-4dc9-84d5-66d73af987f3",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": 118,
       "content_changed": true,
       "deleted": false,
@@ -13710,18 +12019,13 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 123,
     "fields": {
-      "content_type": [
-        "standardpages",
-        "indexpage"
-      ],
+      "content_type": ["standardpages", "indexpage"],
       "label": "About",
       "action": "wagtail.publish",
       "data": {},
       "timestamp": "2024-02-27T06:49:10.667Z",
       "uuid": "041357c1-9863-4dc9-84d5-66d73af987f3",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": 118,
       "content_changed": true,
       "deleted": false,
@@ -13732,18 +12036,13 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 124,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "Article title goes here and can be quite long actually",
       "action": "wagtail.edit",
       "data": {},
       "timestamp": "2024-02-27T06:49:54.026Z",
       "uuid": "75300b7a-4380-4272-b124-36b552fc925e",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": 119,
       "content_changed": true,
       "deleted": false,
@@ -13754,18 +12053,13 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 125,
     "fields": {
-      "content_type": [
-        "news",
-        "articlepage"
-      ],
+      "content_type": ["news", "articlepage"],
       "label": "Article title goes here and can be quite long actually",
       "action": "wagtail.publish",
       "data": {},
       "timestamp": "2024-02-27T06:49:54.052Z",
       "uuid": "75300b7a-4380-4272-b124-36b552fc925e",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": 119,
       "content_changed": true,
       "deleted": false,
@@ -13776,18 +12070,13 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 126,
     "fields": {
-      "content_type": [
-        "standardpages",
-        "standardpage"
-      ],
+      "content_type": ["standardpages", "standardpage"],
       "label": "This is a standard page template",
       "action": "wagtail.edit",
       "data": {},
       "timestamp": "2024-02-27T06:50:04.291Z",
       "uuid": "50610a6e-0723-46b3-a16e-c6c0d0f83ef4",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": 120,
       "content_changed": true,
       "deleted": false,
@@ -13798,18 +12087,13 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 127,
     "fields": {
-      "content_type": [
-        "standardpages",
-        "standardpage"
-      ],
+      "content_type": ["standardpages", "standardpage"],
       "label": "This is a standard page template",
       "action": "wagtail.publish",
       "data": {},
       "timestamp": "2024-02-27T06:50:04.320Z",
       "uuid": "50610a6e-0723-46b3-a16e-c6c0d0f83ef4",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": 120,
       "content_changed": true,
       "deleted": false,
@@ -13820,18 +12104,13 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 128,
     "fields": {
-      "content_type": [
-        "home",
-        "homepage"
-      ],
+      "content_type": ["home", "homepage"],
       "label": "Curvy dark guppy",
       "action": "wagtail.edit",
       "data": {},
       "timestamp": "2024-02-27T06:51:17.973Z",
       "uuid": "75d50279-00f3-4958-9d62-a8dafdbeecf8",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": 121,
       "content_changed": true,
       "deleted": false,
@@ -13842,18 +12121,13 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 129,
     "fields": {
-      "content_type": [
-        "home",
-        "homepage"
-      ],
+      "content_type": ["home", "homepage"],
       "label": "Curvy dark guppy",
       "action": "wagtail.publish",
       "data": {},
       "timestamp": "2024-02-27T06:51:17.998Z",
       "uuid": "75d50279-00f3-4958-9d62-a8dafdbeecf8",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": 121,
       "content_changed": true,
       "deleted": false,
@@ -13864,18 +12138,13 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 130,
     "fields": {
-      "content_type": [
-        "forms",
-        "formpage"
-      ],
+      "content_type": ["forms", "formpage"],
       "label": "Get in touch",
       "action": "wagtail.create",
       "data": {},
       "timestamp": "2024-02-27T08:26:29.406Z",
       "uuid": "b3ce27bd-89b1-42f6-8067-87fb44825985",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": null,
       "content_changed": true,
       "deleted": false,
@@ -13886,18 +12155,13 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 131,
     "fields": {
-      "content_type": [
-        "forms",
-        "formpage"
-      ],
+      "content_type": ["forms", "formpage"],
       "label": "Get in touch",
       "action": "wagtail.edit",
       "data": {},
       "timestamp": "2024-02-27T08:26:29.422Z",
       "uuid": "b3ce27bd-89b1-42f6-8067-87fb44825985",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": 122,
       "content_changed": true,
       "deleted": false,
@@ -13908,18 +12172,13 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 132,
     "fields": {
-      "content_type": [
-        "forms",
-        "formpage"
-      ],
+      "content_type": ["forms", "formpage"],
       "label": "Get in touch",
       "action": "wagtail.publish",
       "data": {},
       "timestamp": "2024-02-27T08:26:29.442Z",
       "uuid": "b3ce27bd-89b1-42f6-8067-87fb44825985",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": 122,
       "content_changed": true,
       "deleted": false,
@@ -13930,18 +12189,13 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 133,
     "fields": {
-      "content_type": [
-        "standardpages",
-        "indexpage"
-      ],
+      "content_type": ["standardpages", "indexpage"],
       "label": "About",
       "action": "wagtail.edit",
       "data": {},
       "timestamp": "2024-02-27T08:57:20.432Z",
       "uuid": "694700b1-96f3-41b4-9235-6b429690d704",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": 123,
       "content_changed": true,
       "deleted": false,
@@ -13952,18 +12206,13 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 134,
     "fields": {
-      "content_type": [
-        "standardpages",
-        "indexpage"
-      ],
+      "content_type": ["standardpages", "indexpage"],
       "label": "About",
       "action": "wagtail.publish",
       "data": {},
       "timestamp": "2024-02-27T08:57:20.471Z",
       "uuid": "694700b1-96f3-41b4-9235-6b429690d704",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": 123,
       "content_changed": true,
       "deleted": false,
@@ -13974,18 +12223,13 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 135,
     "fields": {
-      "content_type": [
-        "standardpages",
-        "standardpage"
-      ],
+      "content_type": ["standardpages", "standardpage"],
       "label": "This is a standard page template",
       "action": "wagtail.edit",
       "data": {},
       "timestamp": "2024-02-27T08:57:42.546Z",
       "uuid": "354a0980-9257-49f0-b6f8-54b973ca2a82",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": 124,
       "content_changed": true,
       "deleted": false,
@@ -13996,18 +12240,13 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 136,
     "fields": {
-      "content_type": [
-        "standardpages",
-        "standardpage"
-      ],
+      "content_type": ["standardpages", "standardpage"],
       "label": "This is a standard page template",
       "action": "wagtail.publish",
       "data": {},
       "timestamp": "2024-02-27T08:57:42.571Z",
       "uuid": "354a0980-9257-49f0-b6f8-54b973ca2a82",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": 124,
       "content_changed": true,
       "deleted": false,
@@ -14018,18 +12257,13 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 137,
     "fields": {
-      "content_type": [
-        "home",
-        "homepage"
-      ],
+      "content_type": ["home", "homepage"],
       "label": "Curvy dark guppy",
       "action": "wagtail.edit",
       "data": {},
       "timestamp": "2024-02-27T08:59:00.295Z",
       "uuid": "51bc1e3b-f9f1-43be-acf8-bf1022138f8e",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": 125,
       "content_changed": true,
       "deleted": false,
@@ -14040,22 +12274,84 @@
     "model": "wagtailcore.pagelogentry",
     "pk": 138,
     "fields": {
-      "content_type": [
-        "home",
-        "homepage"
-      ],
+      "content_type": ["home", "homepage"],
       "label": "Curvy dark guppy",
       "action": "wagtail.publish",
       "data": {},
       "timestamp": "2024-02-27T08:59:00.325Z",
       "uuid": "51bc1e3b-f9f1-43be-acf8-bf1022138f8e",
-      "user": [
-        "admin"
-      ],
+      "user": ["admin"],
       "revision": 125,
       "content_changed": true,
       "deleted": false,
       "page": 3
     }
+  },
+  {
+    "model": "wagtailcore.page",
+    "pk": 31,
+    "fields": {
+      "path": "000100010005",
+      "depth": 3,
+      "numchild": 0,
+      "translation_key": "fd1f64b1-c9e2-4274-a9b8-70414236aaf3",
+      "locale": 1,
+      "latest_revision": null,
+      "live": true,
+      "has_unpublished_changes": false,
+      "first_published_at": "2024-02-27T08:30:00.000Z",
+      "last_published_at": "2024-02-27T08:30:00.000Z",
+      "live_revision": null,
+      "go_live_at": null,
+      "expire_at": null,
+      "expired": false,
+      "locked": false,
+      "locked_at": null,
+      "locked_by": null,
+      "title": "Newsletter signup",
+      "draft_title": "Newsletter signup",
+      "slug": "newsletter-signup",
+      "content_type": ["forms", "formpage"],
+      "url_path": "/home/newsletter-signup/",
+      "owner": ["admin"],
+      "seo_title": "",
+      "show_in_menus": false,
+      "search_description": "",
+      "latest_revision_created_at": "2024-02-27T08:30:00.000Z",
+      "alias_of": null
+    }
+  },
+  {
+    "model": "forms.formpage",
+    "pk": 31,
+    "fields": {
+      "to_address": "",
+      "from_address": "",
+      "subject": "",
+      "social_image": null,
+      "social_text": "",
+      "listing_image": null,
+      "listing_title": "Newsletter signup",
+      "listing_summary": "",
+      "appear_in_search_results": false,
+      "introduction": "<p data-block-key=\"newsletter\">Sign up for our newsletter.</p>",
+      "action_text": "Sign up",
+      "thank_you_text": "<p data-block-key=\"thanks\">Thank you for signing up for our newsletter.</p>"
+    }
+  },
+  {
+    "model": "forms.formfield",
+    "pk": 5,
+    "fields": {
+      "sort_order": 0,
+      "label": "Email",
+      "help_text": "",
+      "required": true,
+      "choices": "",
+      "default_value": "",
+      "clean_name": "email",
+      "field_type": "email",
+      "page": 31
+    }
   }
-  ]
+]
