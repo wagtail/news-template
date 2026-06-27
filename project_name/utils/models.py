@@ -248,9 +248,10 @@ class SystemMessagesSettings(BaseSiteSetting):
         blank=True,
         max_length=255,
     )
-    footer_newsletter_signup_link = models.URLField(
+    footer_newsletter_signup_link = models.CharField(
         blank=True,
         null=True,
+        max_length = 255,
         help_text="Link to the newsletter signup form. If left blank, the signup CTA will not be displayed.",
     )
 
