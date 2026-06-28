@@ -1,10 +1,9 @@
-from django.db import models
 from modelcluster.models import ClusterableModel
 from wagtail import blocks
-from wagtail.admin.panels import FieldPanel, MultiFieldPanel
+from wagtail.admin.panels import FieldPanel
 from wagtail.contrib.settings.models import BaseSiteSetting, register_setting
 from wagtail.fields import StreamField
-from wagtail.snippets.blocks import SnippetChooserBlock
+
 
 from {{ project_name }}.utils.blocks import LinkStreamBlock, InternalLinkBlock
 

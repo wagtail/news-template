@@ -52,6 +52,14 @@ jobs:
           cd /tmp/testproject
           pip install -r requirements.txt
 
+      - name: Install Ruff
+        run: pip install ruff
+
+      - name: Ruff format check
+        run: |
+          cd /tmp/testproject
+          ruff check .
+
       - name: Django check
         run: |
           cd /tmp/testproject

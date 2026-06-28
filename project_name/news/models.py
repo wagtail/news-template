@@ -1,14 +1,14 @@
 from django.conf import settings
 from django.db import models
 from django.db.models.functions import Coalesce
-from django.core.paginator import Paginator
+from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from wagtail.admin.panels import FieldPanel, HelpPanel, InlinePanel, MultiFieldPanel
 from wagtail.fields import RichTextField
 from wagtail.search import index
 
 from wagtail.fields import StreamField
 from {{ project_name }}.utils.models import BasePage, ArticleTopic
-from {{ project_name }}.utils.blocks import CaptionedImageBlock, StoryBlock, FeaturedArticleBlock
+from {{ project_name }}.utils.blocks import CaptionedImageBlock, StoryBlock
 
 
 class ArticlePage(BasePage):
