@@ -9,6 +9,7 @@ from django.utils.decorators import method_decorator
 from django.utils.functional import cached_property
 from modelcluster.fields import ParentalKey
 from willow.image import Image as WillowImage
+from django.utils.text import slugify as django_slugify
 
 from wagtail.admin.panels import FieldPanel, MultiFieldPanel
 from wagtail.contrib.settings.models import BaseSiteSetting, register_setting
@@ -112,7 +113,7 @@ class AuthorSnippet(models.Model):
 @register_snippet
 class ArticleTopic(models.Model):
     title = models.CharField(blank=False, max_length=255)
-    slug = models.SlugField(blank=False, max_length=255)
+    slug = models.SlugField(unique=True, max_length=255)
 
     def __str__(self):
         return self.title
@@ -154,7 +155,7 @@ class ArticleTopic(models.Model):
             return super().save(*args, **kwargs)
 
     def slugify(self, title, i=None):
-        title = slugify(title, allow_unicode=True)
+        title = django_slugify(title, allow_unicode=True)
 
         if i is not None:
             title += "_%d" % i

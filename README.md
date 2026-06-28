@@ -2,67 +2,114 @@
 
 This project template is designed for creating [Wagtail](https://wagtail.org) builds quickly, intended for developers to bootstrap their Wagtail site development using `wagtail start --template=`. The template comes with pre-defined pages, blocks, functionalities, and fixtures to streamline the initial setup process.
 
-## Getting Started
+## Getting started
 
-1. **Check that you have an appropriate version of Python 3** You want to make sure that you have a [compatible version](https://docs.wagtail.org/en/stable/releases/upgrading.html#compatible-django-python-versions) installed:
+### Check your Python version
 
-   ```sh
-   python --version
-   # Or:
-   python3 --version
-   # **On Windows** (cmd.exe, with the Python Launcher for Windows):
-   py --version
-   ```
+**Check that you have an appropriate version of Python.** You want to make sure that you have a [compatible version](https://docs.wagtail.org/en/stable/releases/upgrading.html#compatible-django-python-versions) installed:
 
-2. **Create a Virtual Environment**: Set up a virtual environment to isolate your project dependencies. These instructions are for GNU/Linux or macOS, but there are [other operating systems in the Wagtail docs](https://docs.wagtail.org/en/stable/getting_started/tutorial.html#create-and-activate-a-virtual-environment).
 
-   ```bash
-   python -m venv myproject/env
-   source myproject/env/bin/activate
-   ```
+```bash
+python --version
 
-3. **Navigate to Project Directory**: Move into the newly created project directory.
+# Or:
+python3 --version
 
-   ```bash
-   cd myproject
-   ```
+# On Windows you may want to use py.exe:
+py --version
+```
 
-4. **Install Wagtail**: Install the Wagtail CMS package using pip.
+###  Create and navigate to your project directory
 
-   ```bash
-   pip install wagtail
-   ```
+You can replace `myproject` with your preferred project name.
 
-5. **Initialize Project**: Use the `wagtail start` command to create a new project based on the Wagtail Starter Kit template.
+```bash
+mkdir myproject
+cd myproject
+```
 
-   ```bash
-   wagtail start --template=https://github.com/wagtail/news-template/archive/refs/heads/main.zip myproject .
-   ```
+### Create and activate virtual environment
 
-6. **Install Project Dependencies**: Install the project's dependencies into a virtual environment.
+#### Linux / macOS
 
-   ```bash
-   pip install -r requirements.txt
-   ```
+```bash
+python -m venv .venv
+source .venv/bin/activate
+```
 
-All commands from now on should be run from inside the virtual environment.
+#### Windows
 
-8. **Load Dummy Data**: Load in some dummy data to populate the site with some content.
+```bash
+py -m venv .venv
+.venv\Scripts\activate
+```
 
-   ```bash
-   make load-data
-   ```
+### Install Wagtail
 
-9. **Start the Server**: Start the Django development server.
+Install the Wagtail CMS package using pip:
 
-   ```bash
-   make start
-   ```
+```bash
+pip install wagtail
+```
 
-10. **Access the Site and Admin**: Once the server is running, you can view the site at `localhost:8000` and access the Wagtail admin interface at `localhost:8000/admin`. Log in with the default credentials provided by :
+### Create a new project
 
-    - Username: admin
-    - Password: password
+Use the Wagtail Starter Kit to generate a new project. Here again, you can replace `myproject` with your preferred project name. The project name chosen here will be used throughout the generated code.
+
+```bash
+wagtail start --template=https://github.com/wagtail/news-template/archive/refs/heads/main.zip myproject .
+```
+
+### Bootstrap the project
+
+Run the bootstrap command to install project dependencies and set up the development environment:
+
+```bash
+python bootstrap.py
+```
+
+This command will:
+
+* Install project dependencies
+* Run database migrations
+* Create the cache table
+* Load sample content
+* Create the default administrator account
+* Collect static files
+
+#### Optional: Skip sample content
+
+If you prefer to start with a clean project without demo content:
+
+```bash
+python bootstrap.py --no-sample-data
+```
+
+This skips loading the sample content and default administrator account.
+
+To create an administrator account manually, run:
+
+```bash
+python manage.py createsuperuser
+```
+
+### Start the development server
+
+```bash
+python manage.py runserver
+```
+
+### Access the site
+
+Once the server is running:
+
+* Site: http://localhost:8000
+* Admin: http://localhost:8000/admin/
+
+If sample content was loaded, you can log in with:
+
+* Username: `admin`
+* Password: `password`
 
 ### Deploying
 
@@ -152,5 +199,23 @@ To customize this template, you can either make changes directly or backport cha
 5. Update fixtures using `make dump-data`
 
 Make sure to test any changes by reviewing them against a newly created project, by following the [Getting Started](#getting-started) instructions again.
+
+### Before opening a pull request
+
+Please install the project's pre-commit hooks:
+
+```bash
+pre-commit install
+```
+
+Run the linting checks before submitting a pull request:
+
+```bash
+pre-commit run --all-files
+```
+
+This helps catch formatting and linting issues locally before the CI checks run.
+
+---
 
 Happy coding with Wagtail! If you encounter any issues or have suggestions for improvement, feel free to contribute or open an issue.
