@@ -1,0 +1,29 @@
+{{ '{%' }} load i18n {{ '%}' }}
+{{ '{%' }} get_current_language as CURRENT_LANG_CODE {{ '%}' }}
+{{ '{%' }} get_available_languages as LANGUAGES {{ '%}' }}
+
+<details class="group relative inline-block">
+    <summary class="list-none cursor-pointer flex items-center space-x-1 text-xs font-bold uppercase font-codepro tracking-widest text-gray-400 hover:text-mackerel-200 transition-colors">
+        <span>
+            {# Logic to show the currently active language name #}
+            {% for lang_code, lang_name in LANGUAGES %}
+                {% if lang_code == CURRENT_LANG_CODE %}{{ lang_name }}{% endif %}
+            {% endfor %}
+        </span>
+        <svg class="w-3 h-3 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+    </summary>
+    
+    <ul class="absolute right-0 mt-2 w-40 bg-white border border-gray-100 shadow-xl rounded-sm py-2 z-50">
+        {% for lang_code, lang_name in LANGUAGES %}
+            <li>
+                {# Standard URL prefixing for Simple Translation #}
+                <a href="/{{ lang_code }}/" 
+                   class="block px-4 py-2 text-xs font-bold uppercase tracking-widest hover:bg-gray-50 {% if lang_code == CURRENT_LANG_CODE %}text-mackerel-200{% else %}text-gray-600{% endif %}">
+                    {{ lang_name }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</details>
