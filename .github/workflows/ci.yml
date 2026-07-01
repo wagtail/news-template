@@ -65,6 +65,11 @@ jobs:
           cd /tmp/testproject
           python manage.py check
 
+      - name: Check for missing migrations
+        run: |
+          cd /tmp/testproject
+          python manage.py makemigrations --check --dry-run
+
       - name: Run migrations
         run: |
           cd /tmp/testproject
