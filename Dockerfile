@@ -1,4 +1,4 @@
-FROM python:3.12-slim as production
+FROM python:3.14-slim as production
 
 # Install dependencies in a virtualenv
 ENV VIRTUAL_ENV=/venv
@@ -13,8 +13,8 @@ WORKDIR /app
 #  * PATH - Make sure that Poetry is on the PATH, along with our venv
 #  * PYTHONUNBUFFERED - This is useful so Python does not hold any messages
 #    from being output.
-#    https://docs.python.org/3.12/using/cmdline.html#envvar-PYTHONUNBUFFERED
-#    https://docs.python.org/3.12/using/cmdline.html#cmdoption-u
+#    https://docs.python.org/3.14/using/cmdline.html#envvar-PYTHONUNBUFFERED
+#    https://docs.python.org/3.14/using/cmdline.html#cmdoption-u
 #  * DJANGO_SETTINGS_MODULE - default settings used in the container.
 #  * PORT - default port used. Please match with EXPOSE so it works on Dokku.
 #    Heroku will ignore EXPOSE and only set PORT variable. PORT variable is

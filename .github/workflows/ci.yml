@@ -20,7 +20,7 @@ jobs:
 
       - uses: actions/setup-python@v5
         with:
-          python-version: "3.12"
+          python-version: "3.14"
 
       - name: Install pre-commit
         run: pip install pre-commit
@@ -37,10 +37,10 @@ jobs:
 
       - uses: actions/setup-python@v5
         with:
-          python-version: "3.12"
+          python-version: "3.14"
 
       - name: Install Wagtail
-        run: pip install "wagtail>=6.4,<6.5"
+        run: pip install "wagtail>=7.4,<7.5"
 
       - name: Generate project from template
         run: |
