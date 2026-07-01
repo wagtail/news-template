@@ -3,31 +3,37 @@
 @tailwind utilities;
 
 @layer base {
-    // TODO load fonts
-    // @font-face {
-    //     font-family: "Source Sans 3", sans-serif;
-    //     font-optical-sizing: auto;
-    //     font-weight: 400;
-    //     font-style: normal;
-    //     font-display: swap;
-    //     src: url('../fonts/SourceSans3-variable.woff2') format('woff2-variable');
-    // }
-    // @font-face {
-    //     font-family: "Source Serif 4", serif;
-    //     font-optical-sizing: auto;
-    //     font-weight: 400;
-    //     font-style: normal;
-    //     font-display: swap;
-    //     src: url('../fonts/SourceSerif4-variable.woff2') format('woff2-variable');
-    // }
-    // @font-face {
-    //     font-family: "Source Code Pro", monospace;
-    //     font-optical-sizing: auto;
-    //     font-weight: 400;
-    //     font-style: normal;
-    //     font-display: swap;
-    //     src: url('../fonts/SourceSerif4-variable.woff2') format('woff2-variable');
-    // }
+    @font-face {
+    font-family: "Source Code Pro";
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    src: url('../fonts/SourceCodePro-Regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: "Source Code Pro";
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+    src: url('../fonts/SourceCodePro-Italic.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: "Source Code Pro";
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+    src: url('../fonts/SourceCodePro-Bold.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: "Source Code Pro";
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+    src: url('../fonts/SourceCodePro-BoldItalic.woff2') format('woff2');
+}
 
     html {
         @apply font-sans3 font-normal not-italic;
