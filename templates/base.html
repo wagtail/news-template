@@ -21,10 +21,10 @@
 
 
         {% comment %}
-        Set "noindex" if the site is not being requested on a configured
-        domain to prevent search engines crawling admin domains.
+        Set "noindex" if the site is globally configured to prevent indexing
+        or this page should not appear in search results.
         {% endcomment %}
-        {% if SEO_NOINDEX and not page.appear_in_search_results %}
+        {% if SEO_NOINDEX or page and not page.appear_in_search_results %}
             <meta name="robots" content="noindex">
         {% endif %}
 
