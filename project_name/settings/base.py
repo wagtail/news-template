@@ -19,6 +19,7 @@ if "SECRET_KEY" in os.environ:
     SECRET_KEY = os.environ["SECRET_KEY"]
 
 ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "*").split(",")
+SEO_NOINDEX = os.environ.get("SEO_NOINDEX", "False").lower() == "true"
 
 if "CSRF_TRUSTED_ORIGINS" in os.environ:
     CSRF_TRUSTED_ORIGINS = os.environ["CSRF_TRUSTED_ORIGINS"].split(",")
@@ -90,6 +91,7 @@ TEMPLATES = [
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
                 "wagtail.contrib.settings.context_processors.settings",
+                "{{ project_name }}.utils.context_processors.global_vars",
             ],
         },
     },
