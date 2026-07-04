@@ -563,7 +563,7 @@
       "placeholder_image": 3,
       "footer_newsletter_signup_title": "Sign up for our newsletter",
       "footer_newsletter_signup_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
-      "footer_newsletter_signup_link": "http://www.wagtail.org"
+      "footer_newsletter_signup_link": "/newsletter-template/"
     }
   },
   {

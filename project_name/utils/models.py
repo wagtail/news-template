@@ -251,8 +251,8 @@ class SystemMessagesSettings(BaseSiteSetting):
     footer_newsletter_signup_link = models.CharField(
         blank=True,
         null=True,
-        max_length = 255,
-        help_text="Link to the newsletter signup form. If left blank, the signup CTA will not be displayed.",
+        max_length=255,
+        help_text="Location that the footer's newsletter signup form should submit to. This could be a Wagtail form page with an email field, or a third party service. If left blank, the signup CTA will not be displayed.",
     )
 
     panels = [
