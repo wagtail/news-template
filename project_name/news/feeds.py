@@ -9,8 +9,14 @@ from {{ project_name }}.news.models import ArticlePage, NewsListingPage
 class LatestArticlesFeed(Feed):
     """RSS 2.0 feed for public, published news articles."""
 
-    site = Site.objects.filter(is_default_site=True).first()
-    news_listing = NewsListingPage.objects.live().public().first()
+    @property
+    def site(self):
+        return Site.objects.filter(is_default_site=True).first()
+
+
+    @property
+    def news_listing(self):
+        return NewsListingPage.objects.live().public().first()
 
     def get_object(self, request):
         self.request = request
