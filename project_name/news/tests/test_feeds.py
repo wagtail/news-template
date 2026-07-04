@@ -56,6 +56,11 @@ class LatestArticlesFeedTests(TestCase):
             live=False,
         )
         cls.news_listing.add_child(instance=cls.unpublished_article)
+
+        from {{ project_name }}.news.feeds import LatestArticlesFeed
+
+        LatestArticlesFeed.site = cls.site
+        LatestArticlesFeed.news_listing = cls.news_listing
         cls.feed_url = reverse("news_feed")
 
     def _feed_xml(self):
@@ -71,6 +76,10 @@ class LatestArticlesFeedTests(TestCase):
         _response, root = self._feed_xml()
         self.assertEqual(root.tag, "rss")
         self.assertEqual(root.attrib["version"], "2.0")
+
+    def test_feed_title_includes_site_and_listing_titles(self):
+        _response, root = self._feed_xml()
+        self.assertEqual(root.findtext("channel/title"), "Test News – News")
 
     def test_feed_includes_published_articles(self):
         _response, root = self._feed_xml()
