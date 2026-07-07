@@ -7,12 +7,14 @@ from wagtail import urls as wagtail_urls
 from wagtail.documents import urls as wagtaildocs_urls
 
 from {{ project_name }}.search import views as search_views
+from {{ project_name }}.news.feeds import LatestArticlesFeed
 
 urlpatterns = [
     path("django-admin/", admin.site.urls),
     path("admin/", include(wagtailadmin_urls)),
     path("documents/", include(wagtaildocs_urls)),
     path("search/", search_views.search, name="search"),
+    path("news/feed/", LatestArticlesFeed(), name="news_feed"),
 ]
 
 
