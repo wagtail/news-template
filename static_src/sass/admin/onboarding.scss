@@ -1,0 +1,53 @@
+.shepherd-has-active-tour {
+    .shepherd-overlay {
+        z-index: 9990;
+    }
+}
+
+.shepherd-element {
+    z-index: 9999;
+
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui,
+        Roboto, sans-serif;
+    font-size: 0.9375rem; // 15px — consistent with Wagtail admin prose
+
+
+    &[data-popper-placement^='right'],
+    &[data-popper-placement^='left'] {
+        max-width: 340px;
+    }
+}
+
+// Step content
+.shepherd-content {
+    .shepherd-title {
+        font-weight: 600;
+        font-size: 1rem;
+    }
+
+    .shepherd-text {
+        line-height: 1.6;
+
+        ul {
+            margin-top: 0.4em;
+            padding-left: 1.2em;
+            list-style: disc;
+        }
+
+        p {
+            margin-top: 0.5em;
+        }
+    }
+}
+
+
+.shepherd-footer {
+    .shepherd-button {
+        cursor: pointer;
+
+        &:focus-visible {
+            outline: 3px solid #007cba;
+            outline-offset: 2px;
+        }
+    }
+}

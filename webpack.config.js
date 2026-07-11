@@ -10,6 +10,8 @@ const options = {
         // 'main' is ignored from prettier because if vue (or anything else) isn't added
         // here, it will deem the quotes uneccessary.
         'main': `./static_src/javascript/main.js`, // prettier-ignore
+        // Admin-only onboarding tour — loaded exclusively via wagtail_hooks.py
+        'admin-onboarding': `./static_src/javascript/admin/onboarding.js`, // prettier-ignore
     },
     resolve: {
         extensions: ['.js'],
@@ -95,7 +97,24 @@ const webpackConfig = (environment, argv) => {
 
     options.mode = isProduction ? 'production' : 'development';
 
-    if (!isProduction) {
+    if (isProduction) {
+        // In production, disable source maps entirely.
+        //
+        // Reason: third-party CSS files (e.g. shepherd.js/dist/css/shepherd.css)
+        // contain `sourceMappingURL` comments that point to .map files which are
+        // NOT emitted by webpack. Django's ManifestStaticFilesStorage post-processes
+        // all referenced URLs in CSS and will raise a ValueError if the .map file
+        // is absent. Setting devtool:false and sourceMap:false in each loader
+        // prevents any .map references from appearing in the output.
+        options.devtool = false;
+
+        // Patch css-loader and sass-loader source map options for production
+        options.module.rules[0].use.forEach((loaderConfig) => {
+            if (loaderConfig.options && 'sourceMap' in loaderConfig.options) {
+                loaderConfig.options.sourceMap = false;
+            }
+        });
+    } else {
         // https://webpack.js.org/configuration/stats/
         const stats = {
             // Tells stats whether to add the build date and the build time information.
