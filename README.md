@@ -1,4 +1,4 @@
-# Wagtail News Template
+# Wagtail Starter Kit
 
 This project template is designed for creating [Wagtail](https://wagtail.org) builds quickly, intended for developers to bootstrap their Wagtail site development using `wagtail start --template=`. The template comes with pre-defined pages, blocks, functionalities, and fixtures to streamline the initial setup process.
 
@@ -199,6 +199,33 @@ To customize this template, you can either make changes directly or backport cha
 5. Update fixtures using `make dump-data`
 
 Make sure to test any changes by reviewing them against a newly created project, by following the [Getting Started](#getting-started) instructions again.
+
+### Testing
+
+There are several tools you can use to verify a generated project works as expected after making changes to the template:
+
+- **Django system check** (validates settings and models):
+
+  ```bash
+  python manage.py check
+  ```
+- **Run unit tests**:
+
+  ```bash
+  python manage.py test
+  ```
+- **Run tests with warnings enabled** ([see advice in Django docs](https://docs.djangoproject.com/en/6.0/topics/testing/overview/#running-tests)):
+
+  ```bash
+  python -Wa manage.py test
+  ```
+- **Smoke test**: After loading the sample data, run the development server
+
+  ```bash
+  python manage.py runserver
+  ```
+
+  then visit <http://localhost:8000> and <http://localhost:8000/admin/> to confirm the site and admin load.
 
 ### Before opening a pull request
 
