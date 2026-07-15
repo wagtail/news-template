@@ -1,6 +1,3 @@
-import sys
-import unittest
-
 from django.test import TestCase, override_settings
 from django.urls import reverse
 from wagtail.models import Site
@@ -8,9 +5,6 @@ from wagtail.models import Site
 from {{ project_name }}.home.models import HomePage
 
 
-# Django's test client copies template context on render; Context.__copy__ fails on Python 3.14.
-# Skip these tests on 3.14 until Django fixes compatibility.
-@unittest.skipIf(sys.version_info >= (3, 14), "Django test client template context copy fails on Python 3.14")
 class SearchViewTests(TestCase):
     @classmethod
     def setUpTestData(cls):
