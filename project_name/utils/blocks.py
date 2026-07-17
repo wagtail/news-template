@@ -72,6 +72,7 @@ class LinkStreamBlock(blocks.StreamBlock):
     external = ExternalLinkBlock()
 
     class Meta:
+        template="components/streamfield/blocks/link_stream_block.html"
         icon = "link"
         label = "Link"
         min_num = 1
