@@ -40,7 +40,7 @@ class Migration(migrations.Migration):
                 ('body_404', wagtail.fields.RichTextField(default='<p>You may be trying to find a page that doesn&rsquo;t exist or has been moved.</p>', verbose_name='Text')),
                 ('footer_newsletter_signup_title', models.CharField(default='Sign up for our newsletter', max_length=120)),
                 ('footer_newsletter_signup_description', models.CharField(blank=True, max_length=255)),
-                ('footer_newsletter_signup_link', models.CharField(blank=True, max_length=255, help_text='Location that the footer\'s newsletter signup form should submit to. This could be a Wagtail form page with an email field, or a third party service. If left blank, the signup CTA will not be displayed.', null=True)),
+                ('footer_newsletter_signup_link', models.CharField(blank=True, max_length=255, help_text="Location that the footer's newsletter signup form should submit to. This could be a Wagtail form page with an email field, or a third party service. If left blank, the signup CTA will not be displayed.", null=True)),
                 ('placeholder_image', models.ForeignKey(help_text='Choose the image you wish to be displayed as a placeholder image.', null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='+', to='images.customimage')),
                 ('site', models.OneToOneField(editable=False, on_delete=django.db.models.deletion.CASCADE, to='wagtailcore.site')),
             ],
