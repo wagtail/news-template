@@ -563,7 +563,7 @@
       "placeholder_image": 3,
       "footer_newsletter_signup_title": "Sign up for our newsletter",
       "footer_newsletter_signup_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
-      "footer_newsletter_signup_link": "http://www.wagtail.org"
+      "footer_newsletter_signup_link": "/newsletter-signup/"
     }
   },
   {
@@ -14057,5 +14057,77 @@
       "deleted": false,
       "page": 3
     }
+  },
+    {
+      "model": "wagtailcore.page",
+      "pk": 31,
+      "fields": {
+        "path": "000100010005",
+        "depth": 3,
+        "numchild": 0,
+        "translation_key": "fd1f64b1-c9e2-4274-a9b8-70414236aaf3",
+        "locale": 1,
+        "latest_revision": null,
+        "live": true,
+        "has_unpublished_changes": false,
+        "first_published_at": "2024-02-27T08:30:00.000Z",
+        "last_published_at": "2024-02-27T08:30:00.000Z",
+        "live_revision": null,
+        "go_live_at": null,
+        "expire_at": null,
+        "expired": false,
+        "locked": false,
+        "locked_at": null,
+        "locked_by": null,
+        "title": "Newsletter signup",
+        "draft_title": "Newsletter signup",
+        "slug": "newsletter-signup",
+        "content_type": [
+          "forms",
+          "formpage"
+        ],
+        "url_path": "/home/newsletter-signup/",
+        "owner": [
+          "admin"
+        ],
+        "seo_title": "",
+        "show_in_menus": false,
+        "search_description": "",
+        "latest_revision_created_at": "2024-02-27T08:30:00.000Z",
+        "alias_of": null
+      }
+    },
+    {
+      "model": "forms.formpage",
+      "pk": 31,
+      "fields": {
+        "to_address": "",
+        "from_address": "",
+        "subject": "",
+        "social_image": null,
+        "social_text": "",
+        "listing_image": null,
+        "listing_title": "Newsletter signup",
+        "listing_summary": "",
+        "appear_in_search_results": false,
+        "introduction": "<p data-block-key=\"newsletter\">Sign up for our newsletter.</p>",
+        "action_text": "Sign up",
+        "thank_you_text": "<p data-block-key=\"thanks\">Thank you for signing up for our newsletter.</p>"
+      }
+    },
+    {
+      "model": "forms.formfield",
+      "pk": 5,
+      "fields": {
+        "sort_order": 0,
+        "label": "Email",
+        "help_text": "",
+        "required": true,
+        "choices": "",
+        "default_value": "",
+        "clean_name": "email",
+        "field_type": "email",
+        "page": 31
+      }
   }
   ]
