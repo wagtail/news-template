@@ -2,7 +2,7 @@ from wagtail import blocks
 from wagtail.snippets.blocks import SnippetChooserBlock
 
 from .links import LinkStreamBlock
-from .ux import CardBlock
+from .content import CardBlock
 
 
 class BaseSectionBlock(blocks.StructBlock):

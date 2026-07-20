@@ -1,4 +1,10 @@
-from .content import CaptionedImageBlock
+from .content import (
+    AccordionBlock,
+    CardBlock,
+    CaptionedImageBlock,
+    FeaturedArticleBlock,
+    QuoteBlock,
+)
 from .links import (
     ArticlePageLinkBlock,
     ExternalLinkBlock,
@@ -15,12 +21,6 @@ from .layout import (
     SectionBlocks,
     StatisticSectionBlock,
     StoryBlock,
-)
-from .ux import (
-    AccordionBlock,
-    CardBlock,
-    FeaturedArticleBlock,
-    QuoteBlock,
 )
 
 __all__ = [
