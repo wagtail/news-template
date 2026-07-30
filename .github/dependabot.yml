@@ -5,20 +5,13 @@ updates:
 
     schedule:
       interval: "weekly"
-      day: "tuesday"
-      time: "09:00"
-      timezone: "Etc/UTC"
 
-    open-pull-requests-limit: 5
+    open-pull-requests-limit: 10
 
     groups:
-      python-minor-and-patch:
-        patterns:
-          - "*"
+      patches:
         update-types:
-          - "minor"
           - "patch"
 
     commit-message:
       prefix: "chore"
-      include: "scope"
