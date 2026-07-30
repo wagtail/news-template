@@ -1,5 +1,6 @@
 from .content import (
     AccordionBlock,
+    AccordionItemBlock,
     CardBlock,
     CaptionedImageBlock,
     FeaturedArticleBlock,
@@ -25,6 +26,7 @@ from .layout import (
 
 __all__ = [
     "AccordionBlock",
+    "AccordionItemBlock",
     "ArticlePageLinkBlock",
     "BaseCardSectionBlock",
     "BaseSectionBlock",
