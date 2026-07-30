@@ -1,8 +1,8 @@
-django>=6.0,<6.1
-wagtail>=7.4,<7.5
-dj-database-url
-psycopg[binary]
-whitenoise
+django==6.0.7
+wagtail==7.4.2
+dj-database-url==3.1.2
+psycopg[binary]==3.3.4
+whitenoise==6.12.0
 gunicorn==23.0.0
-django-storages[s3]
-wagtail-storages
+django-storages[s3]==1.14.6
+wagtail-storages==2.0
