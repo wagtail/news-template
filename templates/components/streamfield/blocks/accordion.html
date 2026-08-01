@@ -1,5 +1,14 @@
 {% verbatim %}
-<div class="">
-    {{ self }}
-</div>
+{% load wagtailcore_tags %}
+
+{% if value.heading %}
+    <h2>{{ value.heading }}</h2>
+{% endif %}
+
+{% for item in value.list %}
+    <details>
+        <summary>{{ item.title }}</summary>
+        {{ item.content|richtext }}
+    </details>
+{% endfor %}
 {% endverbatim %}

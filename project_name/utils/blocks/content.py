@@ -18,22 +18,22 @@ class CaptionedImageBlock(blocks.StructBlock):
         template = "components/streamfield/blocks/image_block.html"
 
 
-class AccordionBlock(blocks.StructBlock):
+class AccordionItemBlock(blocks.StructBlock):
     title = blocks.CharBlock(max_length=255)
     content = blocks.RichTextBlock()
 
     class Meta:
-        label = "Section"
+        label = "Accordion item"
         icon = "title"
 
 
 class AccordionBlock(blocks.StructBlock):
-    heading = blocks.ListBlock(AccordionBlock())
-    list = blocks.ListBlock(AccordionBlock())
+    heading = blocks.CharBlock(max_length=255)
+    list = blocks.ListBlock(AccordionItemBlock())
 
     class Meta:
         icon = "list-ol"
-        template = "components/accordion/accordion.html"
+        template = "components/streamfield/blocks/accordion.html"
 
 
 class QuoteBlock(blocks.StructBlock):
