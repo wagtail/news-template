@@ -5,6 +5,25 @@ from .links import ArticlePageLinkBlock, LinkStreamBlock
 from ..struct_values import CardStructValue
 
 
+class HeadingBlock(blocks.StructBlock):
+    heading_text = blocks.CharBlock(max_length=255, required=True)
+    heading_level = blocks.ChoiceBlock(
+        choices=[
+            ("h2", "H2"),
+            ("h3", "H3"),
+            ("h4", "H4"),
+            ("h5", "H5"),
+            ("h6", "H6"),
+        ],
+        default="h2",
+        required=True,
+    )
+
+    class Meta:
+        icon = "title"
+        template = "components/streamfield/blocks/heading_block.html"
+
+
 class CaptionedImageBlock(blocks.StructBlock):
     image = ImageChooserBlock()
     image_alt_text = blocks.CharBlock(
