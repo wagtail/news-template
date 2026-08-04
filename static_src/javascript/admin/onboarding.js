@@ -190,6 +190,12 @@ function createTour() {
         ],
     });
 
+    // Persist dismissal for EVERY exit path:
+    // button clicks, ✕ icon, Escape key, overlay click — all fire these events.
+    const markDone = () => localStorage.setItem('wagtail_onboarding_tour_done', '1');
+    tour.on('cancel', markDone);
+    tour.on('complete', markDone);
+
     return tour;
 }
 
@@ -202,6 +208,10 @@ function initOnboardingTour() {
         /\/admin\/?$/.test(path);
 
     if (!isAdminDashboard) {
+        return;
+    }
+
+    if (localStorage.getItem('wagtail_onboarding_tour_done')) {
         return;
     }
 
