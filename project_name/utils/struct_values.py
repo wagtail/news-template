@@ -8,7 +8,8 @@ class LinkStructValue(blocks.StructValue):
             return link
 
         if page := self.get("page"):
-            return page.url
+            request = self.context.get("request")
+            return page.get_url(request=request)
 
         if document := self.get("document"):
             return document.url
