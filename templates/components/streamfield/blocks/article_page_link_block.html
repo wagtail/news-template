@@ -1,0 +1,10 @@
+{% load wagtailcore_tags %}
+
+{% if value.page %}
+    <a href="{% pageurl value.page %}" 
+    class="block-link block-link--internal"
+    title="{{ value.title|default:value.page.title }}">
+        {{ value.title|default:value.page.title }}
+    
+    </a>
+{% endif %}
