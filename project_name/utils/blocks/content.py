@@ -6,8 +6,8 @@ from ..struct_values import CardStructValue
 
 
 class HeadingBlock(blocks.StructBlock):
-    heading_text = blocks.CharBlock(max_length=255, required=True)
-    heading_level = blocks.ChoiceBlock(
+    text = blocks.CharBlock(required=True)
+    level = blocks.ChoiceBlock(
         choices=[
             ("h2", "H2"),
             ("h3", "H3"),
