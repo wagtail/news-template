@@ -36,20 +36,26 @@ class StatisticSectionBlock(BaseSectionBlock):
         template = "components/streamfield/blocks/stat_block.html"
 
 
-class CTASectionBlock(blocks.StructBlock):
-    heading = blocks.CharBlock(
+class CTABlock(blocks.StructBlock):
+    title = blocks.CharBlock(
         form_classname="title",
         icon="title",
         required=True
     )
+    text = blocks.RichTextBlock(
+        features=["bold", "italic", "link"],
+        required=False,
+    )
+    button_text = blocks.CharBlock(required=True)
     link = LinkStreamBlock()
-    description = blocks.TextBlock(required=False)
 
     class Meta:
         icon = "link"
         label = "CTA"
         template = "components/streamfield/blocks/cta_block.html"
 
+
+CTASectionBlock=CTABlock
 
 class BaseCardSectionBlock(BaseSectionBlock):
     cards = blocks.ListBlock(
@@ -96,7 +102,7 @@ class SectionBlock(blocks.StructBlock):
 
 class StoryBlock(blocks.StreamBlock):
     section = SectionBlock()
-    cta = CTASectionBlock()
+    cta = CTABlock()
     statistics = StatisticSectionBlock()
 
     class Meta:
