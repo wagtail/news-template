@@ -6,7 +6,7 @@ from ..struct_values import CardStructValue
 
 
 class HeadingBlock(blocks.StructBlock):
-    text = blocks.CharBlock(required=True)
+    text = blocks.CharBlock()
     level = blocks.ChoiceBlock(
         choices=[
             ("h2", "H2"),
@@ -16,7 +16,6 @@ class HeadingBlock(blocks.StructBlock):
             ("h6", "H6"),
         ],
         default="h2",
-        required=True,
     )
 
     class Meta:
