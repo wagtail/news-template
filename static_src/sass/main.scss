@@ -54,15 +54,15 @@
         }
 
         h4 {
-            @apply text-xl md:text-3xl font-medium mb-6 md:mb-8;
+            @apply text-xl md:text-2xl font-medium mb-6 md:mb-8;
         }
 
         h5 {
-            @apply text-lg md:text-2xl font-medium mb-4 md:mb-6;
+            @apply text-lg md:text-xl font-medium mb-4 md:mb-6;
         }
 
         h6 {
-            @apply text-base md:text-xl font-medium mb-4 md:mb-6;
+            @apply text-base md:text-lg font-medium mb-4 md:mb-6;
         }
     }
 
