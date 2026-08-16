@@ -36,7 +36,7 @@ class StatisticSectionBlock(BaseSectionBlock):
         template = "components/streamfield/blocks/stat_block.html"
 
 
-class CTABlock(blocks.StructBlock):
+class CallToActionBlock(blocks.StructBlock):
     title = blocks.CharBlock(
         form_classname="title",
         icon="title",
@@ -102,7 +102,7 @@ class SectionBlock(blocks.StructBlock):
 
 class StoryBlock(blocks.StreamBlock):
     section = SectionBlock()
-    cta = CTABlock()
+    cta = CallToActionBlock()
     statistics = StatisticSectionBlock()
 
     class Meta:
