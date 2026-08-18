@@ -23,7 +23,7 @@ class HeadingBlock(blocks.StructBlock):
         template = "components/streamfield/blocks/heading_block.html"
 
 
-class CaptionedImageBlock(blocks.StructBlock):
+class MediaBlock(blocks.StructBlock):
     image = ImageChooserBlock()
     image_alt_text = blocks.CharBlock(
         required=False,
@@ -35,6 +35,9 @@ class CaptionedImageBlock(blocks.StructBlock):
         icon = "image"
         template = "components/streamfield/blocks/image_block.html"
 
+
+class CaptionedImageBlock(MediaBlock):
+    pass
 
 class AccordionItemBlock(blocks.StructBlock):
     title = blocks.CharBlock(max_length=255)

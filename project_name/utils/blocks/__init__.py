@@ -4,6 +4,7 @@ from .content import (
     CardBlock,
     CaptionedImageBlock,
     FeaturedArticleBlock,
+    MediaBlock,
     HeadingBlock,
     QuoteBlock,
 )
@@ -40,6 +41,7 @@ __all__ = [
     "HeadingBlock",
     "InternalLinkBlock",
     "LinkStreamBlock",
+    "MediaBlock",
     "PlainCardSectionBlock",
     "QuoteBlock",
     "SectionBlock",
