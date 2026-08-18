@@ -1,5 +1,55 @@
 {% verbatim %}
-<div class="">
-    {{ self }}
+{% load wagtailcore_tags wagtailimages_tags wagtailsettings_tags %}
+
+{% wagtail_site as current_site %}
+
+<div class="flex flex-col {{ self.left_aligned|yesno:'md:flex-row,md:flex-row-reverse' }} md:gap-10 md:items-center w-full">
+    <div class="rounded-md overflow-hidden w-full md:w-1/2">
+        {% if self.image %}
+            {% image self.image format-webp fill-800x600 as feature_image %}
+        {% elif self.link.page.specific.listing_image %}
+            {% image self.link.page.specific.listing_image format-webp fill-800x600 as feature_image %}
+        {% else %}
+            {% image settings.utils.SystemMessagesSettings.get_placeholder_image format-webp fill-800x600 as feature_image %}
+        {% endif %}
+        {% if feature_image %}
+            <img
+                src="{{ feature_image.url }}"
+                width="{{ feature_image.width }}"
+                height="{{ feature_image.height }}"
+                alt="{{ feature_image.alt }}"
+                class="aspect-[4/3] w-full h-full object-cover"
+            />
+        {% endif %}
+    </div>
+
+    <div class="w-full md:w-1/2 pt-6 md:pt-0">
+        <p class="text-base leading-7 text-grey-700 dark:text-grey-200 pb-4">
+            {% if self.description %}
+                {{ self.description }}
+            {% elif self.link.page.specific.listing_summary %}
+                {{ self.link.page.specific.listing_summary }}
+            {% elif self.link.page.specific.plain_introduction %}
+                {{ self.link.page.specific.plain_introduction }}
+            {% endif %}
+        </p>
+        <a
+            href="{% pageurl self.link.page %}"
+            class="
+            inline-flex
+            items-center
+            text-base
+            font-semibold
+            font-codepro
+            underline
+            underline-offset-8
+            decoration-[1.5px]
+            decoration-mackerel-200
+            hover:decoration-mackerel-300
+            "
+        >
+            {{ self.cta_text }}
+        </a>
+    </div>
 </div>
 {% endverbatim %}
