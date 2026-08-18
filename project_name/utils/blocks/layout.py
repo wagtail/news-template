@@ -46,16 +46,13 @@ class CallToActionBlock(blocks.StructBlock):
         features=["bold", "italic", "link"],
         required=False,
     )
-    button_text = blocks.CharBlock(required=True)
-    link = LinkStreamBlock()
+    button = LinkStreamBlock()
 
     class Meta:
         icon = "link"
         label = "CTA"
         template = "components/streamfield/blocks/cta_block.html"
 
-
-CTASectionBlock=CTABlock
 
 class BaseCardSectionBlock(BaseSectionBlock):
     cards = blocks.ListBlock(
