@@ -75,6 +75,11 @@ jobs:
           cd /tmp/testproject
           python manage.py migrate
 
+      - name: Collect static files
+        run: |
+          cd /tmp/testproject
+          python manage.py collectstatic --noinput
+
       - name: Run tests
         run: |
           cd /tmp/testproject
@@ -89,8 +94,3 @@ jobs:
         run: |
           cd /tmp/testproject
           python manage.py load_initial_data
-
-      - name: Collect static files
-        run: |
-          cd /tmp/testproject
-          python manage.py collectstatic --noinput
