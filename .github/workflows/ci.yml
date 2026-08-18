@@ -75,6 +75,11 @@ jobs:
           cd /tmp/testproject
           python manage.py migrate
 
+      - name: Run tests
+        run: |
+          cd /tmp/testproject
+          python manage.py test
+
       - name: Create cache table
         run: |
           cd /tmp/testproject
