@@ -45,26 +45,3 @@ class LinkStructValue(blocks.StructValue):
         if document := self.get("document"):
             return document.file_extension.upper()
         return ""
-
-
-class CardStructValue(blocks.StructValue):
-    def get_image(self):
-        if image := self.get("image"):
-            return image
-
-        # If there is no image selected, get the listing image from
-        # the selected link.
-        if link := self.get("link"):
-            return link[0].value["page"].specific.listing_image
-        # Else page hero image if exists
-        return ""
-
-    def get_description(self):
-        if description := self.get("description"):
-            return description
-
-        if link := self.get("link"):
-            link = link[0].value["page"].specific
-            return link.listing_summary or link.plain_introduction
-
-        return ""
