@@ -14,8 +14,8 @@
         </div>
         {% endif %}
     </div>
-    {% with cta_link=value.link.0 %}
-        {% include "components/button.html" with title=value.button_text url=cta_link.value.get_url classes='w-full md:w-auto' %}
+    {% with cta_link=value.button.0 %}
+        {% include "components/button.html" with title=cta_link.value.get_title url=cta_link.value.get_url classes='w-full md:w-auto' %}
     {% endwith %}
 </div>
 {% endverbatim %}
