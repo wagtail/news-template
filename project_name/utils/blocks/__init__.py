@@ -16,7 +16,7 @@ from .links import (
 from .layout import (
     BaseCardSectionBlock,
     BaseSectionBlock,
-    CTASectionBlock,
+    CallToActionBlock,
     CardSectionBlock,
     PlainCardSectionBlock,
     SectionBlock,
@@ -31,7 +31,7 @@ __all__ = [
     "ArticlePageLinkBlock",
     "BaseCardSectionBlock",
     "BaseSectionBlock",
-    "CTASectionBlock",
+    "CallToActionBlock",
     "CaptionedImageBlock",
     "CardBlock",
     "CardSectionBlock",
